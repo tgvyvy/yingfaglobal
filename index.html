@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ying Fa Global Consulting | Business Consulting & International Services</title>
+
+  <meta name="description" content="Ying Fa Global Consulting provides business consulting, translation, interpretation, trade support and international business services.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav {
+      min-height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 700;
+      color: #123b63;
+    }
+
+    .logo span {
+      color: #c59a45;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    nav a:hover {
+      color: #123b63;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f3f7fb, #ffffff);
+      padding: 100px 0;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.15;
+      color: #123b63;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #4b5563;
+      margin-bottom: 35px;
+      max-width: 750px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #123b63;
+      color: #ffffff;
+      padding: 14px 27px;
+      border-radius: 6px;
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    .btn.secondary {
+      background: #c59a45;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      color: #123b63;
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #6b7280;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service {
+      padding: 30px;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    }
+
+    .service h3 {
+      color: #123b63;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .service p {
+      color: #6b7280;
+      font-size: 15px;
+    }
+
+    .about {
+      background: #f8fafc;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content h2 {
+      color: #123b63;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: #4b5563;
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .contact {
+      background: #123b63;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      margin-bottom: 30px;
+      color: #e5e7eb;
+    }
+
+    footer {
+      background: #0b263f;
+      color: #dbe4ec;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 14px;
+    }
+
+    .floating {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      z-index: 2000;
+    }
+
+    .floating a {
+      background: #ffffff;
+      border: 1px solid #ddd;
+      padding: 10px 15px;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 800px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">
+      Ying Fa <span>Global</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Connecting Business Across Borders</h1>
+
+      <p>
+        Ying Fa Global Consulting provides professional consulting,
+        translation, interpretation, trade support and international
+        business services for individuals and organizations worldwide.
+      </p>
+
+      <a href="#contact" class="btn">Contact Us</a>
+      <a href="#services" class="btn secondary">Our Services</a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>
+        Professional solutions designed to support your business,
+        communication and international activities.
+      </p>
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <h3>Business Consulting</h3>
+        <p>
+          Business consulting and practical support for companies
+          entering or expanding into international markets.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Translation Services</h3>
+        <p>
+          Professional translation services for business,
+          technical, legal and general documents.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Interpretation</h3>
+        <p>
+          Professional Chinese, English and Vietnamese interpretation
+          for meetings, negotiations and business activities.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>International Trade</h3>
+        <p>
+          Support for sourcing, trading, suppliers and international
+          business communication.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Business Communication</h3>
+        <p>
+          Cross-cultural communication support for companies and
+          international partners.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Market Support</h3>
+        <p>
+          Practical assistance for businesses exploring new markets
+          and international opportunities.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Chinese Language Services</h3>
+        <p>
+          Customized Chinese language training for individuals,
+          professionals and organizations.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Travel Assistance</h3>
+        <p>
+          Chinese-speaking travel assistance and support for
+          international visitors.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Corporate Support</h3>
+        <p>
+          Flexible professional support for companies requiring
+          multilingual and international assistance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-content">
+
+      <h2>About Ying Fa Global</h2>
+
+      <p>
+        Ying Fa Global Consulting connects people, businesses and
+        opportunities across languages, cultures and international markets.
+      </p>
+
+      <p>
+        Our goal is to provide practical, reliable and professional
+        services that help clients communicate and do business globally.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+
+    <h2>Let's Work Together</h2>
+
+    <p>
+      Have a business project or need professional international support?
+      Contact Ying Fa Global today.
+    </p>
+
+    <a href="mailto:info@yingfaglobal.com" class="btn">
+      Email Us
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Ying Fa Global Consulting. All rights reserved.
+  </div>
+</footer>
+
+<div class="floating">
+  <a href="#">WhatsApp</a>
+  <a href="#">WeChat</a>
+  <a href="#">Messenger</a>
+  <a href="#">Zalo</a>
+</div>
+
+</body>
+</html>
