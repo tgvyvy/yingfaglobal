@@ -6,15 +6,22 @@
 
 <title>Ying Fa Global Consulting | Business Consulting & Cross-Border Solutions</title>
 
-<meta name="description" content="Ying Fa Global Consulting provides business consulting, translation, interpretation, international trade, sourcing, market support and cross-border business solutions.">
+<meta name="description" content="Ying Fa Global Consulting provides business consulting, market entry, business setup, sourcing, business matching, translation, interpretation and cross-border solutions in Vietnam.">
 
-<meta name="keywords" content="business consulting, international trade, Vietnam business, China Vietnam business, translation, interpretation, sourcing, business matching, Ying Fa Global">
+<meta name="keywords" content="Ying Fa Global Consulting, business consulting Vietnam, China Vietnam business, international trade, sourcing Vietnam, business matching, translation Chinese English Vietnamese, interpretation Vietnam, market entry Vietnam, investment support">
+
+<meta name="author" content="Ying Fa Global Consulting">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://yingfaglobal.com/">
 
 <style>
+
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 html{
@@ -23,9 +30,9 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    color:#1f2937;
-    line-height:1.7;
+    color:#243447;
     background:#ffffff;
+    line-height:1.7;
 }
 
 a{
@@ -33,20 +40,41 @@ a{
     color:inherit;
 }
 
+img{
+    max-width:100%;
+    display:block;
+}
+
 .container{
-    width:90%;
-    max-width:1180px;
+    width:min(1180px,92%);
     margin:auto;
 }
 
-/* HEADER */
+/* =========================
+   COLORS
+========================= */
+
+:root{
+    --navy:#0d2742;
+    --navy-light:#173b5f;
+    --gold:#c79a45;
+    --gold-light:#dfbd78;
+    --white:#ffffff;
+    --light:#f6f7f9;
+    --text:#4b5563;
+    --border:#e6e9ee;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 header{
     position:sticky;
     top:0;
     z-index:1000;
     background:#ffffff;
-    border-bottom:1px solid #e5e7eb;
-    box-shadow:0 2px 12px rgba(18,59,99,.06);
+    border-bottom:1px solid #eeeeee;
 }
 
 .navbar{
@@ -54,1115 +82,1930 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:30px;
 }
 
 .logo{
-    font-size:26px;
-    font-weight:700;
-    color:#123b63;
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:-.5px;
+    color:var(--navy);
+    white-space:nowrap;
 }
 
 .logo span{
-    color:#c59a45;
+    color:var(--gold);
 }
 
-nav{
+.nav{
     display:flex;
-    gap:32px;
+    align-items:center;
+    gap:30px;
 }
 
-nav a{
-    font-weight:600;
-    color:#1f2937;
-    padding:10px 0;
+.nav a{
     position:relative;
-    transition:.3s;
+    font-size:14px;
+    font-weight:600;
+    color:#344054;
+    padding:29px 0;
 }
 
-nav a::after{
+.nav a:hover,
+.nav a.active{
+    color:var(--navy);
+}
+
+.nav a.active::after{
     content:"";
     position:absolute;
     left:0;
-    bottom:2px;
-    width:0;
+    right:0;
+    bottom:18px;
     height:2px;
-    background:#c59a45;
-    transition:.3s;
+    background:var(--gold);
 }
 
-nav a:hover{
-    color:#c59a45;
-}
+/* =========================
+   HERO
+========================= */
 
-nav a:hover::after{
-    width:100%;
-}
-
-/* HERO */
 .hero{
-    background:
-        radial-gradient(circle at 85% 20%, rgba(197,154,69,.16), transparent 35%),
-        linear-gradient(135deg,#eef4f9 0%,#ffffff 55%,#f8f3e8 100%);
-    padding:90px 110px 100px;
-    border-radius:0 0 32px 32px;
-    position:relative;
-    overflow:hidden;
+    background:#f7f8fa;
 }
 
-.hero::after{
-    content:"";
-    position:absolute;
-    width:320px;
-    height:320px;
-    right:-120px;
-    bottom:-140px;
-    border:1px solid rgba(197,154,69,.25);
-    border-radius:50%;
+.hero-grid{
+    min-height:610px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
 }
 
 .hero-content{
-    max-width:1000px;
-    position:relative;
-    z-index:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:65px 55px 65px 0;
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--gold);
+    font-size:13px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.eyebrow::before{
+    content:"";
+    width:35px;
+    height:2px;
+    background:var(--gold);
 }
 
 .hero h1{
+    color:var(--navy);
     font-size:52px;
-    line-height:1.12;
-    color:#123b63;
-    margin-bottom:25px;
-    letter-spacing:-1.2px;
-    max-width:900px;
+    line-height:1.08;
+    letter-spacing:-1.5px;
+    margin-bottom:20px;
 }
 
 .hero .lead{
-    font-size:21px;
-    line-height:1.6;
-    color:#374151;
-    margin-bottom:20px;
-    max-width:850px;
+    color:#344054;
+    font-size:22px;
+    line-height:1.45;
+    margin-bottom:18px;
+    max-width:590px;
 }
 
 .hero p{
-    font-size:17px;
-    line-height:1.7;
-    max-width:850px;
-    color:#4b5563;
+    color:var(--text);
+    font-size:16px;
+    max-width:600px;
+    margin-bottom:28px;
 }
 
 .buttons{
-    margin-top:32px;
     display:flex;
-    gap:15px;
     flex-wrap:wrap;
+    gap:12px;
 }
 
 .btn{
-    display:inline-block;
-    padding:15px 30px;
-    border-radius:6px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:14px 24px;
+    font-size:14px;
     font-weight:700;
-    letter-spacing:.2px;
-    transition:all .3s ease;
-    box-shadow:0 4px 12px rgba(18,59,99,.12);
+    border-radius:3px;
+    transition:.25s ease;
 }
 
 .btn-primary{
-    background:#123b63;
-    color:#ffffff;
+    color:#fff;
+    background:var(--navy);
 }
 
 .btn-primary:hover{
-    background:#0d2d4b;
+    background:var(--navy-light);
+    transform:translateY(-2px);
 }
 
 .btn-gold{
-    background:#c59a45;
-    color:#ffffff;
+    color:#fff;
+    background:var(--gold);
 }
 
 .btn-gold:hover{
-    background:#a98238;
-}
-.btn-primary{
-    background:#123b63;
-    color:#ffffff;
+    background:#b48838;
+    transform:translateY(-2px);
 }
 
-.btn-primary:hover{
-    background:#0d2d4b;
+.hero-image{
+    position:relative;
+    min-height:610px;
+    overflow:hidden;
 }
 
-.btn-gold{
-    background:#c59a45;
-    color:#ffffff;
+.hero-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
-.btn-gold:hover{
-    background:#a98035;
+.hero-image::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(13,39,66,.08),rgba(13,39,66,.05));
 }
 
-/* GENERAL SECTIONS */
-section{
-    padding:90px 0;
+.hero-overlay{
+    position:absolute;
+    z-index:2;
+    top:35px;
+    right:35px;
+    max-width:245px;
+    padding:18px 20px;
+    background:rgba(13,39,66,.93);
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1.5px;
+    line-height:1.5;
 }
 
-.section-title{
-    text-align:center;
-    color:#123b63;
-    font-size:38px;
-    margin-bottom:15px;
+/* =========================
+   FLOATING CONTACT
+========================= */
+
+.floating-contact{
+    position:fixed;
+    right:18px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:999;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
 }
 
-.section-subtitle{
-    text-align:center;
-    max-width:760px;
-    margin:0 auto 55px;
+.float-btn{
+    width:43px;
+    height:43px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:12px;
+    font-weight:800;
+    box-shadow:0 4px 15px rgba(0,0,0,.18);
+    transition:.25s;
+}
+
+.float-btn:hover{
+    transform:scale(1.08);
+}
+
+.whatsapp{background:#25d366;}
+.wechat{background:#07c160;}
+.messenger{background:#0084ff;}
+.zalo{background:#0068ff;}
+
+/* =========================
+   FEATURE STRIP
+========================= */
+
+.features{
+    border-bottom:1px solid var(--border);
+    background:#fff;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+}
+
+.feature{
+    padding:28px 25px;
+    border-right:1px solid var(--border);
+}
+
+.feature:last-child{
+    border-right:none;
+}
+
+.feature h3{
+    color:var(--navy);
+    font-size:16px;
+    margin-bottom:4px;
+}
+
+.feature p{
     color:#6b7280;
-    font-size:17px;
+    font-size:13px;
 }
 
-/* INTRO */
-.intro{
-    text-align:center;
-    max-width:900px;
-    margin:auto;
+/* =========================
+   GENERAL SECTION
+========================= */
+
+.section{
+    padding:70px 0;
 }
 
-.intro p{
-    font-size:19px;
-    color:#4b5563;
+.section-light{
+    background:var(--light);
 }
 
-/* SERVICES */
-.services-section{
-    background:#ffffff;
+.section-heading{
+    margin-bottom:38px;
 }
+
+.section-label{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:8px;
+}
+
+.section-heading h2{
+    color:var(--navy);
+    font-size:38px;
+    line-height:1.2;
+    margin-bottom:10px;
+}
+
+.section-heading p{
+    color:#6b7280;
+    max-width:680px;
+    font-size:15px;
+}
+
+.heading-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:20px;
+}
+
+.text-link{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:800;
+    white-space:nowrap;
+}
+
+/* =========================
+   SERVICES
+========================= */
 
 .services-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
 }
 
 .service-card{
-    border:1px solid #e5e7eb;
-    border-radius:8px;
-    padding:30px;
-    background:#ffffff;
-    box-shadow:0 8px 25px rgba(18,59,99,.06);
-    transition:.3s;
+    padding:27px 23px;
+    background:#fff;
+    border:1px solid var(--border);
+    transition:.25s ease;
+    min-height:225px;
 }
 
 .service-card:hover{
     transform:translateY(-5px);
-    box-shadow:0 14px 30px rgba(18,59,99,.12);
+    border-color:#d5b16c;
+    box-shadow:0 12px 28px rgba(13,39,66,.08);
+}
+
+.service-icon{
+    width:43px;
+    height:43px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f4ead7;
+    color:var(--gold);
+    font-weight:900;
+    margin-bottom:18px;
 }
 
 .service-card h3{
-    color:#123b63;
-    font-size:21px;
-    margin-bottom:12px;
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:8px;
 }
 
 .service-card p{
     color:#6b7280;
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:15px;
 }
 
-/* WHY US */
-.why-section{
-    background:#f7f9fc;
+.learn{
+    color:var(--gold);
+    font-size:12px;
+    font-weight:800;
 }
 
-.why-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
-}
-
-.why-card{
-    background:#ffffff;
-    padding:32px;
-    border-radius:8px;
-    border:1px solid #e5e7eb;
-}
-
-.why-card h3{
-    color:#123b63;
-    margin-bottom:12px;
-}
-
-/* ABOUT */
-.about-section{
-    background:#ffffff;
-}
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:60px;
+    gap:55px;
     align-items:center;
 }
 
 .about-text h2{
-    color:#123b63;
+    color:var(--navy);
     font-size:38px;
-    margin-bottom:20px;
+    line-height:1.2;
+    margin-bottom:17px;
 }
 
 .about-text p{
+    color:#667085;
+    font-size:15px;
     margin-bottom:18px;
-    color:#4b5563;
 }
 
-.about-box{
-    background:#123b63;
-    color:#ffffff;
-    padding:45px;
-    border-radius:8px;
+.about-image{
+    position:relative;
 }
 
-.about-box h3{
-    font-size:27px;
-    margin-bottom:15px;
-    color:#ffffff;
+.about-image img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
 }
 
-/* BUSINESS SOLUTIONS */
-.solutions{
-    background:#f7f9fc;
+.about-badge{
+    position:absolute;
+    left:-20px;
+    bottom:25px;
+    background:var(--navy);
+    color:#fff;
+    padding:18px 22px;
 }
 
-.solution-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+.about-badge strong{
+    display:block;
+    color:var(--gold-light);
+    font-size:18px;
 }
 
-.solution-card{
-    background:#ffffff;
-    padding:30px;
-    border-left:4px solid #c59a45;
-    box-shadow:0 6px 20px rgba(0,0,0,.05);
+.about-badge span{
+    font-size:12px;
 }
 
-.solution-card h3{
-    color:#123b63;
-    margin-bottom:10px;
-}
+/* =========================
+   WHY CHOOSE US
+========================= */
 
-/* COMPANY PROFILE */
-.profile-section{
-    background:#ffffff;
-}
-
-.profile-grid{
+.why-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
-    margin-top:45px;
+    gap:28px;
 }
 
-.profile-item{
-    text-align:center;
-    padding:28px 18px;
-    border:1px solid #e5e7eb;
-    border-radius:8px;
+.why-item{
+    position:relative;
+    padding-top:20px;
+    border-top:2px solid var(--gold);
 }
 
-.profile-item strong{
-    display:block;
-    color:#123b63;
-    font-size:20px;
+.why-number{
+    color:#d8dde4;
+    font-size:32px;
+    font-weight:800;
     margin-bottom:8px;
 }
 
-/* PROCESS */
-.process-section{
-    background:#f7f9fc;
+.why-item h3{
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:6px;
+}
+
+.why-item p{
+    color:#6b7280;
+    font-size:13px;
+}
+
+/* =========================
+   BUSINESS SOLUTIONS
+========================= */
+
+.solution-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.solution-card{
+    background:#fff;
+    border:1px solid var(--border);
+    overflow:hidden;
+}
+
+.solution-image{
+    height:190px;
+    overflow:hidden;
+}
+
+.solution-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s ease;
+}
+
+.solution-card:hover img{
+    transform:scale(1.05);
+}
+
+.solution-content{
+    padding:20px;
+}
+
+.solution-content h3{
+    color:var(--navy);
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.solution-content p{
+    color:#6b7280;
+    font-size:13px;
+    line-height:1.6;
+    margin-bottom:13px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process{
+    background:var(--navy);
+    color:#fff;
+}
+
+.process .section-label{
+    color:var(--gold-light);
+}
+
+.process .section-heading h2{
+    color:#fff;
+}
+
+.process .section-heading p{
+    color:#c7d0db;
 }
 
 .process-grid{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    gap:0;
 }
 
-.process-card{
-    background:#ffffff;
-    padding:28px 20px;
-    text-align:center;
-    border-radius:8px;
-    border:1px solid #e5e7eb;
+.process-item{
+    padding:20px 30px 20px 0;
+    border-right:1px solid rgba(255,255,255,.15);
+    margin-right:30px;
+}
+
+.process-item:last-child{
+    border-right:none;
 }
 
 .process-number{
-    width:45px;
-    height:45px;
-    line-height:45px;
-    border-radius:50%;
-    background:#123b63;
-    color:#ffffff;
-    font-weight:700;
-    margin:0 auto 15px;
-}
-
-.process-card h3{
-    color:#123b63;
+    color:var(--gold-light);
+    font-size:30px;
+    font-weight:800;
     margin-bottom:10px;
 }
 
-/* NEWS */
-.news-section{
-    background:#ffffff;
+.process-item h3{
+    font-size:18px;
+    margin-bottom:7px;
 }
+
+.process-item p{
+    color:#c7d0db;
+    font-size:13px;
+}
+
+/* =========================
+   NEWS
+========================= */
 
 .news-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:22px;
 }
 
 .news-card{
-    border:1px solid #e5e7eb;
-    border-radius:8px;
+    border:1px solid var(--border);
+    background:#fff;
     overflow:hidden;
-    background:#ffffff;
 }
 
-.news-top{
-    height:7px;
-    background:#c59a45;
+.news-image{
+    height:210px;
+    overflow:hidden;
+}
+
+.news-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }
 
 .news-content{
-    padding:28px;
+    padding:21px;
+}
+
+.news-date{
+    color:var(--gold);
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:8px;
 }
 
 .news-content h3{
-    color:#123b63;
-    margin-bottom:12px;
+    color:var(--navy);
+    font-size:18px;
+    line-height:1.35;
+    margin-bottom:9px;
 }
 
 .news-content p{
     color:#6b7280;
+    font-size:13px;
+    margin-bottom:13px;
 }
 
-/* CONTACT */
-.contact-section{
-    background:#123b63;
-    color:#ffffff;
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    position:relative;
+    background:var(--navy);
+    padding:58px 0;
+    overflow:hidden;
 }
 
-.contact-section .section-title{
-    color:#ffffff;
+.cta::after{
+    content:"";
+    position:absolute;
+    width:420px;
+    height:420px;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:50%;
+    right:-120px;
+    top:-190px;
 }
 
-.contact-section .section-subtitle{
-    color:#dbe5ef;
+.cta-content{
+    position:relative;
+    z-index:2;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
 }
 
-.contact-box{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
+.cta h2{
+    color:#fff;
+    font-size:35px;
+    margin-bottom:8px;
 }
 
-.contact-email{
-    display:inline-block;
-    margin-top:15px;
-    padding:15px 28px;
-    background:#c59a45;
-    color:#ffffff;
-    border-radius:5px;
-    font-weight:700;
+.cta p{
+    color:#c7d0db;
+    font-size:14px;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
+
 footer{
-    background:#0d2d4b;
-    color:#dbe5ef;
-    text-align:center;
-    padding:25px 15px;
+    background:#081c30;
+    color:#fff;
+    padding:42px 0 20px;
 }
 
-footer p{
-    margin:4px 0;
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:45px;
+    padding-bottom:30px;
 }
 
-/* FLOATING CONTACT */
-.floating-contact{
-    position:fixed;
-    right:20px;
-    bottom:25px;
-    z-index:999;
+.footer-logo{
+    font-size:24px;
+    font-weight:800;
+    margin-bottom:8px;
+}
+
+.footer-logo span{
+    color:var(--gold);
+}
+
+.footer-tagline{
+    color:#aeb9c5;
+    font-size:13px;
+}
+
+.footer h4{
+    font-size:13px;
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.footer-links{
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:7px;
 }
 
-.floating-contact a{
-    background:#ffffff;
-    color:#123b63;
-    border:1px solid #d1d5db;
-    padding:9px 17px;
-    border-radius:25px;
+.footer-links a{
+    color:#aeb9c5;
     font-size:13px;
-    font-weight:700;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-    transition:.3s;
 }
 
-.floating-contact a:hover{
-    background:#123b63;
-    color:#ffffff;
+.footer-links a:hover{
+    color:var(--gold-light);
 }
 
-/* MOBILE */
-@media(max-width:900px){
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:18px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:#8290a0;
+    font-size:11px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .nav{
+        gap:18px;
+    }
 
     .hero h1{
         font-size:42px;
     }
 
     .services-grid,
+    .solution-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature-grid,
     .why-grid,
-    .news-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .profile-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
     .process-grid{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .feature:nth-child(2){
+        border-right:none;
     }
 
     .about-grid{
-        grid-template-columns:1fr;
+        gap:35px;
     }
 }
 
-@media(max-width:650px){
+@media(max-width:760px){
 
     .navbar{
-        min-height:70px;
-    }
-
-    nav{
-        gap:14px;
-        font-size:13px;
+        min-height:68px;
     }
 
     .logo{
-        font-size:21px;
+        font-size:20px;
     }
 
-    .hero{
-        padding:75px 0;
+    .nav{
+        display:none;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content{
+        padding:55px 0 45px;
+    }
+
+    .hero-image{
+        min-height:380px;
     }
 
     .hero h1{
-        font-size:35px;
+        font-size:36px;
     }
 
     .hero .lead{
-        font-size:18px;
+        font-size:19px;
     }
 
-    section{
-        padding:65px 0;
-    }
-
-    .section-title{
-        font-size:31px;
-    }
-
+    .feature-grid,
     .services-grid,
     .why-grid,
     .solution-grid,
+    .process-grid,
     .news-grid,
-    .profile-grid,
-    .process-grid{
+    .about-grid,
+    .footer-grid{
         grid-template-columns:1fr;
+    }
+
+    .feature{
+        border-right:none;
+        border-bottom:1px solid var(--border);
+    }
+
+    .feature:last-child{
+        border-bottom:none;
+    }
+
+    .section{
+        padding:52px 0;
+    }
+
+    .section-heading h2,
+    .about-text h2{
+        font-size:30px;
+    }
+
+    .heading-row{
+        align-items:flex-start;
+        flex-direction:column;
+    }
+
+    .about-image img{
+        height:330px;
+    }
+
+    .about-badge{
+        left:15px;
+    }
+
+    .process-item{
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.15);
+        margin-right:0;
+        padding:22px 0;
+    }
+
+    .process-item:last-child{
+        border-bottom:none;
+    }
+
+    .cta-content{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .cta h2{
+        font-size:29px;
+    }
+
+    .footer-grid{
+        gap:28px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
     }
 
     .floating-contact{
         right:10px;
-        bottom:15px;
     }
 
-    .floating-contact a{
-        padding:7px 13px;
-        font-size:12px;
+    .float-btn{
+        width:39px;
+        height:39px;
+        font-size:10px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
+
 <header>
+
 <div class="container navbar">
 
-<a href="#home" class="logo">Ying Fa <span>Global</span></a>
+<a href="#home" class="logo">
+    Ying Fa <span>Global</span>
+</a>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-<a href="#profile">Profile</a>
-<a href="#news">News</a>
-<a href="#contact">Contact</a>
+<nav class="nav">
+    <a href="#home" class="active">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#profile">Profile</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 </div>
+
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     FLOATING CONTACT
+========================= -->
+
+<div class="floating-contact">
+
+<a href="#contact" class="float-btn whatsapp" title="WhatsApp">WA</a>
+
+<a href="#contact" class="float-btn wechat" title="WeChat">WC</a>
+
+<a href="#contact" class="float-btn messenger" title="Messenger">M</a>
+
+<a href="#contact" class="float-btn zalo" title="Zalo">Z</a>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero" id="home">
-<div class="container hero-content">
 
-<h1>GLOBAL BUSINESS CONSULTING & CROSS-BORDER SOLUTIONS</h1>
+<div class="container hero-grid">
 
-<p class="lead">
-Helping international businesses enter, operate and grow in Vietnam.
-</p>
+<div class="hero-content">
+
+<div class="eyebrow">
+    Your Trusted Partner
+</div>
+
+<h1>
+    GLOBAL BUSINESS CONSULTING & CROSS-BORDER SOLUTIONS
+</h1>
+
+<div class="lead">
+    Helping international businesses enter, operate and grow in Vietnam.
+</div>
 
 <p>
-From business setup and compliance to sourcing, business matching,
-investment support and cross-border solutions, Ying Fa Global helps
-connect international businesses with opportunities in Vietnam and beyond.
+    From business setup and compliance to sourcing, business matching,
+    investment support and cross-border solutions, Ying Fa Global helps
+    connect international businesses with opportunities in Vietnam and beyond.
 </p>
 
 <div class="buttons">
-<a href="#contact" class="btn btn-primary">Talk to a Consultant</a>
-<a href="#services" class="btn btn-gold">Explore Our Services</a>
+
+<a href="#contact" class="btn btn-primary">
+    Talk to a Consultant →
+</a>
+
+<a href="#services" class="btn btn-gold">
+    Explore Our Services →
+</a>
+
 </div>
 
 </div>
+
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=1200&q=85"
+     alt="Ho Chi Minh City Vietnam">
+
+<div class="hero-overlay">
+    BRIDGING OPPORTUNITIES ACROSS BORDERS
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- INTRO -->
-<section>
-<div class="container intro">
+<!-- =========================
+     FEATURES
+========================= -->
 
-<h2 class="section-title">Connecting Business Across Borders</h2>
+<section class="features">
 
-<p>
-Ying Fa Global Consulting provides practical and professional services
-for companies, entrepreneurs and organizations working across languages,
-cultures and international markets.
-</p>
+<div class="container feature-grid">
+
+<div class="feature">
+    <h3>Global Perspective</h3>
+    <p>Connecting markets across borders</p>
+</div>
+
+<div class="feature">
+    <h3>Local Expertise</h3>
+    <p>In-depth knowledge of Vietnam</p>
+</div>
+
+<div class="feature">
+    <h3>Reliable Support</h3>
+    <p>From strategy to implementation</p>
+</div>
+
+<div class="feature">
+    <h3>Sustainable Growth</h3>
+    <p>Long-term success together</p>
+</div>
 
 </div>
+
 </section>
 
 
-<!-- SERVICES -->
-<section class="services-section" id="services">
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="section" id="services">
+
 <div class="container">
 
-<h2 class="section-title">Our Services</h2>
+<div class="section-heading">
 
-<p class="section-subtitle">
-Professional solutions designed to support business development,
-communication, international trade and cross-border activities.
+<div class="section-label">
+    What We Do
+</div>
+
+<h2>Our Services</h2>
+
+<p>
+    Professional solutions designed to support business development,
+    communication and international cooperation.
 </p>
+
+</div>
+
 
 <div class="services-grid">
 
+
 <div class="service-card">
+
+<div class="service-icon">01</div>
+
 <h3>Business Consulting</h3>
+
 <p>
-Practical consulting and support for companies entering or expanding
-into international markets.
+    Market entry, business setup, compliance and strategic advisory.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
 </div>
 
-<div class="service-card">
-<h3>Business Setup & Compliance</h3>
-<p>
-Guidance and practical support for establishing and operating a business
-in Vietnam.
-</p>
-</div>
 
 <div class="service-card">
-<h3>International Trade</h3>
+
+<div class="service-icon">02</div>
+
+<h3>Translation & Interpretation</h3>
+
 <p>
-Support for sourcing, suppliers, trading activities and international
-business communication.
+    Chinese – English – Vietnamese translation and professional interpretation.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
 </div>
 
-<div class="service-card">
-<h3>Sourcing & Supplier Support</h3>
-<p>
-Assistance with identifying suppliers, products and suitable business
-opportunities.
-</p>
-</div>
 
 <div class="service-card">
+
+<div class="service-icon">03</div>
+
 <h3>Business Matching</h3>
+
 <p>
-Connecting companies and business partners based on commercial needs
-and market opportunities.
+    Connecting international partners, suppliers and business opportunities.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
 </div>
 
+
 <div class="service-card">
+
+<div class="service-icon">04</div>
+
+<h3>Market Research</h3>
+
+<p>
+    Insights and analysis to help businesses evaluate markets and opportunities.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">05</div>
+
+<h3>Business Setup & Compliance</h3>
+
+<p>
+    Practical support for companies establishing and operating in Vietnam.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">06</div>
+
+<h3>International Trade</h3>
+
+<p>
+    Support for cross-border trade, sourcing and international cooperation.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">07</div>
+
+<h3>Sourcing & Supplier Support</h3>
+
+<p>
+    Finding suppliers, products and suitable business partners.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">08</div>
+
 <h3>Investment Support</h3>
+
 <p>
-Practical assistance for international businesses exploring investment
-and expansion opportunities.
+    Assistance for businesses exploring investment opportunities in Vietnam.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
 </div>
 
+
 <div class="service-card">
+
+<div class="service-icon">09</div>
+
 <h3>Market Entry Support</h3>
+
 <p>
-Helping businesses understand markets, identify opportunities and prepare
-for cross-border expansion.
+    Practical guidance for international businesses entering new markets.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
 </div>
 
-<div class="service-card">
-<h3>Translation Services</h3>
-<p>
-Professional translation for business, technical, commercial, legal
-and general documents.
-</p>
-</div>
 
 <div class="service-card">
-<h3>Interpretation</h3>
-<p>
-Chinese, English and Vietnamese interpretation for meetings,
-negotiations and business activities.
-</p>
-</div>
 
-<div class="service-card">
+<div class="service-icon">10</div>
+
 <h3>Business Communication</h3>
+
 <p>
-Cross-cultural communication support for companies and international
-business partners.
+    Professional multilingual communication support for international business.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
 </div>
 
+
 <div class="service-card">
+
+<div class="service-icon">11</div>
+
 <h3>Chinese Language Services</h3>
+
 <p>
-Customized Chinese language training for individuals, professionals
-and organizations.
+    Customized Chinese language support for individuals and businesses.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
 </div>
 
-<div class="service-card">
-<h3>Travel Assistance</h3>
-<p>
-Chinese-speaking travel assistance and practical support for
-international visitors.
-</p>
-</div>
 
 <div class="service-card">
+
+<div class="service-icon">12</div>
+
 <h3>Corporate Support</h3>
+
 <p>
-Flexible professional support for companies requiring multilingual
-and international assistance.
+    Flexible ongoing support for companies working across markets and cultures.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
 </div>
 
-<div class="service-card">
-<h3>Market Research Support</h3>
-<p>
-Practical research assistance to help businesses evaluate markets,
-products and potential opportunities.
-</p>
-</div>
 
 <div class="service-card">
+
+<div class="service-icon">13</div>
+
+<h3>Travel Assistance</h3>
+
+<p>
+    Business travel, local assistance and Chinese-speaking support in Vietnam.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">14</div>
+
 <h3>Cross-Border Solutions</h3>
+
 <p>
-Integrated support for businesses working across countries, languages
-and different business environments.
+    Connecting people, information and opportunities across international markets.
 </p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">15</div>
+
+<h3>Market Development</h3>
+
+<p>
+    Supporting businesses with practical strategies for sustainable growth.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">16</div>
+
+<h3>Ongoing Business Support</h3>
+
+<p>
+    Long-term flexible assistance according to your changing business needs.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+
 </div>
 
 </div>
-</div>
+
 </section>
 
 
-<!-- WHY CHOOSE US -->
-<section class="why-section">
-<div class="container">
+<!-- =========================
+     ABOUT
+========================= -->
 
-<h2 class="section-title">Why Ying Fa Global</h2>
+<section class="section section-light" id="about">
 
-<p class="section-subtitle">
-We focus on practical solutions, clear communication and reliable
-cross-border support.
-</p>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h3>Practical Approach</h3>
-<p>
-We focus on practical solutions that can be applied to real business
-situations.
-</p>
-</div>
-
-<div class="why-card">
-<h3>Cross-Cultural Understanding</h3>
-<p>
-We help bridge language, communication and cultural differences between
-international business partners.
-</p>
-</div>
-
-<div class="why-card">
-<h3>Flexible Support</h3>
-<p>
-Our services can be adapted to the needs, size and objectives of each
-client and project.
-</p>
-</div>
-
-<div class="why-card">
-<h3>Multilingual Capability</h3>
-<p>
-Support across Chinese, English and Vietnamese for communication and
-international business activities.
-</p>
-</div>
-
-<div class="why-card">
-<h3>Business-Focused</h3>
-<p>
-Our goal is to help clients communicate effectively and identify
-meaningful business opportunities.
-</p>
-</div>
-
-<div class="why-card">
-<h3>International Perspective</h3>
-<p>
-We understand the importance of connecting local opportunities with
-international markets.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
 <div class="container about-grid">
 
 <div class="about-text">
 
-<h2>About Ying Fa Global</h2>
+<div class="section-label">
+    Who We Are
+</div>
+
+<h2>
+    About Ying Fa Global
+</h2>
 
 <p>
-Ying Fa Global Consulting connects people, businesses and opportunities
-across languages, cultures and international markets.
+    Ying Fa Global Consulting is a flexible international business support
+    partner for companies, entrepreneurs and organizations working across
+    different markets, languages and cultures.
 </p>
 
 <p>
-We provide practical, reliable and professional services to help clients
-communicate, develop business relationships and explore opportunities
-in Vietnam and beyond.
+    We help clients navigate business opportunities, communication,
+    sourcing, market development and cross-border cooperation with a
+    practical and professional approach.
 </p>
 
-<p>
-Our approach combines business support, language services,
-cross-cultural communication and international market assistance.
-</p>
-
-</div>
-
-<div class="about-box">
-
-<h3>Our Mission</h3>
-
-<p>
-To connect businesses and people across borders through professional
-services, practical solutions and effective communication.
-</p>
-
-<br>
-
-<h3>Our Vision</h3>
-
-<p>
-To become a trusted bridge connecting Vietnam with international
-businesses and opportunities.
-</p>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- BUSINESS SOLUTIONS -->
-<section class="solutions">
-<div class="container">
-
-<h2 class="section-title">Business Solutions</h2>
-
-<p class="section-subtitle">
-Supporting businesses through different stages of international
-development.
-</p>
-
-<div class="solution-grid">
-
-<div class="solution-card">
-<h3>Entering Vietnam</h3>
-<p>
-Practical support for companies exploring the Vietnamese market,
-business opportunities and potential partners.
-</p>
-</div>
-
-<div class="solution-card">
-<h3>Finding Business Partners</h3>
-<p>
-Support with business matching, communication and relationship
-development.
-</p>
-</div>
-
-<div class="solution-card">
-<h3>Sourcing & Trading</h3>
-<p>
-Assistance with sourcing, suppliers, products and international
-commercial communication.
-</p>
-</div>
-
-<div class="solution-card">
-<h3>Cross-Border Communication</h3>
-<p>
-Multilingual support to make communication between international
-business partners clearer and more effective.
-</p>
-</div>
-
-<div class="solution-card">
-<h3>Market Development</h3>
-<p>
-Support for companies evaluating new markets and exploring
-international growth opportunities.
-</p>
-</div>
-
-<div class="solution-card">
-<h3>Ongoing Business Support</h3>
-<p>
-Flexible assistance for companies that need continued multilingual
-and cross-border support.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- COMPANY PROFILE -->
-<section class="profile-section" id="profile">
-<div class="container">
-
-<h2 class="section-title">Company Profile</h2>
-
-<p class="section-subtitle">
-Ying Fa Global Consulting is positioned as a flexible international
-business support partner for companies, entrepreneurs and organizations.
-</p>
-
-<div class="profile-grid">
-
-<div class="profile-item">
-<strong>Business Consulting</strong>
-<span>International business support</span>
-</div>
-
-<div class="profile-item">
-<strong>Languages</strong>
-<span>Chinese · English · Vietnamese</span>
-</div>
-
-<div class="profile-item">
-<strong>Markets</strong>
-<span>Vietnam & International Markets</span>
-</div>
-
-<div class="profile-item">
-<strong>Solutions</strong>
-<span>Flexible & Practical Support</span>
-</div>
-
-</div>
-
-</div>
-</section>
-
-
-<!-- PROCESS -->
-<section class="process-section">
-<div class="container">
-
-<h2 class="section-title">How We Work</h2>
-
-<p class="section-subtitle">
-A simple and practical approach designed around each client's needs.
-</p>
-
-<div class="process-grid">
-
-<div class="process-card">
-<div class="process-number">1</div>
-<h3>Understand</h3>
-<p>
-We understand your business objectives, requirements and challenges.
-</p>
-</div>
-
-<div class="process-card">
-<div class="process-number">2</div>
-<h3>Plan</h3>
-<p>
-We identify suitable approaches and practical solutions for your needs.
-</p>
-</div>
-
-<div class="process-card">
-<div class="process-number">3</div>
-<h3>Support</h3>
-<p>
-We provide professional support throughout the agreed project.
-</p>
-</div>
-
-<div class="process-card">
-<div class="process-number">4</div>
-<h3>Connect</h3>
-<p>
-We help connect people, information and opportunities across borders.
-</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- NEWS -->
-<section class="news-section" id="news">
-<div class="container">
-
-<h2 class="section-title">News & Insights</h2>
-
-<p class="section-subtitle">
-Practical information and insights about international business,
-Vietnam, trade and cross-border opportunities.
-</p>
-
-<div class="news-grid">
-
-<div class="news-card">
-<div class="news-top"></div>
-<div class="news-content">
-<h3>Doing Business in Vietnam</h3>
-<p>
-Insights for international businesses exploring opportunities in
-Vietnam.
-</p>
-</div>
-</div>
-
-<div class="news-card">
-<div class="news-top"></div>
-<div class="news-content">
-<h3>China–Vietnam Business</h3>
-<p>
-Information about communication, trade and business cooperation
-between China and Vietnam.
-</p>
-</div>
-</div>
-
-<div class="news-card">
-<div class="news-top"></div>
-<div class="news-content">
-<h3>Cross-Border Business</h3>
-<p>
-Practical perspectives on international markets, communication and
-business development.
-</p>
-</div>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-<div class="container contact-box">
-
-<h2 class="section-title">Let's Work Together</h2>
-
-<p class="section-subtitle">
-Have a business project or need professional international support?
-Contact Ying Fa Global to discuss your requirements.
-</p>
-
-<a href="mailto:info@yingfaglobal.com" class="contact-email">
-Email Us: info@yingfaglobal.com
+<a href="#profile" class="btn btn-gold">
+    Learn More About Us →
 </a>
 
 </div>
+
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=85"
+     alt="Modern business office">
+
+<div class="about-badge">
+
+<strong>Global Opportunities</strong>
+
+<span>Local Success</span>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="section-label">
+    Our Advantages
+</div>
+
+<h2>Why Choose Us</h2>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-item">
+
+<div class="why-number">01</div>
+
+<h3>Practical Solutions</h3>
+
+<p>
+    Action and results-driven advice designed around real business needs.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-number">02</div>
+
+<h3>Multilingual Team</h3>
+
+<p>
+    Bridging cultures and businesses through Chinese, English and Vietnamese.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-number">03</div>
+
+<h3>Local Insight</h3>
+
+<p>
+    In-depth understanding of Vietnam's business environment and market.
+</p>
+
+</div>
+
+
+<div class="why-item">
+
+<div class="why-number">04</div>
+
+<h3>International Network</h3>
+
+<p>
+    Access to global partners, suppliers and business opportunities.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BUSINESS SOLUTIONS
+========================= -->
+
+<section class="section section-light">
+
+<div class="container">
+
+<div class="heading-row section-heading">
+
+<div>
+
+<div class="section-label">
+    Business Solutions
+</div>
+
+<h2>Supporting Your Growth</h2>
+
+<p>
+    Supporting businesses through different stages of international development.
+</p>
+
+</div>
+
+<a href="#services" class="text-link">
+    View All Services →
+</a>
+
+</div>
+
+
+<div class="solution-grid">
+
+
+<div class="solution-card">
+
+<div class="solution-image">
+
+<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+     alt="Doing business in Vietnam">
+
+</div>
+
+<div class="solution-content">
+
+<h3>Doing Business in Vietnam</h3>
+
+<p>
+    Insights for international businesses exploring opportunities in Vietnam.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="solution-card">
+
+<div class="solution-image">
+
+<img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+     alt="China Vietnam business cooperation">
+
+</div>
+
+<div class="solution-content">
+
+<h3>China–Vietnam Business</h3>
+
+<p>
+    Communication, trade and business cooperation between China and Vietnam.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="solution-card">
+
+<div class="solution-image">
+
+<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=85"
+     alt="Cross border business">
+
+</div>
+
+<div class="solution-content">
+
+<h3>Cross-Border Business</h3>
+
+<p>
+    Practical perspectives on international markets and business development.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="solution-card">
+
+<div class="solution-image">
+
+<img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85"
+     alt="Investment support">
+
+</div>
+
+<div class="solution-content">
+
+<h3>Investment Support</h3>
+
+<p>
+    Assistance for companies seeking investment opportunities in Vietnam and the region.
+</p>
+
+<a href="#contact" class="learn">
+    Learn More →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section class="section process" id="profile">
+
+<div class="container">
+
+<div class="section-heading">
+
+<div class="section-label">
+    How We Work
+</div>
+
+<h2>Our Process</h2>
+
+<p>
+    A simple and transparent process to turn your goals into results.
+</p>
+
+</div>
+
+
+<div class="process-grid">
+
+
+<div class="process-item">
+
+<div class="process-number">01</div>
+
+<h3>Understand</h3>
+
+<p>
+    We understand your business objectives, requirements and challenges.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">02</div>
+
+<h3>Plan</h3>
+
+<p>
+    We identify suitable approaches and practical solutions for your needs.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">03</div>
+
+<h3>Support</h3>
+
+<p>
+    We provide professional support throughout the agreed project.
+</p>
+
+</div>
+
+
+<div class="process-item">
+
+<div class="process-number">04</div>
+
+<h3>Connect</h3>
+
+<p>
+    We help connect people, information and opportunities across borders.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     NEWS
+========================= -->
+
+<section class="section" id="news">
+
+<div class="container">
+
+<div class="heading-row section-heading">
+
+<div>
+
+<div class="section-label">
+    News & Insights
+</div>
+
+<h2>Latest Updates</h2>
+
+<p>
+    Insights, articles and news about international business,
+    Vietnam market and cross-border opportunities.
+</p>
+
+</div>
+
+<a href="#news" class="text-link">
+    View All News →
+</a>
+
+</div>
+
+
+<div class="news-grid">
+
+
+<div class="news-card">
+
+<div class="news-image">
+
+<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=85"
+     alt="Vietnam business market">
+
+</div>
+
+<div class="news-content">
+
+<div class="news-date">
+    BUSINESS IN VIETNAM
+</div>
+
+<h3>
+    Opportunities for Foreign Businesses in Vietnam's Growing Market
+</h3>
+
+<p>
+    Key considerations for international companies exploring Vietnam.
+</p>
+
+<a href="#contact" class="learn">
+    Read More →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<div class="news-image">
+
+<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=85"
+     alt="China Vietnam business">
+
+</div>
+
+<div class="news-content">
+
+<div class="news-date">
+    CHINA–VIETNAM
+</div>
+
+<h3>
+    Strengthening China–Vietnam Business Cooperation
+</h3>
+
+<p>
+    Understanding communication, trade and cooperation opportunities.
+</p>
+
+<a href="#contact" class="learn">
+    Read More →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="news-card">
+
+<div class="news-image">
+
+<img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1000&q=85"
+     alt="Cross border investment">
+
+</div>
+
+<div class="news-content">
+
+<div class="news-date">
+    INTERNATIONAL BUSINESS
+</div>
+
+<h3>
+    Key Trends in Cross-Border Investment in Southeast Asia
+</h3>
+
+<p>
+    Perspectives for businesses considering international expansion.
+</p>
+
+<a href="#contact" class="learn">
+    Read More →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta" id="contact">
+
+<div class="container cta-content">
+
+<div>
+
+<h2>Let's Work Together</h2>
+
+<p>
+    Connect with our team to discuss how Ying Fa Global can support your business goals.
+</p>
+
+</div>
+
+<a href="mailto:info@yingfaglobal.com" class="btn btn-gold">
+    Contact Us →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<p>
-© 2026 Ying Fa Global Consulting. All rights reserved.
-</p>
+<div class="container">
 
-<p>
-Business Consulting · Translation · Interpretation · International Trade
-</p>
+<div class="footer-grid">
+
+
+<div>
+
+<div class="footer-logo">
+    Ying Fa <span>Global</span>
+</div>
+
+<div class="footer-tagline">
+    Bridging Opportunities Across Borders
+</div>
+
+</div>
+
+
+<div>
+
+<h4>Navigation</h4>
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+
+<a href="#services">Services</a>
+
+<a href="#about">About</a>
+
+<a href="#profile">Profile</a>
+
+<a href="#news">News</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<h4>Contact</h4>
+
+<div class="footer-links">
+
+<a href="mailto:info@yingfaglobal.com">
+    info@yingfaglobal.com
+</a>
+
+<a href="#contact">
+    Business Consulting
+</a>
+
+<a href="#contact">
+    Translation & Interpretation
+</a>
+
+<a href="#contact">
+    International Trade
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="footer-bottom">
+
+<div>
+    © 2026 Ying Fa Global Consulting. All rights reserved.
+</div>
+
+<div>
+    Business Consulting · Translation · Interpretation · International Trade
+</div>
+
+</div>
+
+</div>
 
 </footer>
 
-
-<!-- FLOATING CONTACT -->
-<div class="floating-contact">
-
-<a href="#" title="WhatsApp">WhatsApp</a>
-<a href="#" title="WeChat">WeChat</a>
-<a href="#" title="Messenger">Messenger</a>
-<a href="#" title="Zalo">Zalo</a>
-
-</div>
 
 </body>
 </html>
