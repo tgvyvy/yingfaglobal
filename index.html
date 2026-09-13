@@ -269,38 +269,68 @@ header{
 ========================= */
 
 .floating-contact{
-    position:fixed;
-    right:18px;
-    top:50%;
-    transform:translateY(-50%);
-    z-index:999;
-    display:flex;
-    flex-direction:column;
-    gap:9px;
+  position:fixed;
+  right:18px;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  z-index:9999;
 }
 
-.float-btn{
-    width:43px;
-    height:43px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    font-size:12px;
-    font-weight:800;
-    box-shadow:0 4px 15px rgba(0,0,0,.18);
-    transition:.25s;
+.floating-contact .float-btn{
+  width:108px;
+  height:40px;
+  padding:0 12px;
+  box-sizing:border-box;
+  border-radius:999px;
+  background:#fff;
+  color:#111827;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:8px;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:700;
+  box-shadow:0 5px 16px rgba(15,23,42,.16);
+  border:1px solid rgba(15,23,42,.06);
+  transition:transform .2s ease,box-shadow .2s ease;
 }
 
-.float-btn:hover{
-    transform:scale(1.08);
+.floating-contact .float-btn:hover{
+  transform:translateX(-3px);
+  box-shadow:0 8px 20px rgba(15,23,42,.20);
 }
 
-.whatsapp{background:#25d366;}
-.wechat{background:#07c160;}
-.messenger{background:#0084ff;}
-.zalo{background:#0068ff;}
+.floating-contact .float-btn img{
+  width:21px;
+  height:21px;
+  flex:0 0 21px;
+  display:block;
+}
+
+@media(max-width:700px){
+  .floating-contact{
+    right:8px;
+    gap:6px;
+  }
+
+  .floating-contact .float-btn{
+    width:92px;
+    height:36px;
+    padding:0 9px;
+    font-size:10px;
+    gap:6px;
+  }
+
+  .floating-contact .float-btn img{
+    width:18px;
+    height:18px;
+    flex-basis:18px;
+  }
+}
 
 /* =========================
    FEATURE STRIP
@@ -976,13 +1006,30 @@ footer{
 
 <div class="floating-contact">
 
-<a href="#contact" class="float-btn whatsapp" title="WhatsApp">WA</a>
+  <a href="#contact" class="float-btn whatsapp" title="WhatsApp">
+    <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="">
+    <span>WhatsApp</span>
+  </a>
 
-<a href="#contact" class="float-btn wechat" title="WeChat">WC</a>
+  <a href="#contact" class="float-btn wechat" title="WeChat">
+    <img src="https://cdn.simpleicons.org/wechat/07C160" alt="">
+    <span>WeChat</span>
+  </a>
 
-<a href="#contact" class="float-btn messenger" title="Messenger">M</a>
+  <a href="#contact" class="float-btn line" title="LINE">
+    <img src="https://cdn.simpleicons.org/line/00C300" alt="">
+    <span>LINE</span>
+  </a>
 
-<a href="#contact" class="float-btn zalo" title="Zalo">Z</a>
+  <a href="#contact" class="float-btn messenger" title="Messenger">
+    <img src="https://cdn.simpleicons.org/messenger/0084FF" alt="">
+    <span>Messenger</span>
+  </a>
+
+  <a href="#contact" class="float-btn zalo" title="Zalo">
+    <img src="https://cdn.simpleicons.org/zalo/0068FF" alt="">
+    <span>Zalo</span>
+  </a>
 
 </div>
 
