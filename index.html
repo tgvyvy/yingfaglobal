@@ -435,6 +435,70 @@ header{
     transition:.25s ease;
     min-height:225px;
 }
+.services-grid{
+    gap:14px;
+}
+
+.service-card{
+    background:#fff;
+    border:1px solid #edf0f5;
+    border-radius:7px;
+    padding:16px 18px 15px;
+    min-height:165px;
+    box-shadow:0 5px 18px rgba(15,23,42,.06);
+}
+
+.service-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(15,23,42,.10);
+}
+
+.service-icon{
+    width:48px;
+    height:48px;
+    margin:0 0 12px;
+    padding:0;
+    border-radius:50%;
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0;
+}
+
+.service-icon svg{
+    width:48px;
+    height:48px;
+    display:block;
+}
+
+.service-card h3{
+    color:var(--navy);
+    font-size:15px;
+    line-height:1.15;
+    margin:0 0 9px;
+    font-weight:700;
+}
+
+.service-card p{
+    color:#526173;
+    font-size:12px;
+    line-height:1.45;
+    margin:0 0 10px;
+}
+
+.service-card .learn{
+    color:#c89424;
+    font-size:11px;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.service-card .learn:hover{
+    color:#a97916;
+}
+
+    
 
 .service-card:hover{
     transform:translateY(-5px);
@@ -1135,288 +1199,129 @@ footer{
 
 <section class="section" id="services">
 
-<div class="container">
+  <div class="container">
 
-<div class="section-heading">
+    <div class="section-heading center">
 
-<div class="section-label">
-    What We Do
-</div>
+      <div class="section-label">
+        WHAT WE DO
+      </div>
 
-<h2>Our Services</h2>
+      <h2>Our Services</h2>
 
-<p>
-    Professional solutions designed to support business development,
-    communication and international cooperation.
-</p>
+      <p>
+        Professional solutions designed to support business development,
+        communication and international cooperation.
+      </p>
 
-</div>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- 01 -->
+      <div class="service-card">
+
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="28" fill="#142D5A"/>
+            <circle cx="32" cy="24" r="7" fill="#fff"/>
+            <circle cx="20" cy="28" r="5" fill="#fff"/>
+            <circle cx="44" cy="28" r="5" fill="#fff"/>
+            <path d="M20 47c0-8 5-13 12-13s12 5 12 13H20z" fill="#fff"/>
+            <path d="M8 46c0-6 4-10 9-10 3 0 6 2 7 4-3 2-5 5-5 10H8z" fill="#fff"/>
+            <path d="M56 46c0-6-4-10-9-10-3 0-6 2-7 4 3 2 5 5 5 10h11z" fill="#fff"/>
+          </svg>
+        </div>
+
+        <h3>Business Consulting</h3>
+
+        <p>
+          Market entry, business setup, compliance and strategic advisory.
+        </p>
+
+        <a href="#contact" class="learn">
+          Learn More →
+        </a>
+
+      </div>
 
 
-<div class="services-grid">
+      <!-- 02 -->
+      <div class="service-card">
+
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="28" fill="#C89424"/>
+            <circle cx="32" cy="32" r="15" fill="none" stroke="#fff" stroke-width="2"/>
+            <path d="M17 32h30M32 17c5 5 7 10 7 15s-2 10-7 15M32 17c-5 5-7 10-7 15s2 10 7 15" fill="none" stroke="#fff" stroke-width="2"/>
+            <path d="M20 24h24M20 40h24" fill="none" stroke="#fff" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <h3>Translation &amp; Interpretation</h3>
+
+        <p>
+          Chinese – English – Vietnamese translation and on-site interpretation.
+        </p>
+
+        <a href="#contact" class="learn">
+          Learn More →
+        </a>
+
+      </div>
 
 
-<div class="service-card">
-  <div class="service-icon">
-    <svg viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="30" fill="#0b2a5b"/>
-      <circle cx="32" cy="23" r="7" fill="white"/>
-      <circle cx="20" cy="27" r="5" fill="white"/>
-      <circle cx="44" cy="27" r="5" fill="white"/>
-      <path d="M20 43c0-7 5-12 12-12s12 5 12 12v3H20z" fill="white"/>
-      <path d="M10 44c0-5 4-9 9-9 3 0 6 2 7 4-4 2-6 5-6 9h-10z" fill="white"/>
-      <path d="M54 44c0-5-4-9-9-9-3 0-6 2-7 4 4 2 6 5 6 9h10z" fill="white"/>
-    </svg>
+      <!-- 03 -->
+      <div class="service-card">
+
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="28" fill="#142D5A"/>
+            <path d="M18 25l7-5 9 9-4 4-7-7-3 2 8 8 5-5 4 4-5 5c-3 3-7 3-10 0l-8-8c-3-3-3-5-1-7z" fill="#fff"/>
+            <path d="M46 39l-7 5-9-9 4-4 7 7 3-2-8-8-5 5-4-4 5-5c3-3 7-3 10 0l8 8c3 3 3 5 1 7z" fill="#fff"/>
+          </svg>
+        </div>
+
+        <h3>Business Matching</h3>
+
+        <p>
+          Connecting international partners, suppliers and business opportunities.
+        </p>
+
+        <a href="#contact" class="learn">
+          Learn More →
+        </a>
+
+      </div>
+
+
+      <!-- 04 -->
+      <div class="service-card">
+
+        <div class="service-icon">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="28" fill="#C89424"/>
+            <path d="M18 43V34M27 43V28M36 43V23M45 43V17" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+            <path d="M17 27l10-7 9 4 10-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M42 14h5v5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <h3>Market Research</h3>
+
+        <p>
+          Insights and analysis to help businesses evaluate markets and make informed decisions.
+        </p>
+
+        <a href="#contact" class="learn">
+          Learn More →
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
-  <h3>Business Consulting</h3>
-  <p>Market entry, business setup, compliance and strategic advisory.</p>
-  <a href="#contact" class="learn">Learn More →</a>
-</div>
-
-<div class="service-card">
-  <div class="service-icon">
-    <svg viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="30" fill="#c89424"/>
-      <circle cx="32" cy="32" r="15" fill="none" stroke="white" stroke-width="3"/>
-      <path d="M17 32h30M32 17c5 5 7 10 7 15s-2 10-7 15M32 17c-5 5-7 10-7 15s2 10 7 15M19 24h26M19 40h26" fill="none" stroke="white" stroke-width="2"/>
-    </svg>
-  </div>
-  <h3>Translation &amp; Interpretation</h3>
-  <p>Chinese – English – Vietnamese translation and professional interpretation.</p>
-  <a href="#contact" class="learn">Learn More →</a>
-</div>
-
-<div class="service-card">
-  <div class="service-icon">
-    <svg viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="30" fill="#0b2a5b"/>
-      <path d="M15 28l10-7c2-1 4-1 6 1l4 4-4 4-5-3-5 4 8 8c2 2 5 2 7 0l8-7" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M49 36l-8 7c-2 2-5 2-7 0l-4-4 4-4 5 3 5-4-8-8c-2-2-5-2-7 0l-8 7" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-  <h3>Business Matching</h3>
-  <p>Connecting international partners, suppliers and business opportunities.</p>
-  <a href="#contact" class="learn">Learn More →</a>
-</div>
-
-<div class="service-card">
-  <div class="service-icon">
-    <svg viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="30" fill="#c89424"/>
-      <path d="M16 43V34h7v9M28 43V27h7v16M40 43V20h7v23" fill="none" stroke="white" stroke-width="4" stroke-linejoin="round"/>
-      <path d="M15 27l11-9 9 5 14-12" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M43 11h7v7" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-  </div>
-  <h3>Market Research</h3>
-  <p>Insights and analysis to help businesses evaluate markets and opportunities.</p>
-  <a href="#contact" class="learn">Learn More →</a>
-</div>
-
-<div class="service-icon">05</div>
-
-<h3>Business Setup & Compliance</h3>
-
-<p>
-    Practical support for companies establishing and operating in Vietnam.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-<div class="service-card">
-
-<div class="service-icon">06</div>
-
-<h3>International Trade</h3>
-
-<p>
-    Support for cross-border trade, sourcing and international cooperation.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">07</div>
-
-<h3>Sourcing & Supplier Support</h3>
-
-<p>
-    Finding suppliers, products and suitable business partners.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">08</div>
-
-<h3>Investment Support</h3>
-
-<p>
-    Assistance for businesses exploring investment opportunities in Vietnam.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">09</div>
-
-<h3>Market Entry Support</h3>
-
-<p>
-    Practical guidance for international businesses entering new markets.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">10</div>
-
-<h3>Business Communication</h3>
-
-<p>
-    Professional multilingual communication support for international business.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">11</div>
-
-<h3>Chinese Language Services</h3>
-
-<p>
-    Customized Chinese language support for individuals and businesses.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">12</div>
-
-<h3>Corporate Support</h3>
-
-<p>
-    Flexible ongoing support for companies working across markets and cultures.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">13</div>
-
-<h3>Travel Assistance</h3>
-
-<p>
-    Business travel, local assistance and Chinese-speaking support in Vietnam.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">14</div>
-
-<h3>Cross-Border Solutions</h3>
-
-<p>
-    Connecting people, information and opportunities across international markets.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">15</div>
-
-<h3>Market Development</h3>
-
-<p>
-    Supporting businesses with practical strategies for sustainable growth.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-<div class="service-card">
-
-<div class="service-icon">16</div>
-
-<h3>Ongoing Business Support</h3>
-
-<p>
-    Long-term flexible assistance according to your changing business needs.
-</p>
-
-<a href="#contact" class="learn">
-    Learn More →
-</a>
-
-</div>
-
-
-</div>
-
-</div>
 
 </section>
 
