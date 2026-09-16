@@ -1348,17 +1348,276 @@ footer{
      SERVICES
 ========================= -->
 
+<!-- =========================
+     SERVICES - 16 CARD CAROUSEL
+     ========================= -->
+
 <section class="section" id="services">
+
+  <style>
+    /* SERVICES CAROUSEL */
+    #services.yf-services{
+      background:#f7fafc;
+      overflow:hidden;
+    }
+
+    #services .yf-services-heading{
+      text-align:center;
+      margin-bottom:34px;
+    }
+
+    #services .yf-services-label{
+      color:#b08a3e;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:2px;
+      margin-bottom:8px;
+      text-transform:uppercase;
+    }
+
+    #services .yf-services-heading h2{
+      color:#0b2a5b;
+      font-size:38px;
+      line-height:1.2;
+      margin:0 0 12px;
+    }
+
+    #services .yf-services-heading p{
+      max-width:720px;
+      margin:0 auto;
+      color:#667085;
+      font-size:15px;
+      line-height:1.6;
+    }
+
+    .yf-services-carousel{
+      position:relative;
+      width:100%;
+    }
+
+    .yf-services-window{
+      overflow:hidden;
+      width:100%;
+      padding:5px 3px 15px;
+      box-sizing:border-box;
+    }
+
+    .yf-services-track{
+      display:flex;
+      gap:16px;
+      transition:transform .55s ease;
+      will-change:transform;
+    }
+
+    .yf-service-card{
+      flex:0 0 calc((100% - 48px) / 4);
+      min-width:0;
+      background:#fff;
+      border:1px solid #e7eaf0;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 5px 16px rgba(15,23,42,.07);
+      transition:.25s ease;
+      box-sizing:border-box;
+    }
+
+    .yf-service-card:hover{
+      transform:translateY(-5px);
+      border-color:#d5b16c;
+      box-shadow:0 10px 25px rgba(15,23,42,.11);
+    }
+
+    .yf-service-image{
+      width:100%;
+      height:175px;
+      overflow:hidden;
+      background:#e9eef5;
+    }
+
+    .yf-service-image img{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:cover;
+      transition:transform .45s ease;
+    }
+
+    .yf-service-card:hover .yf-service-image img{
+      transform:scale(1.05);
+    }
+
+    .yf-service-content{
+      padding:20px 19px 21px;
+    }
+
+    .yf-service-number{
+      color:#b08a3e;
+      font-size:11px;
+      font-weight:800;
+      letter-spacing:1.5px;
+      margin-bottom:8px;
+    }
+
+    .yf-service-card h3{
+      color:#0b2a5b;
+      font-size:17px;
+      line-height:1.3;
+      margin:0 0 9px;
+      font-weight:700;
+    }
+
+    .yf-service-card p{
+      color:#667085;
+      font-size:13px;
+      line-height:1.55;
+      margin:0 0 15px;
+    }
+
+    .yf-service-card .yf-learn{
+      color:#b08a3e;
+      font-size:12px;
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .yf-service-card .yf-learn:hover{
+      color:#8f6d2d;
+    }
+
+    /* ARROWS */
+    .yf-carousel-arrow{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      border:1px solid #dfe4ea;
+      background:#fff;
+      color:#0b2a5b;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      font-size:22px;
+      line-height:1;
+      z-index:5;
+      box-shadow:0 5px 15px rgba(15,23,42,.12);
+      transition:.2s ease;
+    }
+
+    .yf-carousel-arrow:hover{
+      background:#0b2a5b;
+      color:#fff;
+      border-color:#0b2a5b;
+    }
+
+    .yf-carousel-prev{
+      left:-20px;
+    }
+
+    .yf-carousel-next{
+      right:-20px;
+    }
+
+    /* DOTS */
+    .yf-carousel-dots{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:7px;
+      margin-top:8px;
+    }
+
+    .yf-carousel-dot{
+      width:7px;
+      height:7px;
+      padding:0;
+      border:0;
+      border-radius:50%;
+      background:#d6dce5;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .yf-carousel-dot.active{
+      width:22px;
+      border-radius:10px;
+      background:#b08a3e;
+    }
+
+    /* TABLET */
+    @media(max-width:1000px){
+      .yf-service-card{
+        flex:0 0 calc((100% - 16px) / 2);
+      }
+
+      .yf-carousel-prev{
+        left:5px;
+      }
+
+      .yf-carousel-next{
+        right:5px;
+      }
+    }
+
+    /* MOBILE */
+    @media(max-width:600px){
+
+      #services .yf-services-heading h2{
+        font-size:30px;
+      }
+
+      #services .yf-services-heading p{
+        font-size:14px;
+        padding:0 8px;
+      }
+
+      .yf-services-window{
+        padding-left:2px;
+        padding-right:2px;
+      }
+
+      .yf-service-card{
+        flex:0 0 100%;
+      }
+
+      .yf-service-image{
+        height:190px;
+      }
+
+      .yf-service-content{
+        padding:20px;
+      }
+
+      .yf-carousel-arrow{
+        width:36px;
+        height:36px;
+        font-size:19px;
+      }
+
+      .yf-carousel-prev{
+        left:7px;
+      }
+
+      .yf-carousel-next{
+        right:7px;
+      }
+    }
+  </style>
+
 
   <div class="container">
 
-    <div class="section-heading center">
+    <div class="yf-services-heading">
 
-      <div class="section-label">
+      <div class="yf-services-label">
         WHAT WE DO
       </div>
 
-      <h2>Our Services</h2>
+      <h2>
+        Our Services
+      </h2>
 
       <p>
         Professional solutions designed to support business development,
@@ -1367,112 +1626,822 @@ footer{
 
     </div>
 
-    <div class="services-grid">
 
-      <!-- 01 -->
-      <div class="service-card">
+    <div class="yf-services-carousel">
 
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="32" cy="32" r="28" fill="#142D5A"/>
-            <circle cx="32" cy="24" r="7" fill="#fff"/>
-            <circle cx="20" cy="28" r="5" fill="#fff"/>
-            <circle cx="44" cy="28" r="5" fill="#fff"/>
-            <path d="M20 47c0-8 5-13 12-13s12 5 12 13H20z" fill="#fff"/>
-            <path d="M8 46c0-6 4-10 9-10 3 0 6 2 7 4-3 2-5 5-5 10H8z" fill="#fff"/>
-            <path d="M56 46c0-6-4-10-9-10-3 0-6 2-7 4 3 2 5 5 5 10h11z" fill="#fff"/>
-          </svg>
+      <button
+        class="yf-carousel-arrow yf-carousel-prev"
+        type="button"
+        aria-label="Previous services">
+        &#10094;
+      </button>
+
+
+      <div class="yf-services-window">
+
+        <div class="yf-services-track">
+
+
+          <!-- =========================
+               SERVICE 01
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                alt="Business Consulting">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 01
+              </div>
+
+              <h3>
+                Business Consulting
+              </h3>
+
+              <p>
+                Market entry, business setup, compliance and strategic advisory.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 02
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=900&q=80"
+                alt="Translation and Interpretation">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 02
+              </div>
+
+              <h3>
+                Translation &amp; Interpretation
+              </h3>
+
+              <p>
+                Professional Chinese, English and Vietnamese translation and interpretation.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 03
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80"
+                alt="Business Matching">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 03
+              </div>
+
+              <h3>
+                Business Matching
+              </h3>
+
+              <p>
+                Connecting companies with suitable partners, suppliers and business opportunities.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 04
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                alt="Market Research">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 04
+              </div>
+
+              <h3>
+                Market Research
+              </h3>
+
+              <p>
+                Insights and analysis to help businesses evaluate markets and make informed decisions.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 05
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80"
+                alt="Representative Office Setup">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 05
+              </div>
+
+              <h3>
+                Representative Office Setup
+              </h3>
+
+              <p>
+                Support for foreign businesses establishing a representative office in Vietnam.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 06
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80"
+                alt="Company Setup and FDI Services">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 06
+              </div>
+
+              <h3>
+                Company Setup &amp; FDI Services
+              </h3>
+
+              <p>
+                Practical support for company establishment and foreign investment projects.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 07
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+                alt="Post Licensing and Compliance">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 07
+              </div>
+
+              <h3>
+                Post-Licensing &amp; Compliance
+              </h3>
+
+              <p>
+                Ongoing support for licensing, compliance and business administration.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 08
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
+                alt="Accounting and Tax Support">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 08
+              </div>
+
+              <h3>
+                Accounting &amp; Tax Support
+              </h3>
+
+              <p>
+                Business accounting, tax coordination, payroll and administrative support.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 09
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80"
+                alt="M&A Advisory">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 09
+              </div>
+
+              <h3>
+                M&amp;A Advisory
+              </h3>
+
+              <p>
+                Advisory support for business acquisitions, sales and investment transactions.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 10
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80"
+                alt="Investment Consulting">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 10
+              </div>
+
+              <h3>
+                Investment Consulting
+              </h3>
+
+              <p>
+                Practical guidance for investors exploring opportunities in Vietnam and Asia.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 11
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80"
+                alt="Sourcing and Procurement">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 11
+              </div>
+
+              <h3>
+                Sourcing &amp; Procurement
+              </h3>
+
+              <p>
+                Supplier sourcing, product research and procurement support in Vietnam and China.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 12
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
+                alt="Import and Export Support">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 12
+              </div>
+
+              <h3>
+                Import &amp; Export Support
+              </h3>
+
+              <p>
+                Support for cross-border trade, sourcing, documentation and international transactions.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 13
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80"
+                alt="Trade and Business Negotiation">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 13
+              </div>
+
+              <h3>
+                Trade &amp; Business Negotiation
+              </h3>
+
+              <p>
+                Support for business communication, commercial negotiation and deal coordination.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 14
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+                alt="China Vietnam Business Support">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 14
+              </div>
+
+              <h3>
+                China–Vietnam Business Support
+              </h3>
+
+              <p>
+                Cross-border support for companies working between China and Vietnam.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 15
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+                alt="Market Entry Consulting">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 15
+              </div>
+
+              <h3>
+                Market Entry Consulting
+              </h3>
+
+              <p>
+                Helping international businesses understand and enter the Vietnamese market.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- =========================
+               SERVICE 16
+               ========================= -->
+          <div class="yf-service-card">
+
+            <div class="yf-service-image">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-129418cb2d35?auto=format&fit=crop&w=900&q=80"
+                alt="Business Strategy and Advisory">
+            </div>
+
+            <div class="yf-service-content">
+
+              <div class="yf-service-number">
+                SERVICE 16
+              </div>
+
+              <h3>
+                Business Strategy &amp; Advisory
+              </h3>
+
+              <p>
+                Strategic guidance to help businesses plan, develop and expand sustainably.
+              </p>
+
+              <a href="#contact" class="yf-learn">
+                Learn More →
+              </a>
+
+            </div>
+
+          </div>
+
+
         </div>
-
-        <h3>Business Consulting</h3>
-
-        <p>
-          Market entry, business setup, compliance and strategic advisory.
-        </p>
-
-        <a href="#contact" class="learn">
-          Learn More →
-        </a>
-
       </div>
 
 
-      <!-- 02 -->
-      <div class="service-card">
+      <button
+        class="yf-carousel-arrow yf-carousel-next"
+        type="button"
+        aria-label="Next services">
+        &#10095;
+      </button>
 
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="32" cy="32" r="28" fill="#C89424"/>
-            <circle cx="32" cy="32" r="15" fill="none" stroke="#fff" stroke-width="2"/>
-            <path d="M17 32h30M32 17c5 5 7 10 7 15s-2 10-7 15M32 17c-5 5-7 10-7 15s2 10 7 15" fill="none" stroke="#fff" stroke-width="2"/>
-            <path d="M20 24h24M20 40h24" fill="none" stroke="#fff" stroke-width="2"/>
-          </svg>
-        </div>
-
-        <h3>Translation &amp; Interpretation</h3>
-
-        <p>
-          Chinese – English – Vietnamese translation and on-site interpretation.
-        </p>
-
-        <a href="#contact" class="learn">
-          Learn More →
-        </a>
-
-      </div>
+    </div>
 
 
-      <!-- 03 -->
-      <div class="service-card">
+    <div class="yf-carousel-dots">
 
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="32" cy="32" r="28" fill="#142D5A"/>
-            <path d="M18 25l7-5 9 9-4 4-7-7-3 2 8 8 5-5 4 4-5 5c-3 3-7 3-10 0l-8-8c-3-3-3-5-1-7z" fill="#fff"/>
-            <path d="M46 39l-7 5-9-9 4-4 7 7 3-2-8-8-5 5-4-4 5-5c3-3 7-3 10 0l8 8c3 3 3 5 1 7z" fill="#fff"/>
-          </svg>
-        </div>
+      <button class="yf-carousel-dot active" type="button" aria-label="Services 1 to 4"></button>
 
-        <h3>Business Matching</h3>
+      <button class="yf-carousel-dot" type="button" aria-label="Services 5 to 8"></button>
 
-        <p>
-          Connecting international partners, suppliers and business opportunities.
-        </p>
+      <button class="yf-carousel-dot" type="button" aria-label="Services 9 to 12"></button>
 
-        <a href="#contact" class="learn">
-          Learn More →
-        </a>
-
-      </div>
-
-
-      <!-- 04 -->
-      <div class="service-card">
-
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64" aria-hidden="true">
-            <circle cx="32" cy="32" r="28" fill="#C89424"/>
-            <path d="M18 43V34M27 43V28M36 43V23M45 43V17" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-            <path d="M17 27l10-7 9 4 10-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M42 14h5v5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </div>
-
-        <h3>Market Research</h3>
-
-        <p>
-          Insights and analysis to help businesses evaluate markets and make informed decisions.
-        </p>
-
-        <a href="#contact" class="learn">
-          Learn More →
-        </a>
-
-      </div>
+      <button class="yf-carousel-dot" type="button" aria-label="Services 13 to 16"></button>
 
     </div>
 
   </div>
+
+
+  <script>
+    (function(){
+
+      const carousel = document.querySelector('#services .yf-services-carousel');
+
+      if(!carousel) return;
+
+      const track = carousel.querySelector('.yf-services-track');
+      const cards = carousel.querySelectorAll('.yf-service-card');
+      const prev = carousel.querySelector('.yf-carousel-prev');
+      const next = carousel.querySelector('.yf-carousel-next');
+      const dots = carousel.querySelectorAll('.yf-carousel-dot');
+
+      let current = 0;
+      let timer;
+
+      function isMobile(){
+        return window.innerWidth <= 600;
+      }
+
+      function getStep(){
+        if(isMobile()){
+          return 1;
+        }
+
+        if(window.innerWidth <= 1000){
+          return 2;
+        }
+
+        return 4;
+      }
+
+      function getMax(){
+        const step = getStep();
+        return Math.max(0, Math.ceil(cards.length / step) - 1);
+      }
+
+      function update(){
+
+        const step = getStep();
+
+        if(current > getMax()){
+          current = 0;
+        }
+
+        let moveIndex = current * step;
+
+        if(isMobile()){
+          track.style.transform =
+            'translateX(calc(-' + moveIndex + ' * (100% + 16px)))';
+        }else if(window.innerWidth <= 1000){
+          track.style.transform =
+            'translateX(calc(-' + moveIndex + ' * (50% + 8px)))';
+        }else{
+          track.style.transform =
+            'translateX(calc(-' + moveIndex + ' * (25% + 4px)))';
+        }
+
+        dots.forEach(function(dot,index){
+
+          if(isMobile()){
+
+            /*
+             * On mobile there are 16 positions.
+             * Keep the four dots as simple progress indicators.
+             */
+            const mobileGroup = Math.floor(current / 4);
+
+            dot.classList.toggle(
+              'active',
+              index === mobileGroup
+            );
+
+          }else{
+
+            dot.classList.toggle(
+              'active',
+              index === current
+            );
+
+          }
+
+        });
+
+      }
+
+
+      function goNext(){
+
+        current++;
+
+        if(current > getMax()){
+          current = 0;
+        }
+
+        update();
+
+      }
+
+
+      function goPrev(){
+
+        current--;
+
+        if(current < 0){
+          current = getMax();
+        }
+
+        update();
+
+      }
+
+
+      function startAuto(){
+
+        clearInterval(timer);
+
+        timer = setInterval(function(){
+          goNext();
+        },5000);
+
+      }
+
+
+      function stopAuto(){
+
+        clearInterval(timer);
+
+      }
+
+
+      next.addEventListener('click',function(){
+
+        goNext();
+        startAuto();
+
+      });
+
+
+      prev.addEventListener('click',function(){
+
+        goPrev();
+        startAuto();
+
+      });
+
+
+      dots.forEach(function(dot,index){
+
+        dot.addEventListener('click',function(){
+
+          if(isMobile()){
+            current = index * 4;
+          }else{
+            current = index;
+          }
+
+          update();
+          startAuto();
+
+        });
+
+      });
+
+
+      carousel.addEventListener('mouseenter',function(){
+
+        if(!isMobile()){
+          stopAuto();
+        }
+
+      });
+
+
+      carousel.addEventListener('mouseleave',function(){
+
+        if(!isMobile()){
+          startAuto();
+        }
+
+      });
+
+
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      carousel.addEventListener('touchstart',function(e){
+
+        touchStartX = e.changedTouches[0].screenX;
+
+      },{passive:true});
+
+
+      carousel.addEventListener('touchend',function(e){
+
+        touchEndX = e.changedTouches[0].screenX;
+
+        const distance = touchEndX - touchStartX;
+
+        if(Math.abs(distance) > 50){
+
+          if(distance < 0){
+            goNext();
+          }else{
+            goPrev();
+          }
+
+          startAuto();
+
+        }
+
+      },{passive:true});
+
+
+      window.addEventListener('resize',function(){
+
+        current = 0;
+        update();
+
+      });
+
+
+      update();
+      startAuto();
+
+    })();
+  </script>
 
 </section>
 
