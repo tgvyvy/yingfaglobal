@@ -78,7 +78,7 @@ header{
 }
 
 .navbar{
-    min-height:78px;
+    min-height:58px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -86,29 +86,29 @@ header{
 }
 
 .logo{
-    font-size:24px;
-    font-weight:800;
-    letter-spacing:-.5px;
-    color:var(--navy);
+    display:flex;
+    align-items:center;
     white-space:nowrap;
 }
 
-.logo span{
-    color:var(--gold);
+.logo img{
+    width:180px;
+    height:auto;
+    display:block;
 }
 
 .nav{
     display:flex;
     align-items:center;
-    gap:30px;
+    gap:34px;
 }
 
 .nav a{
     position:relative;
-    font-size:14px;
-    font-weight:600;
+    font-size:13px;
+    font-weight:500;
     color:#344054;
-    padding:29px 0;
+    padding:22px 0;
 }
 
 .nav a:hover,
@@ -135,7 +135,7 @@ header{
 }
 
 .hero-grid{
-    min-height:520px;
+    min-height:720px;
     display:grid;
     grid-template-columns:1fr 1fr;
 }
@@ -144,7 +144,7 @@ header{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:65px 55px 65px 0;
+    padding:65px 55px 65px 65px;
 }
 
 .eyebrow{
@@ -168,7 +168,7 @@ header{
 
 .hero h1{
     color:var(--navy);
-    font-size:42px;
+    font-size:48px;
     line-height:1.08;
     letter-spacing:-1.5px;
     margin-bottom:20px;
@@ -194,6 +194,18 @@ header{
     flex-wrap:nowrap;
     gap:18px;
 }
+.buttons{
+    display:flex;
+    flex-wrap:nowrap;
+    gap:18px;
+}
+.hero-countries{
+    margin-top:16px;
+    color:#64748b;
+    font-size:11px;
+    letter-spacing:.3px;
+    white-space:nowrap;
+}    
 
 .btn{
     display:inline-flex;
@@ -1220,7 +1232,7 @@ footer{
 <div class="container navbar">
 
 <a href="#home" class="logo">
-    Ying Fa <span>Global</span>
+    <img src="ying-fa-global-logo-hd.png" alt="Ying Fa Global Consulting">
 </a>
 
 <nav class="nav">
@@ -1315,6 +1327,9 @@ footer{
     Explore Our Services →
 </a>
 
+</div>
+    <div class="hero-countries">
+    Vietnam · China · Hong Kong · Singapore · Japan · South Korea · USA · Australia · Canada & Beyond
 </div>
 
 </div>
