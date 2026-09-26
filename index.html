@@ -132,18 +132,23 @@ header{
 
 .hero{
     background:#f7f8fa;
+    overflow:hidden;
 }
 
 .hero-grid{
-    min-height:auto;
-    display:flex;
-    flex-direction:column;
+    min-height:610px;
+    display:grid;
+    grid-template-columns:minmax(0, 47%) minmax(0, 53%);
+    align-items:stretch;
 }
+
 .hero-content{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:65px 55px 65px 65px;
+    padding:58px 42px 58px 38px;
+    position:relative;
+    z-index:3;
 }
 
 .eyebrow{
@@ -155,7 +160,7 @@ header{
     font-weight:800;
     letter-spacing:2px;
     text-transform:uppercase;
-    margin-bottom:18px;
+    margin-bottom:17px;
 }
 
 .eyebrow::before{
@@ -167,52 +172,49 @@ header{
 
 .hero h1{
     color:var(--navy);
-    font-size:48px;
+    font-size:46px;
     line-height:1.08;
     letter-spacing:-1.5px;
-    margin-bottom:20px;
+    margin-bottom:18px;
 }
 
 .hero .lead{
     color:#344054;
-    font-size:22px;
+    font-size:20px;
     line-height:1.45;
-    margin-bottom:18px;
-    max-width:590px;
+    margin-bottom:16px;
+    max-width:560px;
 }
 
 .hero p{
     color:var(--text);
-    font-size:16px;
-    max-width:600px;
-    margin-bottom:28px;
+    font-size:15px;
+    line-height:1.65;
+    max-width:555px;
+    margin-bottom:25px;
 }
 
 .buttons{
     display:flex;
     flex-wrap:nowrap;
-    gap:18px;
+    gap:15px;
 }
-.buttons{
-    display:flex;
-    flex-wrap:nowrap;
-    gap:18px;
-}
+
 .hero-countries{
-    margin-top:16px;
+    margin-top:15px;
     color:#64748b;
-    font-size:11px;
-    letter-spacing:.3px;
+    font-size:10.5px;
+    letter-spacing:.25px;
     white-space:nowrap;
-}    
+}
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
     gap:8px;
-    padding:14px 24px;
-    font-size:14px;
+    padding:13px 21px;
+    font-size:13.5px;
     font-weight:700;
     border-radius:3px;
     white-space:nowrap;
@@ -240,17 +242,18 @@ header{
 }
 
 .hero-image{
-    position: relative;
-    min-height: 720px;
-    overflow: hidden;
-    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%);
+    position:relative;
+    min-height:610px;
+    overflow:hidden;
+    clip-path:polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left:-1px;
 }
 
 .hero-image img{
     width:100%;
-    height:720px;
+    height:610px;
     object-fit:cover;
-    object-position:55% center;
+    object-position:center center;
     display:block;
 }
 
@@ -258,27 +261,26 @@ header{
     content:"";
     position:absolute;
     inset:0;
-    background:linear-gradient(90deg, rgba(13,39,66,.03), rgba(13,39,66,.05));
+    background:linear-gradient(90deg, rgba(13,39,66,.04), rgba(13,39,66,.02));
     pointer-events:none;
 }
 
 .hero-overlay{
     position:absolute;
     z-index:2;
-    top:68px;
-    right:55px;
-    width:300px;
-    padding:22px 28px;
-    background:#0d2742;
+    top:58px;
+    right:38px;
+    width:285px;
+    padding:20px 24px;
+    background:rgba(13,39,66,.93);
     color:#fff;
-    font-size:16px;
+    font-size:15px;
     font-weight:700;
-    letter-spacing:1.5px;
+    letter-spacing:1.4px;
     line-height:1.45;
     text-transform:uppercase;
     box-sizing:border-box;
 }
-
 /* =========================
    FLOATING CONTACT
 ========================= */
@@ -1051,6 +1053,42 @@ footer{
     }
 }
 
+@media(max-width:1000px) and (min-width:761px){
+    .hero-grid{
+        grid-template-columns:minmax(0, 48%) minmax(0, 52%);
+        min-height:570px;
+    }
+
+    .hero-content{
+        padding:48px 28px 48px 26px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero .lead{
+        font-size:18px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .hero-image,
+    .hero-image img{
+        min-height:570px;
+        height:570px;
+    }
+
+    .hero-overlay{
+        top:42px;
+        right:24px;
+        width:245px;
+        font-size:13px;
+    }
+}
+
 @media(max-width:760px){
 
     .navbar{
@@ -1066,36 +1104,38 @@ footer{
     }
 
     .hero-grid{
-    display:flex;
-    flex-direction:column;
-}
-
-    .hero-content{
-        padding:55px 0 45px;
+        display:flex;
+        flex-direction:column;
+        min-height:auto;
     }
 
-   .hero-image{
-    order:-1;   
-    min-height:420px;
-    clip-path:none;
-}
+    .hero-image{
+        order:-1;
+        min-height:390px;
+        clip-path:none;
+        margin-left:0;
+    }
 
-.hero-image img{
-    width:100%;
-    height:420px;
-    object-fit:cover;
-    object-position:center center;
-    display:block;
-}
+    .hero-image img{
+        width:100%;
+        height:390px;
+        object-fit:cover;
+        object-position:center center;
+        display:block;
+    }
 
-.hero-overlay{
-    top:25px;
-    right:20px;
-    width:220px;
-    padding:14px 18px;
-    font-size:12px;
-    line-height:1.4;
-}
+    .hero-content{
+        padding:48px 0 42px;
+    }
+
+    .hero-overlay{
+        top:22px;
+        right:18px;
+        width:210px;
+        padding:13px 16px;
+        font-size:11px;
+        line-height:1.4;
+    }
 
     .hero h1{
         font-size:36px;
@@ -1103,6 +1143,20 @@ footer{
 
     .hero .lead{
         font-size:19px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .buttons{
+        flex-wrap:wrap;
+        gap:12px;
+    }
+
+    .hero-countries{
+        white-space:normal;
+        line-height:1.6;
     }
 
     .feature-grid,
@@ -1304,8 +1358,7 @@ footer{
 <h1>
     GLOBAL BUSINESS<br>
     CONSULTING &<br>
-    CROSS-BORDER<br>
-    SOLUTIONS
+    CROSS-BORDER SOLUTIONS
 </h1>
 
 <div class="lead">
@@ -1338,8 +1391,8 @@ footer{
 
 <div class="hero-image">
 
-<img src="ChatGPT Image Sep 22, 2026, 12_42_37 PM.png"
-     alt="Vietnam business cooperation and global partnership">
+<img src="hero-hcm-skyline.jpg"
+     alt="Ho Chi Minh City skyline and Bitexco Financial Tower at sunset">
 
 <div class="hero-overlay">
     BRIDGING OPPORTUNITIES ACROSS BORDERS
