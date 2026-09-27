@@ -196,24 +196,22 @@ header{
     margin-bottom:22px;
 }
 
-.buttons{
+ .buttons{
     display:flex;
-    align-items:center;
     flex-wrap:nowrap;
-    gap:20px;
+    gap:12px;
     width:100%;
-    max-width:100%;
-    margin-bottom:20px;
+    max-width:500px;
 }
 
 .hero-countries{
     display:block;
-    max-width:570px;
-    color:#1d3553;
-    font-size:16px;
-    line-height:1.45;
+    margin-top:16px;
+    max-width:500px;
+    color:#344054;
+    font-size:14px;
+    line-height:1.55;
     letter-spacing:.05px;
-    white-space:normal;
 }
 
 .btn{
@@ -221,16 +219,17 @@ header{
     align-items:center;
     justify-content:center;
     gap:8px;
-    min-height:62px;
-    padding:0 34px;
-    font-size:16px;
+    padding:13px 17px;
+    font-size:13.5px;
     font-weight:700;
-    border-radius:32px;
+    border-radius:999px;
     white-space:nowrap;
     transition:.25s ease;
+    min-width:0;
+    flex:1 1 0;
 }
 
-.btn-primary{
+ .btn-primary{
     color:#fff;
     background:var(--navy);
     border:1px solid var(--navy);
@@ -241,15 +240,14 @@ header{
     transform:translateY(-2px);
 }
 
-.btn-gold{
-    color:var(--navy);
-    background:#fff;
-    border:1.5px solid var(--gold);
+ .btn-gold{
+    color:#fff;
+    background:var(--gold);
+    border:1px solid var(--gold);
 }
 
 .btn-gold:hover{
-    color:var(--navy);
-    background:#fffaf0;
+    background:#b48838;
     transform:translateY(-2px);
 }
 
@@ -1051,28 +1049,6 @@ footer{
 }
 
 /* =========================
-   HERO BUTTONS / COUNTRIES
-   ========================= */
-@media(min-width:1001px){
-    .hero-content{
-        padding-right:22px;
-    }
-
-    .buttons .btn-primary{
-        min-width:286px;
-    }
-
-    .buttons .btn-gold{
-        min-width:278px;
-    }
-
-    .hero-countries{
-        margin-top:0;
-        padding-left:0;
-    }
-}
-
-/* =========================
    RESPONSIVE
 ========================= */
 
@@ -1432,8 +1408,8 @@ footer{
 </div>
 
 <div class="hero-countries">
-    Vietnam · China · Hong Kong · Singapore · Japan · South Korea ·<br>
-    USA · Australia · Canada &amp; Beyond
+    Vietnam · China · Hong Kong · Singapore · Japan · South Korea ·
+    USA · Australia · Canada & Beyond
 </div>
 
 </div>
