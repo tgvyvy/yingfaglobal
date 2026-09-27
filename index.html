@@ -1298,6 +1298,89 @@ footer{
 }   
 
 </style>
+
+<style id="compact-section-spacing">
+/* ===== COMPACT VERTICAL SPACING — preserves all section content ===== */
+.section{
+    padding:44px 0;
+}
+
+/* Services: reduce the extra air below the carousel */
+#services.yf-services{
+    padding-top:44px;
+    padding-bottom:30px;
+}
+#services .yf-services-window{
+    padding-bottom:8px;
+}
+#services .yf-carousel-dots{
+    margin-top:4px;
+}
+
+/* Keep section headings visually close to their content */
+.section-heading{
+    margin-bottom:30px;
+}
+
+/* About / Why / Solutions / Process / News use the same tighter rhythm */
+#about.section,
+#about + .section,
+#about ~ .section{
+    padding-top:44px;
+    padding-bottom:44px;
+}
+
+/* Slightly tighten the dark process band without changing its contents */
+.section.process{
+    padding-top:44px;
+    padding-bottom:44px;
+}
+
+/* News-to-CTA transition */
+#news.section{
+    padding-bottom:40px;
+}
+.cta{
+    padding-top:46px;
+    padding-bottom:46px;
+}
+
+@media(max-width:900px){
+    .section{
+        padding:38px 0;
+    }
+    #services.yf-services{
+        padding-top:38px;
+        padding-bottom:28px;
+    }
+    .section.process{
+        padding-top:38px;
+        padding-bottom:38px;
+    }
+    .cta{
+        padding-top:42px;
+        padding-bottom:42px;
+    }
+}
+
+@media(max-width:600px){
+    .section{
+        padding:34px 0;
+    }
+    #services.yf-services{
+        padding-top:34px;
+        padding-bottom:24px;
+    }
+    .section.process{
+        padding-top:34px;
+        padding-bottom:34px;
+    }
+    .cta{
+        padding-top:38px;
+        padding-bottom:38px;
+    }
+}
+</style>
 </head>
 
 <body>
