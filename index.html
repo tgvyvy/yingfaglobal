@@ -139,7 +139,7 @@ header{
 .hero-grid{
     min-height:560px;
     display:grid;
-    grid-template-columns:minmax(0, 45%) minmax(0, 55%);
+    grid-template-columns:minmax(0, 47%) minmax(0, 53%);
     align-items:stretch;
 }
 
@@ -147,7 +147,7 @@ header{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    padding:48px 34px 48px 38px;
+    padding:48px 30px 48px 38px;
     position:relative;
     z-index:3;
 }
@@ -175,8 +175,9 @@ header{
     color:var(--navy);
     font-size:35px;
     line-height:1.08;
-    letter-spacing:-1.5px;
+    letter-spacing:-1.7px;
     margin-bottom:16px;
+    max-width:620px;
 }
 
 .hero .lead{
@@ -184,21 +185,22 @@ header{
     font-size:19px;
     line-height:1.42;
     margin-bottom:14px;
-    max-width:540px;
+    max-width:590px;
 }
 
 .hero p{
     color:var(--text);
     font-size:14.5px;
     line-height:1.58;
-    max-width:540px;
+    max-width:590px;
     margin-bottom:22px;
 }
 
 .buttons{
     display:flex;
     flex-wrap:nowrap;
-    gap:14px;
+    gap:12px;
+    max-width:100%;
 }
 
 .hero-countries{
@@ -210,7 +212,7 @@ header{
     align-items:center;
     justify-content:center;
     gap:8px;
-    padding:13px 21px;
+    padding:13px 19px;
     font-size:13.5px;
     font-weight:700;
     border-radius:3px;
@@ -242,7 +244,7 @@ header{
     position:relative;
     min-height:560px;
     overflow:hidden;
-    clip-path:polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+    clip-path:polygon(20% 0, 100% 0, 100% 100%, 0 100%);
     margin-left:-1px;
 }
 
@@ -361,8 +363,27 @@ header{
 }
 
 .feature{
-    padding:28px 25px;
+    padding:24px 25px;
     border-right:1px solid var(--border);
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+}
+
+.feature-icon{
+    width:42px;
+    height:42px;
+    flex:0 0 42px;
+    color:var(--navy);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.feature-icon svg{
+    width:38px;
+    height:38px;
+    display:block;
 }
 
 .feature:last-child{
@@ -1403,23 +1424,23 @@ footer{
 <div class="container feature-grid">
 
 <div class="feature">
-    <h3>Global Perspective</h3>
-    <p>Connecting markets across borders</p>
+    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="3"/><path d="M7 24h34M24 7c5 5 7 10.7 7 17s-2 12-7 17c-5-5-7-10.7-7-17s2-12 7-17Z" stroke="currentColor" stroke-width="2.5"/><path d="M11 15h26M11 33h26" stroke="currentColor" stroke-width="2"/></svg></div>
+    <div><h3>Global Perspective</h3><p>Connecting markets across borders</p></div>
 </div>
 
 <div class="feature">
-    <h3>Local Expertise</h3>
-    <p>In-depth knowledge of Vietnam</p>
+    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="15" r="6" stroke="currentColor" stroke-width="3"/><circle cx="11" cy="20" r="5" stroke="currentColor" stroke-width="3"/><circle cx="37" cy="20" r="5" stroke="currentColor" stroke-width="3"/><path d="M13 39c0-7 4.8-11 11-11s11 4 11 11M4 38c0-5.5 3.2-9 8-9 2.1 0 3.9.6 5.3 1.7M44 38c0-5.5-3.2-9-8-9-2.1 0-3.9.6-5.3 1.7" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
+    <div><h3>Local Expertise</h3><p>In-depth knowledge of Vietnam</p></div>
 </div>
 
 <div class="feature">
-    <h3>Reliable Support</h3>
-    <p>From strategy to implementation</p>
+    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 5l15 6v11c0 10-6.2 17-15 21-8.8-4-15-11-15-21V11l15-6Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="m16.5 24 5 5 10-11" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div><h3>Reliable Support</h3><p>From strategy to implementation</p></div>
 </div>
 
 <div class="feature">
-    <h3>Sustainable Growth</h3>
-    <p>Long-term success together</p>
+    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 38V27M19 38V20M30 38V25M41 38V11" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="m8 18 10-7 10 6 12-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 9h6v6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <div><h3>Sustainable Growth</h3><p>Long-term success together</p></div>
 </div>
 
 </div>
