@@ -198,13 +198,22 @@ header{
 
 .buttons{
     display:flex;
+    align-items:center;
     flex-wrap:nowrap;
-    gap:12px;
+    gap:20px;
+    width:100%;
     max-width:100%;
+    margin-bottom:20px;
 }
 
 .hero-countries{
-    display:none;
+    display:block;
+    max-width:570px;
+    color:#1d3553;
+    font-size:16px;
+    line-height:1.45;
+    letter-spacing:.05px;
+    white-space:normal;
 }
 
 .btn{
@@ -212,10 +221,11 @@ header{
     align-items:center;
     justify-content:center;
     gap:8px;
-    padding:13px 19px;
-    font-size:13.5px;
+    min-height:62px;
+    padding:0 34px;
+    font-size:16px;
     font-weight:700;
-    border-radius:3px;
+    border-radius:32px;
     white-space:nowrap;
     transition:.25s ease;
 }
@@ -223,6 +233,7 @@ header{
 .btn-primary{
     color:#fff;
     background:var(--navy);
+    border:1px solid var(--navy);
 }
 
 .btn-primary:hover{
@@ -231,12 +242,14 @@ header{
 }
 
 .btn-gold{
-    color:#fff;
-    background:var(--gold);
+    color:var(--navy);
+    background:#fff;
+    border:1.5px solid var(--gold);
 }
 
 .btn-gold:hover{
-    background:#b48838;
+    color:var(--navy);
+    background:#fffaf0;
     transform:translateY(-2px);
 }
 
@@ -1038,6 +1051,28 @@ footer{
 }
 
 /* =========================
+   HERO BUTTONS / COUNTRIES
+   ========================= */
+@media(min-width:1001px){
+    .hero-content{
+        padding-right:22px;
+    }
+
+    .buttons .btn-primary{
+        min-width:286px;
+    }
+
+    .buttons .btn-gold{
+        min-width:278px;
+    }
+
+    .hero-countries{
+        margin-top:0;
+        padding-left:0;
+    }
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -1394,6 +1429,11 @@ footer{
     Explore Our Services →
 </a>
 
+</div>
+
+<div class="hero-countries">
+    Vietnam · China · Hong Kong · Singapore · Japan · South Korea ·<br>
+    USA · Australia · Canada &amp; Beyond
 </div>
 
 </div>
