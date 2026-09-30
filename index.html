@@ -1386,8 +1386,39 @@ footer{
    MARKET ENTRY DETAIL
    ========================================= */
 .market-entry-detail{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  overflow-y:auto;
   background:#f7f8fa;
   padding:70px 0;
+}
+
+.market-entry-detail.is-open{
+  display:block;
+}
+
+.market-entry-close{
+  position:fixed;
+  top:18px;
+  right:24px;
+  z-index:10001;
+  width:44px;
+  height:44px;
+  border:0;
+  border-radius:50%;
+  background:#0b2a5b;
+  color:#fff;
+  font-size:27px;
+  line-height:44px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 5px 18px rgba(15,23,42,.18);
+}
+
+.market-entry-close:hover{
+  background:#b08a3e;
 }
 
 .market-entry-detail .detail-intro{
@@ -1544,7 +1575,7 @@ footer{
 <div class="container navbar">
 
 <a href="#home" class="logo">
-    <img src="https://raw.githubusercontent.com/tgvyyy/yingfaglobal/main/logo.png" alt="Ying Fa Global Consulting">
+    <img src="logo.png" alt="Ying Fa Global Consulting">
 </a>
 
 <nav class="nav">
@@ -2494,7 +2525,7 @@ footer{
                 Helping international businesses understand and enter the Vietnamese market.
               </p>
 
-              <a href="#market-entry-details" class="yf-learn">
+              <a href="#market-entry-details" class="yf-learn" data-market-entry-open>
                 Learn More →
               </a>
 
@@ -2803,6 +2834,7 @@ footer{
 ========================= -->
 
 <section class="market-entry-detail" id="market-entry-details">
+<button type="button" class="market-entry-close" aria-label="Close Market Entry details">&times;</button>
 
   <div class="container">
 
@@ -3893,6 +3925,43 @@ document.querySelectorAll('.nav a').forEach(function(link){
         this.classList.add('active');
     });
 });
+</script>
+
+
+<script>
+(function(){
+  const detail = document.getElementById('market-entry-details');
+  const openButton = document.querySelector('[data-market-entry-open]');
+  const closeButton = detail ? detail.querySelector('.market-entry-close') : null;
+
+  if(!detail || !openButton || !closeButton) return;
+
+  openButton.addEventListener('click', function(e){
+    e.preventDefault();
+    detail.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    detail.scrollTop = 0;
+  });
+
+  closeButton.addEventListener('click', function(){
+    detail.classList.remove('is-open');
+    document.body.style.overflow = '';
+  });
+
+  detail.addEventListener('click', function(e){
+    if(e.target === detail){
+      detail.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && detail.classList.contains('is-open')){
+      detail.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+  });
+})();
 </script>
 
 </body>
