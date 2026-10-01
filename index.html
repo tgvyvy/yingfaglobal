@@ -2056,6 +2056,48 @@ header{position:sticky!important;top:0;z-index:10000}
     padding-top:30px;
   }
 }
+</style><style>
+/* =========================================
+   FIXED TOP UTILITY BAR + MAIN HEADER
+========================================= */
+.yf-topbar{
+  position:sticky !important;
+  top:0 !important;
+  z-index:10002 !important;
+}
+
+header{
+  position:sticky !important;
+  top:48px !important;
+  z-index:10000 !important;
+  background:#fff;
+}
+
+/* Services overlay starts below both persistent bars. */
+.yf-services-directory{
+  top:108px !important;
+  z-index:999 !important;
+}
+
+/* Keep the Services content from sitting underneath the persistent bars. */
+.yf-services-directory-inner{
+  padding-top:38px;
+}
+
+@media(max-width:600px){
+  .yf-topbar{
+    position:sticky !important;
+    top:0 !important;
+  }
+
+  header{
+    top:48px !important;
+  }
+
+  .yf-services-directory{
+    top:96px !important;
+  }
+}
 </style></head>
 <body><div class="yf-topbar"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone">☎</span>Contact Us</a><div class="yf-topbar-item"><button class="yf-lang-btn" data-lang="zh-tw" type="button">繁體中文</button><span> / </span><button class="yf-lang-btn" data-lang="zh-cn" type="button">简体中文</button></div><button class="yf-topbar-item yf-lang-btn" data-lang="vi" type="button">Tiếng Việt</button></div><div class="yf-topbar-search"><input aria-label="Search" placeholder="Search" type="search"/><button aria-label="Search" type="button">⌕</button></div></div>
 <!-- =========================
