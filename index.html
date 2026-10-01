@@ -1,23 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-<link rel="icon" type="image/png" href="/favicon.png">
-
-<title>Ying Fa Global Consulting | Business Consulting & Cross-Border Solutions</title>
-
-<meta name="description" content="Ying Fa Global Consulting provides business consulting, market entry, business setup, sourcing, business matching, translation, interpretation and cross-border solutions in Vietnam.">
-
-<meta name="keywords" content="Ying Fa Global Consulting, business consulting Vietnam, China Vietnam business, international trade, sourcing Vietnam, business matching, translation Chinese English Vietnamese, interpretation Vietnam, market entry Vietnam, investment support">
-
-<meta name="author" content="Ying Fa Global Consulting">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://yingfaglobal.com/">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ying Fa Global Consulting | Business Consulting &amp; Cross-Border Solutions</title>
+<meta content="Ying Fa Global Consulting provides business consulting, market entry, business setup, sourcing, business matching, translation, interpretation and cross-border solutions in Vietnam." name="description"/>
+<meta content="Ying Fa Global Consulting, business consulting Vietnam, China Vietnam business, international trade, sourcing Vietnam, business matching, translation Chinese English Vietnamese, interpretation Vietnam, market entry Vietnam, investment support" name="keywords"/>
+<meta content="Ying Fa Global Consulting" name="author"/>
+<meta content="index, follow" name="robots"/>
+<link href="https://yingfaglobal.com/" rel="canonical"/>
 <style>
 
 *{
@@ -1300,7 +1292,6 @@ footer{
 }   
 
 </style>
-
 <style id="compact-section-spacing">
 /* ===== COMPACT VERTICAL SPACING — preserves all section content ===== */
 .section{
@@ -1564,177 +1555,318 @@ footer{
 }
 
 </style>
-</head>
+<style>
+/* =========================================
+   SERVICES DIRECTORY — ALL 16 SERVICES
+========================================= */
+.yf-services-directory{
+  position:fixed;
+  inset:0;
+  z-index:9998;
+  background:#f7fafc;
+  overflow-y:auto;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:opacity .25s ease, visibility .25s ease;
+}
 
+.yf-services-directory.is-open{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+}
+
+.yf-services-directory-inner{
+  width:min(1180px, calc(100% - 40px));
+  margin:0 auto;
+  padding:108px 0 70px;
+}
+
+.yf-services-directory-header{
+  text-align:center;
+  margin-bottom:38px;
+}
+
+.yf-services-directory-label{
+  color:#b08a3e;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  margin-bottom:9px;
+  text-transform:uppercase;
+}
+
+.yf-services-directory-header h2{
+  color:#0b2a5b;
+  font-size:38px;
+  line-height:1.2;
+  margin:0 0 12px;
+}
+
+.yf-services-directory-header p{
+  max-width:720px;
+  margin:0 auto;
+  color:#667085;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.yf-services-directory-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.yf-services-directory-grid .yf-service-card{
+  min-width:0;
+  background:#fff;
+  border:1px solid #e7eaf0;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 5px 16px rgba(15,23,42,.07);
+  transition:.25s ease;
+}
+
+.yf-services-directory-grid .yf-service-card:hover{
+  transform:translateY(-5px);
+  border-color:#d5b16c;
+  box-shadow:0 10px 25px rgba(15,23,42,.11);
+}
+
+.yf-services-directory-grid .yf-service-image{
+  width:100%;
+  height:175px;
+  overflow:hidden;
+  background:#e9eef5;
+}
+
+.yf-services-directory-grid .yf-service-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+}
+
+.yf-services-directory-grid .yf-service-content{
+  padding:20px 19px 21px;
+}
+
+.yf-services-directory-grid .yf-service-number{
+  display:none;
+}
+
+.yf-services-directory-grid .yf-service-card h3{
+  color:#0b2a5b;
+  font-size:17px;
+  line-height:1.3;
+  margin:0 0 9px;
+  font-weight:700;
+}
+
+.yf-services-directory-grid .yf-service-card p{
+  color:#667085;
+  font-size:13px;
+  line-height:1.55;
+  margin:0 0 15px;
+}
+
+.yf-services-directory-grid .yf-service-card .yf-learn{
+  color:#b08a3e;
+  font-size:12px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+.yf-services-directory-grid .yf-service-card .yf-learn:hover{
+  color:#8f6d2d;
+}
+
+.yf-services-directory-close{
+  position:fixed;
+  top:24px;
+  right:28px;
+  z-index:10000;
+  width:44px;
+  height:44px;
+  border:1px solid #dfe4ea;
+  border-radius:50%;
+  background:#fff;
+  color:#0b2a5b;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 5px 15px rgba(15,23,42,.12);
+  transition:.2s ease;
+}
+
+.yf-services-directory-close:hover{
+  background:#0b2a5b;
+  color:#fff;
+  border-color:#0b2a5b;
+}
+
+@media(max-width:1000px){
+  .yf-services-directory-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .yf-services-directory-inner{
+    width:min(100% - 28px, 560px);
+    padding:88px 0 50px;
+  }
+
+  .yf-services-directory-header{
+    margin-bottom:28px;
+  }
+
+  .yf-services-directory-header h2{
+    font-size:30px;
+  }
+
+  .yf-services-directory-header p{
+    font-size:14px;
+  }
+
+  .yf-services-directory-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .yf-services-directory-grid .yf-service-image{
+    height:190px;
+  }
+
+  .yf-services-directory-close{
+    top:16px;
+    right:16px;
+    width:42px;
+    height:42px;
+  }
+}
+</style></head>
 <body>
-
 <!-- =========================
      HEADER
 ========================= -->
-
 <header>
-
 <div class="container navbar">
-
-<a href="#home" class="logo">
-    <img src="logo.png" alt="Ying Fa Global Consulting">
+<a class="logo" href="#home">
+<img alt="Ying Fa Global Consulting" src="logo.png"/>
 </a>
-
 <nav class="nav">
-    <a href="#home" class="active">Home</a>
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#profile">Profile</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
+<a class="active" href="#home">Home</a>
+<a class="yf-open-services" data-services-open="" href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#profile">Profile</a>
+<a href="#news">News</a>
+<a href="#contact">Contact</a>
 </nav>
-
 </div>
-
 </header>
-
-
 <!-- =========================
      FLOATING CONTACT
 ========================= -->
-
 <div class="floating-contact">
-
-  <a href="#contact" class="float-btn whatsapp" title="WhatsApp">
-    <img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="">
-    <span>WhatsApp</span>
-  </a>
-
-  <a href="#contact" class="float-btn wechat" title="WeChat">
-    <img src="https://cdn.simpleicons.org/wechat/07C160" alt="">
-    <span>WeChat</span>
-  </a>
-
-  <a href="#contact" class="float-btn line" title="LINE">
-    <img src="https://cdn.simpleicons.org/line/00C300" alt="">
-    <span>LINE</span>
-  </a>
-
-  <a href="#contact" class="float-btn messenger" title="Messenger">
-    <img src="https://cdn.simpleicons.org/messenger/0084FF" alt="">
-    <span>Messenger</span>
-  </a>
-
- <a href="#contact" class="float-btn zalo" title="Zalo">
-  <svg class="zalo-logo" viewBox="0 0 64 64" width="27" height="27" style="flex:0 0 27px;" aria-label="Zalo">
-    <rect x="1" y="1" width="62" height="62" rx="17" fill="#0068FF"/>
-    <path d="M16 12h31c8.3 0 15 6.7 15 15v15c0 8.3-6.7 15-15 15H29L13 61l5-10h-2C7.7 51 1 44.3 1 36V27c0-8.3 6.7-15 15-15z" fill="#FFFFFF"/>
-    <text x="32" y="42" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#0068FF">Zalo</text>
-  </svg>
-  <span>Zalo</span>
+<a class="float-btn whatsapp" href="#contact" title="WhatsApp">
+<img alt="" src="https://cdn.simpleicons.org/whatsapp/25D366"/>
+<span>WhatsApp</span>
+</a>
+<a class="float-btn wechat" href="#contact" title="WeChat">
+<img alt="" src="https://cdn.simpleicons.org/wechat/07C160"/>
+<span>WeChat</span>
+</a>
+<a class="float-btn line" href="#contact" title="LINE">
+<img alt="" src="https://cdn.simpleicons.org/line/00C300"/>
+<span>LINE</span>
+</a>
+<a class="float-btn messenger" href="#contact" title="Messenger">
+<img alt="" src="https://cdn.simpleicons.org/messenger/0084FF"/>
+<span>Messenger</span>
+</a>
+<a class="float-btn zalo" href="#contact" title="Zalo">
+<svg aria-label="Zalo" class="zalo-logo" height="27" style="flex:0 0 27px;" viewbox="0 0 64 64" width="27">
+<rect fill="#0068FF" height="62" rx="17" width="62" x="1" y="1"></rect>
+<path d="M16 12h31c8.3 0 15 6.7 15 15v15c0 8.3-6.7 15-15 15H29L13 61l5-10h-2C7.7 51 1 44.3 1 36V27c0-8.3 6.7-15 15-15z" fill="#FFFFFF"></path>
+<text fill="#0068FF" font-family="Arial,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="32" y="42">Zalo</text>
+</svg>
+<span>Zalo</span>
 </a>
 </div>
-
-
 <!-- =========================
      HERO
 ========================= -->
-
 <section class="hero" id="home">
-
 <div class="container hero-grid">
-
 <div class="hero-content">
-
 <h1>
     GLOBAL BUSINESS CONSULTING &amp; CROSS-BORDER SOLUTIONS
 </h1>
-
 <div class="lead">
     Connecting Vietnam with the World. Connecting the World with Vietnam.
 </div>
-
 <p>
     Helping international businesses enter, operate and grow in Vietnam — while
     supporting Vietnamese businesses in expanding into international markets.
 </p>
-
 <p>
     From business setup and compliance to sourcing, business matching, investment
     support and cross-border solutions, Ying Fa Global connects businesses with
     the right partners, opportunities and markets in Vietnam and around the world.
 </p>
-
 <div class="buttons">
-
-<a href="#contact" class="btn btn-primary">
+<a class="btn btn-primary" href="#contact">
     Talk to a Consultant →
 </a>
-
-<a href="#services" class="btn btn-gold">
+<a class="btn btn-gold yf-open-services" data-services-open="" href="#services">
     Explore Our Services →
 </a>
-
 </div>
-
 </div>
-
-
 <div class="hero-image">
-
-<img src="hero-hcm-skyline.jpg"
-     alt="Ho Chi Minh City skyline and Bitexco Financial Tower at sunset">
-
+<img alt="Ho Chi Minh City skyline and Bitexco Financial Tower at sunset" src="hero-hcm-skyline.jpg"/>
 <div class="hero-overlay">
     BRIDGING OPPORTUNITIES ACROSS BORDERS
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- =========================
      FEATURES
 ========================= -->
-
 <section class="features">
-
 <div class="container feature-grid">
-
 <div class="feature">
-    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="3"/><path d="M7 24h34M24 7c5 5 7 10.7 7 17s-2 12-7 17c-5-5-7-10.7-7-17s2-12 7-17Z" stroke="currentColor" stroke-width="2.5"/><path d="M11 15h26M11 33h26" stroke="currentColor" stroke-width="2"/></svg></div>
-    <div><h3>Global Perspective</h3><p>Connecting markets across borders</p></div>
+<div aria-hidden="true" class="feature-icon"><svg fill="none" viewbox="0 0 48 48"><circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="3"></circle><path d="M7 24h34M24 7c5 5 7 10.7 7 17s-2 12-7 17c-5-5-7-10.7-7-17s2-12 7-17Z" stroke="currentColor" stroke-width="2.5"></path><path d="M11 15h26M11 33h26" stroke="currentColor" stroke-width="2"></path></svg></div>
+<div><h3>Global Perspective</h3><p>Connecting markets across borders</p></div>
 </div>
-
 <div class="feature">
-    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="15" r="6" stroke="currentColor" stroke-width="3"/><circle cx="11" cy="20" r="5" stroke="currentColor" stroke-width="3"/><circle cx="37" cy="20" r="5" stroke="currentColor" stroke-width="3"/><path d="M13 39c0-7 4.8-11 11-11s11 4 11 11M4 38c0-5.5 3.2-9 8-9 2.1 0 3.9.6 5.3 1.7M44 38c0-5.5-3.2-9-8-9-2.1 0-3.9.6-5.3 1.7" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></div>
-    <div><h3>Local Expertise</h3><p>In-depth knowledge of Vietnam</p></div>
+<div aria-hidden="true" class="feature-icon"><svg fill="none" viewbox="0 0 48 48"><circle cx="24" cy="15" r="6" stroke="currentColor" stroke-width="3"></circle><circle cx="11" cy="20" r="5" stroke="currentColor" stroke-width="3"></circle><circle cx="37" cy="20" r="5" stroke="currentColor" stroke-width="3"></circle><path d="M13 39c0-7 4.8-11 11-11s11 4 11 11M4 38c0-5.5 3.2-9 8-9 2.1 0 3.9.6 5.3 1.7M44 38c0-5.5-3.2-9-8-9-2.1 0-3.9.6-5.3 1.7" stroke="currentColor" stroke-linecap="round" stroke-width="3"></path></svg></div>
+<div><h3>Local Expertise</h3><p>In-depth knowledge of Vietnam</p></div>
 </div>
-
 <div class="feature">
-    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M24 5l15 6v11c0 10-6.2 17-15 21-8.8-4-15-11-15-21V11l15-6Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="m16.5 24 5 5 10-11" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div><h3>Reliable Support</h3><p>From strategy to implementation</p></div>
+<div aria-hidden="true" class="feature-icon"><svg fill="none" viewbox="0 0 48 48"><path d="M24 5l15 6v11c0 10-6.2 17-15 21-8.8-4-15-11-15-21V11l15-6Z" stroke="currentColor" stroke-linejoin="round" stroke-width="3"></path><path d="m16.5 24 5 5 10-11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg></div>
+<div><h3>Reliable Support</h3><p>From strategy to implementation</p></div>
 </div>
-
 <div class="feature">
-    <div class="feature-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><path d="M8 38V27M19 38V20M30 38V25M41 38V11" stroke="currentColor" stroke-width="4" stroke-linecap="round"/><path d="m8 18 10-7 10 6 12-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M34 9h6v6" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div><h3>Sustainable Growth</h3><p>Long-term success together</p></div>
+<div aria-hidden="true" class="feature-icon"><svg fill="none" viewbox="0 0 48 48"><path d="M8 38V27M19 38V20M30 38V25M41 38V11" stroke="currentColor" stroke-linecap="round" stroke-width="4"></path><path d="m8 18 10-7 10 6 12-10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path><path d="M34 9h6v6" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg></div>
+<div><h3>Sustainable Growth</h3><p>Long-term success together</p></div>
 </div>
-
 </div>
-
 </section>
-
-
 <!-- =========================
      SERVICES
 ========================= -->
-
 <!-- =========================
      SERVICES - 16 CARD CAROUSEL
      ========================= -->
-
 <section class="section" id="services">
-
-  <style>
+<style>
     /* SERVICES CAROUSEL */
     #services.yf-services{
       background:#f7fafc;
@@ -1989,617 +2121,391 @@ footer{
     padding-top:25px;
 }
   </style>
-
-
-  <div class="container">
-
-    <div class="yf-services-heading">
-
-      <div class="yf-services-label">
+<div class="container">
+<div class="yf-services-heading">
+<div class="yf-services-label">
         WHAT WE DO
       </div>
-
-      <h2>
+<h2>
         Our Services
       </h2>
-
-      <p>
+<p>
         Professional solutions designed to support business development,
         communication and international cooperation.
       </p>
-
-    </div>
-
-
-    <div class="yf-services-carousel">
-
-      <button
-        class="yf-carousel-arrow yf-carousel-prev"
-        type="button"
-        aria-label="Previous services">
-        &#10094;
+</div>
+<div class="yf-services-carousel">
+<button aria-label="Previous services" class="yf-carousel-arrow yf-carousel-prev" type="button">
+        ❮
       </button>
-
-
-      <div class="yf-services-window">
-
-        <div class="yf-services-track">
-
-
-          <!-- =========================
+<div class="yf-services-window">
+<div class="yf-services-track">
+<!-- =========================
                SERVICE 01
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
-                alt="Business Consulting">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Business Consulting" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 01
               </div>
-
-              <h3>
+<h3>
                 Business Consulting
               </h3>
-
-              <p>
+<p>
                 Market entry, business setup, compliance and strategic advisory.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 02
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=900&q=80"
-                alt="Translation and Interpretation">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Translation and Interpretation" src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 02
               </div>
-
-              <h3>
+<h3>
                 Translation &amp; Interpretation
               </h3>
-
-              <p>
+<p>
                 Professional Chinese, English and Vietnamese translation and interpretation.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 03
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80"
-                alt="Business Matching">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Business Matching" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 03
               </div>
-
-              <h3>
+<h3>
                 Business Matching
               </h3>
-
-              <p>
+<p>
                 Connecting companies with suitable partners, suppliers and business opportunities.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 04
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
-                alt="Market Research">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Market Research" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 04
               </div>
-
-              <h3>
+<h3>
                 Market Research
               </h3>
-
-              <p>
+<p>
                 Insights and analysis to help businesses evaluate markets and make informed decisions.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 05
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80"
-                alt="Representative Office Setup">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Representative Office Setup" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 05
               </div>
-
-              <h3>
+<h3>
                 Representative Office Setup
               </h3>
-
-              <p>
+<p>
                 Support for foreign businesses establishing a representative office in Vietnam.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 06
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80"
-                alt="Company Setup and FDI Services">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Company Setup and FDI Services" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 06
               </div>
-
-              <h3>
+<h3>
                 Company Setup &amp; FDI Services
               </h3>
-
-              <p>
+<p>
                 Practical support for company establishment and foreign investment projects.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 07
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
-                alt="Post Licensing and Compliance">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Post Licensing and Compliance" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 07
               </div>
-
-              <h3>
+<h3>
                 Post-Licensing &amp; Compliance
               </h3>
-
-              <p>
+<p>
                 Ongoing support for licensing, compliance and business administration.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 08
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=80"
-                alt="Accounting and Tax Support">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Accounting and Tax Support" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 08
               </div>
-
-              <h3>
+<h3>
                 Accounting &amp; Tax Support
               </h3>
-
-              <p>
+<p>
                 Business accounting, tax coordination, payroll and administrative support.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 09
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80"
-                alt="M&A Advisory">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="M&amp;A Advisory" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 09
               </div>
-
-              <h3>
+<h3>
                 M&amp;A Advisory
               </h3>
-
-              <p>
+<p>
                 Advisory support for business acquisitions, sales and investment transactions.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 10
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80"
-                alt="Investment Consulting">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Investment Consulting" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 10
               </div>
-
-              <h3>
+<h3>
                 Investment Consulting
               </h3>
-
-              <p>
+<p>
                 Practical guidance for investors exploring opportunities in Vietnam and Asia.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 11
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=900&q=80"
-                alt="Sourcing and Procurement">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Sourcing and Procurement" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 11
               </div>
-
-              <h3>
+<h3>
                 Sourcing &amp; Procurement
               </h3>
-
-              <p>
+<p>
                 Supplier sourcing, product research and procurement support in Vietnam and China.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 12
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
-                alt="Import and Export Support">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Import and Export Support" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 12
               </div>
-
-              <h3>
+<h3>
                 Import &amp; Export Support
               </h3>
-
-              <p>
+<p>
                 Support for cross-border trade, sourcing, documentation and international transactions.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 13
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80"
-                alt="Trade and Business Negotiation">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Trade and Business Negotiation" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 13
               </div>
-
-              <h3>
+<h3>
                 Trade &amp; Business Negotiation
               </h3>
-
-              <p>
+<p>
                 Support for business communication, commercial negotiation and deal coordination.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 14
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
-                alt="China Vietnam Business Support">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="China Vietnam Business Support" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 14
               </div>
-
-              <h3>
+<h3>
                 China–Vietnam Business Support
               </h3>
-
-              <p>
+<p>
                 Cross-border support for companies working between China and Vietnam.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 15
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
-                alt="Market Entry Consulting">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Market Entry Consulting" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 15
               </div>
-
-              <h3>
+<h3>
                 Market Entry Consulting
               </h3>
-
-              <p>
+<p>
                 Helping international businesses understand and enter the Vietnamese market.
               </p>
-
-              <a href="#market-entry-details" class="yf-learn" data-market-entry-open>
+<a class="yf-learn" data-market-entry-open="" href="#market-entry-details">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-          <!-- =========================
+</div>
+</div>
+<!-- =========================
                SERVICE 16
                ========================= -->
-          <div class="yf-service-card">
-
-            <div class="yf-service-image">
-              <img
-                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=900&q=80"
-                alt="Business Strategy and Advisory">
-            </div>
-
-            <div class="yf-service-content">
-
-              <div class="yf-service-number">
+<div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Business Strategy and Advisory" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
                 SERVICE 16
               </div>
-
-              <h3>
+<h3>
                 Business Strategy &amp; Advisory
               </h3>
-
-              <p>
+<p>
                 Strategic guidance to help businesses plan, develop and expand sustainably.
               </p>
-
-              <a href="#contact" class="yf-learn">
+<a class="yf-learn" href="#contact">
                 Learn More →
               </a>
-
-            </div>
-
-          </div>
-
-
-        </div>
-      </div>
-
-
-      <button
-        class="yf-carousel-arrow yf-carousel-next"
-        type="button"
-        aria-label="Next services">
-        &#10095;
+</div>
+</div>
+</div>
+</div>
+<button aria-label="Next services" class="yf-carousel-arrow yf-carousel-next" type="button">
+        ❯
       </button>
-
-    </div>
-
-
-    <div class="yf-carousel-dots">
-
-      <button class="yf-carousel-dot active" type="button" aria-label="Services 1 to 4"></button>
-
-      <button class="yf-carousel-dot" type="button" aria-label="Services 5 to 8"></button>
-
-      <button class="yf-carousel-dot" type="button" aria-label="Services 9 to 12"></button>
-
-      <button class="yf-carousel-dot" type="button" aria-label="Services 13 to 16"></button>
-
-    </div>
-
-  </div>
-
-
-  <script>
+</div>
+<div class="yf-carousel-dots">
+<button aria-label="Services 1 to 4" class="yf-carousel-dot active" type="button"></button>
+<button aria-label="Services 5 to 8" class="yf-carousel-dot" type="button"></button>
+<button aria-label="Services 9 to 12" class="yf-carousel-dot" type="button"></button>
+<button aria-label="Services 13 to 16" class="yf-carousel-dot" type="button"></button>
+</div>
+</div>
+<script>
     (function(){
 
       const carousel = document.querySelector('#services .yf-services-carousel');
@@ -2826,797 +2732,768 @@ footer{
 
     })();
   </script>
-
 </section>
-
-
-
 <!-- =========================
      MARKET ENTRY DETAIL
 ========================= -->
-
-<section class="market-entry-detail" id="market-entry-details">
-<button type="button" class="market-entry-close" aria-label="Close Market Entry details">&times;</button>
-
-  <div class="container">
-
-    <div class="detail-intro">
-
-      <div class="section-label">
+<section aria-hidden="true" class="yf-services-directory" id="services-directory"><button aria-label="Close Services" class="yf-services-directory-close" type="button">×</button><div class="yf-services-directory-inner"><div class="yf-services-directory-header"><div class="yf-services-directory-label">OUR SERVICES</div><h2>All 16 Services</h2><p>Explore our complete range of business consulting and cross-border solutions.</p></div><div class="yf-services-directory-grid"><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Business Consulting" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 01
+              </div>
+<h3>
+                Business Consulting
+              </h3>
+<p>
+                Market entry, business setup, compliance and strategic advisory.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Translation and Interpretation" src="https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 02
+              </div>
+<h3>
+                Translation &amp; Interpretation
+              </h3>
+<p>
+                Professional Chinese, English and Vietnamese translation and interpretation.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Business Matching" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 03
+              </div>
+<h3>
+                Business Matching
+              </h3>
+<p>
+                Connecting companies with suitable partners, suppliers and business opportunities.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Market Research" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 04
+              </div>
+<h3>
+                Market Research
+              </h3>
+<p>
+                Insights and analysis to help businesses evaluate markets and make informed decisions.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Representative Office Setup" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 05
+              </div>
+<h3>
+                Representative Office Setup
+              </h3>
+<p>
+                Support for foreign businesses establishing a representative office in Vietnam.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Company Setup and FDI Services" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 06
+              </div>
+<h3>
+                Company Setup &amp; FDI Services
+              </h3>
+<p>
+                Practical support for company establishment and foreign investment projects.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Post Licensing and Compliance" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 07
+              </div>
+<h3>
+                Post-Licensing &amp; Compliance
+              </h3>
+<p>
+                Ongoing support for licensing, compliance and business administration.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Accounting and Tax Support" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 08
+              </div>
+<h3>
+                Accounting &amp; Tax Support
+              </h3>
+<p>
+                Business accounting, tax coordination, payroll and administrative support.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="M&amp;A Advisory" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 09
+              </div>
+<h3>
+                M&amp;A Advisory
+              </h3>
+<p>
+                Advisory support for business acquisitions, sales and investment transactions.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Investment Consulting" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 10
+              </div>
+<h3>
+                Investment Consulting
+              </h3>
+<p>
+                Practical guidance for investors exploring opportunities in Vietnam and Asia.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Sourcing and Procurement" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 11
+              </div>
+<h3>
+                Sourcing &amp; Procurement
+              </h3>
+<p>
+                Supplier sourcing, product research and procurement support in Vietnam and China.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Import and Export Support" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 12
+              </div>
+<h3>
+                Import &amp; Export Support
+              </h3>
+<p>
+                Support for cross-border trade, sourcing, documentation and international transactions.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Trade and Business Negotiation" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 13
+              </div>
+<h3>
+                Trade &amp; Business Negotiation
+              </h3>
+<p>
+                Support for business communication, commercial negotiation and deal coordination.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="China Vietnam Business Support" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 14
+              </div>
+<h3>
+                China–Vietnam Business Support
+              </h3>
+<p>
+                Cross-border support for companies working between China and Vietnam.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Market Entry Consulting" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 15
+              </div>
+<h3>
+                Market Entry Consulting
+              </h3>
+<p>
+                Helping international businesses understand and enter the Vietnamese market.
+              </p>
+<a class="yf-learn" data-market-entry-open="" href="#market-entry-details">
+                Learn More →
+              </a>
+</div>
+</div><div class="yf-service-card">
+<div class="yf-service-image">
+<img alt="Business Strategy and Advisory" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+</div>
+<div class="yf-service-content">
+<div class="yf-service-number">
+                SERVICE 16
+              </div>
+<h3>
+                Business Strategy &amp; Advisory
+              </h3>
+<p>
+                Strategic guidance to help businesses plan, develop and expand sustainably.
+              </p>
+<a class="yf-learn" href="#contact">
+                Learn More →
+              </a>
+</div>
+</div></div></div></section><section class="market-entry-detail" id="market-entry-details">
+<button aria-label="Close Market Entry details" class="market-entry-close" type="button">×</button>
+<div class="container">
+<div class="detail-intro">
+<div class="section-label">
         MARKET ENTRY CONSULTING
       </div>
-
-      <h2>Business Setup &amp; Market Entry in Vietnam</h2>
-
-      <p>
+<h2>Business Setup &amp; Market Entry in Vietnam</h2>
+<p>
         For international businesses looking to explore the Vietnamese market,
         build local relationships, identify business opportunities, or establish
         a long-term presence, we support the appropriate market-entry structure
         and initial setup process.
       </p>
-
-    </div>
-
-
-    <div class="market-entry-options">
-
-      <article class="market-entry-card">
-
-        <div class="market-entry-card-image">
-          <img
-            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
-            alt="Representative Office in Vietnam">
-        </div>
-
-        <div class="market-entry-card-body">
-
-          <h3>Representative Office — Establish a Local Presence</h3>
-
-          <p>
+</div>
+<div class="market-entry-options">
+<article class="market-entry-card">
+<div class="market-entry-card-image">
+<img alt="Representative Office in Vietnam" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+</div>
+<div class="market-entry-card-body">
+<h3>Representative Office — Establish a Local Presence</h3>
+<p>
             For international businesses looking to explore the Vietnamese market,
             build local relationships, and identify business opportunities before
             committing to full-scale operations, a Representative Office can provide
             a practical starting point.
           </p>
-
-          <h4>Key advantages</h4>
-          <ul>
-            <li>Establish a local presence in Vietnam</li>
-            <li>Conduct market research and develop business relationships</li>
-            <li>Explore potential partners and market opportunities</li>
-            <li>Relatively simple structure with lower operating requirements</li>
-          </ul>
-
-          <h4>Our support</h4>
-          <ul>
-            <li>Market-entry and setup consultation</li>
-            <li>Preparation and submission of registration documents</li>
-            <li>Liaison with relevant authorities</li>
-            <li>Assistance with local staffing and initial administrative setup</li>
-          </ul>
-
-          <h4>Typical timeline</h4>
-          <p>
+<h4>Key advantages</h4>
+<ul>
+<li>Establish a local presence in Vietnam</li>
+<li>Conduct market research and develop business relationships</li>
+<li>Explore potential partners and market opportunities</li>
+<li>Relatively simple structure with lower operating requirements</li>
+</ul>
+<h4>Our support</h4>
+<ul>
+<li>Market-entry and setup consultation</li>
+<li>Preparation and submission of registration documents</li>
+<li>Liaison with relevant authorities</li>
+<li>Assistance with local staffing and initial administrative setup</li>
+</ul>
+<h4>Typical timeline</h4>
+<p>
             From 15–20 working days, depending on the specific case and applicable regulations.
           </p>
-
-        </div>
-
-      </article>
-
-
-      <article class="market-entry-card">
-
-        <div class="market-entry-card-image">
-          <img
-            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"
-            alt="Business operations in Vietnam">
-        </div>
-
-        <div class="market-entry-card-body">
-
-          <h3>Small Service Company — Build and Operate Your Business</h3>
-
-          <p>
+</div>
+</article>
+<article class="market-entry-card">
+<div class="market-entry-card-image">
+<img alt="Business operations in Vietnam" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=1200&amp;q=85"/>
+</div>
+<div class="market-entry-card-body">
+<h3>Small Service Company — Build and Operate Your Business</h3>
+<p>
             For businesses ready to provide services, enter into contracts, and
             generate revenue in Vietnam, establishing a local company provides a
             more suitable foundation for long-term operations.
           </p>
-
-          <p>
+<p>
             We support businesses across eligible sectors, including consulting,
             IT, marketing, professional services, trading, and other business activities.
           </p>
-
-          <h4>Key advantages</h4>
-          <ul>
-            <li>Establish a fully registered local business entity</li>
-            <li>Enter into contracts and invoice customers in Vietnam</li>
-            <li>Conduct business operations and generate local revenue</li>
-            <li>Build a foundation for long-term growth in Vietnam</li>
-          </ul>
-
-          <h4>Our support</h4>
-          <ul>
-            <li>Business structure and market-entry advisory</li>
-            <li>Capital and ownership structure consultation</li>
-            <li>Preparation of corporate documents and charter</li>
-            <li>Support with Investment Registration Certificate (IRC) and Enterprise Registration Certificate (ERC)</li>
-            <li>Business-line and regulatory compliance guidance</li>
-          </ul>
-
-        </div>
-
-      </article>
-
-    </div>
-
-
-    <div class="market-entry-note">
-      <strong>Important:</strong>
-      <p>
+<h4>Key advantages</h4>
+<ul>
+<li>Establish a fully registered local business entity</li>
+<li>Enter into contracts and invoice customers in Vietnam</li>
+<li>Conduct business operations and generate local revenue</li>
+<li>Build a foundation for long-term growth in Vietnam</li>
+</ul>
+<h4>Our support</h4>
+<ul>
+<li>Business structure and market-entry advisory</li>
+<li>Capital and ownership structure consultation</li>
+<li>Preparation of corporate documents and charter</li>
+<li>Support with Investment Registration Certificate (IRC) and Enterprise Registration Certificate (ERC)</li>
+<li>Business-line and regulatory compliance guidance</li>
+</ul>
+</div>
+</article>
+</div>
+<div class="market-entry-note">
+<strong>Important:</strong>
+<p>
         Business activities, ownership structures, licensing requirements, and tax obligations
         vary depending on the nature and scope of the investment. We help clients identify the
         appropriate structure and compliance requirements before proceeding.
       </p>
-    </div>
-
-  </div>
-
+</div>
+</div>
 </section>
-
-
 <!-- =========================
      ABOUT
 ========================= -->
-
 <section class="section section-light about-reference" id="about">
-
 <div class="container about-grid">
-
 <div class="about-text">
-
 <div class="section-label">
     Who We Are
 </div>
-
 <h2>
     About Ying Fa Global
 </h2>
-
 <p>
     Ying Fa Global Consulting is a flexible international business support
     partner for companies, entrepreneurs and organizations working across
     different markets, languages and cultures.
 </p>
-
-<a href="#profile" class="btn btn-gold">
+<a class="btn btn-gold" href="#profile">
     Learn More About Us →
 </a>
-
 </div>
-
-
 <div class="about-image">
-
-<img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=85"
-     alt="Modern business office">
-
+<img alt="Modern business office" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"/>
 <div class="about-badge">
-
 <strong>Global</strong>
-
 <span>Opportunities</span>
-
 <strong>Local Success</strong>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- =========================
      WHY CHOOSE US
 ========================= -->
-
 <section class="section why-reference">
-
 <div class="container">
-
 <div class="section-heading why-reference-heading">
-
 <div class="section-label">
     Our Advantages
 </div>
-
 <h2>Why Choose Us</h2>
-
 </div>
-
-
 <div class="why-grid">
-
 <div class="why-item">
-
-<div class="why-icon" aria-hidden="true">
-<svg viewBox="0 0 48 48" fill="none">
-<path d="M10 17L24 8L38 17L24 39L10 17Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
-<path d="M10 17H38M17 13L24 39L31 13" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+<div aria-hidden="true" class="why-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<path d="M10 17L24 8L38 17L24 39L10 17Z" stroke="currentColor" stroke-linejoin="round" stroke-width="2.2"></path>
+<path d="M10 17H38M17 13L24 39L31 13" stroke="currentColor" stroke-linejoin="round" stroke-width="2.2"></path>
 </svg>
 </div>
-
 <h3>Practical Solutions</h3>
-
 <p>
     Action and results-driven advice
     designed around real business needs.
 </p>
-
 </div>
-
-
 <div class="why-item">
-
-<div class="why-icon" aria-hidden="true">
-<svg viewBox="0 0 48 48" fill="none">
-<circle cx="17" cy="16" r="6" stroke="currentColor" stroke-width="2.2"/>
-<circle cx="31" cy="16" r="6" stroke="currentColor" stroke-width="2.2"/>
-<path d="M7 36C7.8 29.5 11.2 26 17 26C22.8 26 26.2 29.5 27 36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-<path d="M21 36C21.8 29.5 25.2 26 31 26C36.8 26 40.2 29.5 41 36" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+<div aria-hidden="true" class="why-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<circle cx="17" cy="16" r="6" stroke="currentColor" stroke-width="2.2"></circle>
+<circle cx="31" cy="16" r="6" stroke="currentColor" stroke-width="2.2"></circle>
+<path d="M7 36C7.8 29.5 11.2 26 17 26C22.8 26 26.2 29.5 27 36" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M21 36C21.8 29.5 25.2 26 31 26C36.8 26 40.2 29.5 41 36" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
 </svg>
 </div>
-
 <h3>Multilingual Team</h3>
-
 <p>
     Bridging cultures and businesses
     through Chinese, English and Vietnamese.
 </p>
-
 </div>
-
-
 <div class="why-item">
-
-<div class="why-icon" aria-hidden="true">
-<svg viewBox="0 0 48 48" fill="none">
-<circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2.2"/>
-<circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="2.2"/>
-<path d="M24 9V19M39 24H29M24 39V29M9 24H19" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-<path d="M24 24L34 14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+<div aria-hidden="true" class="why-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2.2"></circle>
+<circle cx="24" cy="24" r="5" stroke="currentColor" stroke-width="2.2"></circle>
+<path d="M24 9V19M39 24H29M24 39V29M9 24H19" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
+<path d="M24 24L34 14" stroke="currentColor" stroke-linecap="round" stroke-width="2.2"></path>
 </svg>
 </div>
-
 <h3>Local Insight</h3>
-
 <p>
     In-depth understanding of Vietnam's
     business environment and market.
 </p>
-
 </div>
-
-
 <div class="why-item">
-
-<div class="why-icon" aria-hidden="true">
-<svg viewBox="0 0 48 48" fill="none">
-<circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2.2"/>
-<path d="M9 24H39M24 9C28 13.2 30 18.2 30 24C30 29.8 28 34.8 24 39C20 34.8 18 29.8 18 24C18 18.2 20 13.2 24 9Z" stroke="currentColor" stroke-width="2.2"/>
-<path d="M12 15C15.5 17.2 19.5 18.3 24 18.3C28.5 18.3 32.5 17.2 36 15M12 33C15.5 30.8 19.5 29.7 24 29.7C28.5 29.7 32.5 30.8 36 33" stroke="currentColor" stroke-width="2.2"/>
+<div aria-hidden="true" class="why-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2.2"></circle>
+<path d="M9 24H39M24 9C28 13.2 30 18.2 30 24C30 29.8 28 34.8 24 39C20 34.8 18 29.8 18 24C18 18.2 20 13.2 24 9Z" stroke="currentColor" stroke-width="2.2"></path>
+<path d="M12 15C15.5 17.2 19.5 18.3 24 18.3C28.5 18.3 32.5 17.2 36 15M12 33C15.5 30.8 19.5 29.7 24 29.7C28.5 29.7 32.5 30.8 36 33" stroke="currentColor" stroke-width="2.2"></path>
 </svg>
 </div>
-
 <h3>International Network</h3>
-
 <p>
     Access to global partners, suppliers
     and business opportunities.
 </p>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- =========================
      BUSINESS SOLUTIONS
 ========================= -->
-
 <section class="section section-light">
-
 <div class="container">
-
 <div class="heading-row section-heading">
-
 <div>
-
 <div class="section-label">
     Business Solutions
 </div>
-
 <h2>Supporting Your Growth</h2>
-
 <p>
     Supporting businesses through different stages of international development.
 </p>
-
 </div>
-
-<a href="#services" class="text-link">
+<a class="text-link yf-open-services" data-services-open="" href="#services">
     View All Services →
 </a>
-
 </div>
-
-
 <div class="solution-grid">
-
-
 <div class="solution-card">
-
 <div class="solution-image">
-
-<img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
-     alt="Doing business in Vietnam">
-
+<img alt="Doing business in Vietnam" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
 </div>
-
 <div class="solution-content">
-
 <h3>Doing Business in Vietnam</h3>
-
 <p>
     Insights for international businesses exploring opportunities in Vietnam.
 </p>
-
-<a href="#contact" class="learn">
+<a class="learn" href="#contact">
     Learn More →
 </a>
-
 </div>
-
 </div>
-
-
 <div class="solution-card">
-
 <div class="solution-image">
-
-<img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
-     alt="China Vietnam business cooperation">
-
+<img alt="China Vietnam business cooperation" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
 </div>
-
 <div class="solution-content">
-
 <h3>China–Vietnam Business</h3>
-
 <p>
     Communication, trade and business cooperation between China and Vietnam.
 </p>
-
-<a href="#contact" class="learn">
+<a class="learn" href="#contact">
     Learn More →
 </a>
-
 </div>
-
 </div>
-
-
 <div class="solution-card">
-
 <div class="solution-image">
-
-<img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=900&q=85"
-     alt="Cross border business">
-
+<img alt="Cross border business" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
 </div>
-
 <div class="solution-content">
-
 <h3>Cross-Border Business</h3>
-
 <p>
     Practical perspectives on international markets and business development.
 </p>
-
-<a href="#contact" class="learn">
+<a class="learn" href="#contact">
     Learn More →
 </a>
-
 </div>
-
 </div>
-
-
 <div class="solution-card">
-
 <div class="solution-image">
-
-<img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85"
-     alt="Investment support">
-
+<img alt="Investment support" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=900&amp;q=85"/>
 </div>
-
 <div class="solution-content">
-
 <h3>Investment Support</h3>
-
 <p>
     Assistance for companies seeking investment opportunities in Vietnam and the region.
 </p>
-
-<a href="#contact" class="learn">
+<a class="learn" href="#contact">
     Learn More →
 </a>
-
 </div>
-
 </div>
-
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- =========================
      PROCESS
 ========================= -->
-
 <section class="section process" id="profile">
-
 <div class="container">
-
 <div class="section-heading">
-
 <div class="section-label">
     How We Work
 </div>
-
 <h2>Our Process</h2>
-
 <p>
     A simple and transparent process to turn your goals into results.
 </p>
-
 </div>
-
-
 <div class="process-grid">
-
-
 <div class="process-item">
-
 <div class="process-number">01</div>
-
 <h3>Understand</h3>
-
 <p>
     We understand your business objectives, requirements and challenges.
 </p>
-
 </div>
-
-
 <div class="process-item">
-
 <div class="process-number">02</div>
-
 <h3>Plan</h3>
-
 <p>
     We identify suitable approaches and practical solutions for your needs.
 </p>
-
 </div>
-
-
 <div class="process-item">
-
 <div class="process-number">03</div>
-
 <h3>Support</h3>
-
 <p>
     We provide professional support throughout the agreed project.
 </p>
-
 </div>
-
-
 <div class="process-item">
-
 <div class="process-number">04</div>
-
 <h3>Connect</h3>
-
 <p>
     We help connect people, information and opportunities across borders.
 </p>
-
 </div>
-
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- =========================
      NEWS
 ========================= -->
-
 <section class="section" id="news">
-
 <div class="container">
-
 <div class="heading-row section-heading">
-
 <div>
-
 <div class="section-label">
-    News & Insights
+    News &amp; Insights
 </div>
-
 <h2>Latest Updates</h2>
-
 <p>
     Insights, articles and news about international business,
     Vietnam market and cross-border opportunities.
 </p>
-
 </div>
-
-<a href="#news" class="text-link">
+<a class="text-link" href="#news">
     View All News →
 </a>
-
 </div>
-
-
 <div class="news-grid">
-
-
 <div class="news-card">
-
 <div class="news-image">
-
-<img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=85"
-     alt="Vietnam business market">
-
+<img alt="Vietnam business market" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/>
 </div>
-
 <div class="news-content">
-
 <div class="news-date">
     BUSINESS IN VIETNAM
 </div>
-
 <h3>
     Opportunities for Foreign Businesses in Vietnam's Growing Market
 </h3>
-
 <p>
     Key considerations for international companies exploring Vietnam.
 </p>
-
-<a href="#contact" class="learn">
+<a class="learn" href="#contact">
     Read More →
 </a>
-
 </div>
-
 </div>
-
-
 <div class="news-card">
-
 <div class="news-image">
-
-<img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=85"
-     alt="China Vietnam business">
-
+<img alt="China Vietnam business" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/>
 </div>
-
 <div class="news-content">
-
 <div class="news-date">
     CHINA–VIETNAM
 </div>
-
 <h3>
     Strengthening China–Vietnam Business Cooperation
 </h3>
-
 <p>
     Understanding communication, trade and cooperation opportunities.
 </p>
-
-<a href="#contact" class="learn">
+<a class="learn" href="#contact">
     Read More →
 </a>
-
 </div>
-
 </div>
-
-
 <div class="news-card">
-
 <div class="news-image">
-
-<img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1000&q=85"
-     alt="Cross border investment">
-
+<img alt="Cross border investment" src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"/>
 </div>
-
 <div class="news-content">
-
 <div class="news-date">
     INTERNATIONAL BUSINESS
 </div>
-
 <h3>
     Key Trends in Cross-Border Investment in Southeast Asia
 </h3>
-
 <p>
     Perspectives for businesses considering international expansion.
 </p>
-
-<a href="#contact" class="learn">
+<a class="learn" href="#contact">
     Read More →
 </a>
-
 </div>
-
 </div>
-
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- =========================
      CTA
 ========================= -->
-
 <section class="cta" id="contact">
-
 <div class="container cta-content">
-
 <div>
-
 <h2>Let's Work Together</h2>
-
 <p>
     Connect with our team to discuss how Ying Fa Global can support your business goals.
 </p>
-
 </div>
-
-<a href="mailto:info@yingfaglobal.com" class="btn btn-gold">
+<a class="btn btn-gold" href="mailto:info@yingfaglobal.com">
     Contact Us →
 </a>
-
 </div>
-
 </section>
-
-
 <!-- =========================
      FOOTER
 ========================= -->
-
 <footer>
-
 <div class="container">
-
 <div class="footer-grid">
-
-
 <div>
-
 <div class="footer-logo">
     Ying Fa <span>Global</span>
 </div>
-
 <div class="footer-tagline">
     Bridging Opportunities Across Borders
 </div>
-
 </div>
-
-
 <div>
-
 <h4>Navigation</h4>
-
 <div class="footer-links">
-
 <a href="#home">Home</a>
-
-<a href="#services">Services</a>
-
+<a class="yf-open-services" data-services-open="" href="#services">Services</a>
 <a href="#about">About</a>
-
 <a href="#profile">Profile</a>
-
 <a href="#news">News</a>
-
 <a href="#contact">Contact</a>
-
 </div>
-
 </div>
-
-
 <div>
-
 <h4>Contact</h4>
-
 <div class="footer-links">
-
 <a href="mailto:info@yingfaglobal.com">
     info@yingfaglobal.com
 </a>
-
 <a href="#contact">
     Business Consulting
 </a>
-
 <a href="#contact">
-    Translation & Interpretation
+    Translation &amp; Interpretation
 </a>
-
 <a href="#contact">
     International Trade
 </a>
-
 </div>
-
 </div>
-
-
 </div>
-
-
 <div class="footer-bottom">
-
 <div>
     © 2026 Ying Fa Global Consulting. All rights reserved.
 </div>
-
 <div>
     Business Consulting · Translation · Interpretation · International Trade
 </div>
-
 </div>
-
 </div>
-
 </footer>
-
-
- <style>
+<style>
 /* =========================================
    YING FA GLOBAL - DESKTOP CONTACT ICONS
    ========================================= */
@@ -3917,32 +3794,68 @@ footer{
 }
 
 </style>
-<script>
-// Keep the clicked navigation item visually active.
-document.querySelectorAll('.nav a').forEach(function(link){
-    link.addEventListener('click', function(){
-        document.querySelectorAll('.nav a').forEach(function(item){
-            item.classList.remove('active');
-        });
-        this.classList.add('active');
-    });
-});
-</script>
 
 
 <script>
 (function(){
+  const directory = document.getElementById('services-directory');
+  if(!directory) return;
+
+  const closeButton = directory.querySelector('.yf-services-directory-close');
+  const triggers = document.querySelectorAll('[data-services-open]');
+  const navLinks = document.querySelectorAll('.nav a');
+
+  function openServices(){
+    directory.classList.add('is-open');
+    directory.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+
+    navLinks.forEach(function(item){
+      item.classList.toggle('active', item.getAttribute('href') === '#services');
+    });
+
+    directory.scrollTop = 0;
+  }
+
+  function closeServices(){
+    directory.classList.remove('is-open');
+    directory.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+
+    navLinks.forEach(function(item){
+      item.classList.remove('active');
+    });
+  }
+
+  triggers.forEach(function(link){
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      openServices();
+    });
+  });
+
+  closeButton.addEventListener('click', closeServices);
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && directory.classList.contains('is-open')){
+      closeServices();
+    }
+  });
+})();
+</script><script>
+(function(){
   const detail = document.getElementById('market-entry-details');
-  const openButton = document.querySelector('[data-market-entry-open]');
   const closeButton = detail ? detail.querySelector('.market-entry-close') : null;
 
-  if(!detail || !openButton || !closeButton) return;
+  if(!detail || !closeButton) return;
 
-  openButton.addEventListener('click', function(e){
-    e.preventDefault();
-    detail.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
-    detail.scrollTop = 0;
+  document.querySelectorAll('[data-market-entry-open]').forEach(function(openButton){
+    openButton.addEventListener('click', function(e){
+      e.preventDefault();
+      detail.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      detail.scrollTop = 0;
+    });
   });
 
   closeButton.addEventListener('click', function(){
@@ -3964,7 +3877,5 @@ document.querySelectorAll('.nav a').forEach(function(link){
     }
   });
 })();
-</script>
-
-</body>
+</script></body>
 </html>
