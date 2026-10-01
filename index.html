@@ -2034,8 +2034,17 @@ header{position:sticky!important;top:0;z-index:10000}
   .yf-topbar-item{padding:0 8px;font-size:11px}
   .yf-topbar-search input{width:125px}
 }
+</style><style>
+/* Final topbar adjustment: English is the site's original language, so no ENG button. */
+.yf-topbar-group{
+  display:flex;
+  align-items:center;
+}
+.yf-topbar .yf-lang-btn{
+  cursor:pointer;
+}
 </style></head>
-<body><div class="yf-topbar"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone">☎</span>Contact Us</a><div class="yf-topbar-item"><button class="yf-lang-btn" data-lang="zh-tw" type="button">繁體中文</button><span> / </span><button class="yf-lang-btn" data-lang="zh-cn" type="button">简体中文</button></div><button class="yf-topbar-item yf-lang-btn" data-lang="vi" type="button">Tiếng Việt</button><button class="yf-topbar-item yf-lang-btn" data-lang="en" type="button">ENG</button></div><div class="yf-topbar-search"><input aria-label="Search" placeholder="Search" type="search"/><button aria-label="Search" type="button">⌕</button></div></div>
+<body><div class="yf-topbar"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone">☎</span>Contact Us</a><div class="yf-topbar-item"><button class="yf-lang-btn" data-lang="zh-tw" type="button">繁體中文</button><span> / </span><button class="yf-lang-btn" data-lang="zh-cn" type="button">简体中文</button></div><button class="yf-topbar-item yf-lang-btn" data-lang="vi" type="button">Tiếng Việt</button></div><div class="yf-topbar-search"><input aria-label="Search" placeholder="Search" type="search"/><button aria-label="Search" type="button">⌕</button></div></div>
 <!-- =========================
      HEADER
 ========================= -->
