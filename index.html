@@ -1990,8 +1990,52 @@ header{
   .yf-services-prev{left:10px;}
   .yf-services-next{right:10px;}
 }
+</style><style>
+/* YF TOP UTILITY BAR */
+.yf-topbar{
+  min-height:48px;background:#0b4b78;color:#fff;display:flex;align-items:center;
+  justify-content:flex-end;padding:0 4.5%;position:relative;z-index:10002;
+  border-bottom:1px solid rgba(255,255,255,.16);
+}
+.yf-topbar-group{height:100%;display:flex;align-items:center}
+.yf-topbar-item{
+  height:48px;display:flex;align-items:center;padding:0 18px;
+  border-left:1px solid rgba(255,255,255,.16);color:#fff;background:transparent;
+  font-size:14px;text-decoration:none;white-space:nowrap;cursor:pointer;
+}
+.yf-topbar-item:hover{background:rgba(255,255,255,.08)}
+.yf-topbar-contact{font-weight:700}
+.yf-phone{margin-right:8px;font-size:17px;color:#d7ad55}
+.yf-topbar-search{position:relative;display:flex;align-items:center;height:48px;padding-left:14px}
+.yf-topbar-search input{
+  width:220px;height:32px;border:1px solid #d7ad55;background:#fff;color:#27364a;
+  padding:0 38px 0 12px;font-size:13px;outline:none
+}
+.yf-topbar-search button{
+  position:absolute;right:5px;width:30px;height:30px;border:0;background:transparent;
+  color:#0b4b78;font-size:17px;cursor:pointer
+}
+.yf-lang-btn{border:0;font:inherit}
+.yf-lang-btn.selected{background:rgba(215,173,85,.25)}
+header{position:sticky!important;top:0;z-index:10000}
+.nav a{position:relative}
+.nav a::after{
+  content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;
+  background:#d7ad55;transform:scaleX(0);transform-origin:center;transition:transform .22s ease
+}
+.nav a.active::after,.nav a:hover::after{transform:scaleX(1)}
+@media(max-width:900px){
+  .yf-topbar{justify-content:center;padding:0 8px;overflow-x:auto}
+  .yf-topbar-item{padding:0 10px;font-size:12px}
+  .yf-topbar-search input{width:145px}
+}
+@media(max-width:600px){
+  .yf-topbar{justify-content:flex-start}
+  .yf-topbar-item{padding:0 8px;font-size:11px}
+  .yf-topbar-search input{width:125px}
+}
 </style></head>
-<body>
+<body><div class="yf-topbar"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone">☎</span>Contact Us</a><div class="yf-topbar-item"><button class="yf-lang-btn" data-lang="zh-tw" type="button">繁體中文</button><span> / </span><button class="yf-lang-btn" data-lang="zh-cn" type="button">简体中文</button></div><button class="yf-topbar-item yf-lang-btn" data-lang="vi" type="button">Tiếng Việt</button><button class="yf-topbar-item yf-lang-btn" data-lang="en" type="button">ENG</button></div><div class="yf-topbar-search"><input aria-label="Search" placeholder="Search" type="search"/><button aria-label="Search" type="button">⌕</button></div></div>
 <!-- =========================
      HEADER
 ========================= -->
@@ -4072,66 +4116,6 @@ header{
 })();
 </script><script>
 (function(){
-  const directory = document.getElementById('services-directory');
-  if(!directory) return;
-
-  const closeButton = directory.querySelector('.yf-services-directory-close');
-  const serviceTrigger = document.querySelectorAll('[data-services-open]');
-  const navLinks = document.querySelectorAll('.nav a');
-
-  function openServices(){
-    directory.classList.add('is-open');
-    directory.setAttribute('aria-hidden','false');
-    document.body.style.overflow = 'hidden';
-
-    navLinks.forEach(function(item){
-      item.classList.toggle('active', item.getAttribute('href') === '#services');
-    });
-
-    directory.scrollTop = 0;
-  }
-
-  function closeServices(){
-    directory.classList.remove('is-open');
-    directory.setAttribute('aria-hidden','true');
-    document.body.style.overflow = '';
-
-    navLinks.forEach(function(item){
-      item.classList.remove('active');
-    });
-  }
-
-  // SERVICES menu: open the separate 16-service area.
-  serviceTrigger.forEach(function(link){
-    link.addEventListener('click', function(e){
-      e.preventDefault();
-      openServices();
-    });
-  });
-
-  // ALL OTHER MENU ITEMS:
-  // close the Services area first, then allow the normal anchor
-  // (Home/About/Profile/News/Contact) to jump to its section.
-  navLinks.forEach(function(link){
-    if(link.hasAttribute('data-services-open')) return;
-
-    link.addEventListener('click', function(){
-      if(directory.classList.contains('is-open')){
-        closeServices();
-      }
-    });
-  });
-
-  closeButton.addEventListener('click', closeServices);
-
-  document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape' && directory.classList.contains('is-open')){
-      closeServices();
-    }
-  });
-})();
-</script><script>
-(function(){
   const hero = document.querySelector('.yf-services-hero');
   if(!hero) return;
 
@@ -4193,6 +4177,88 @@ header{
 
   show(0);
   start();
+})();
+</script><script>
+(function(){
+  const directory=document.getElementById('services-directory');
+  const navLinks=document.querySelectorAll('.nav a');
+  if(!directory) return;
+  const closeButton=directory.querySelector('.yf-services-directory-close');
+
+  function active(link){
+    navLinks.forEach(a=>a.classList.remove('active'));
+    if(link) link.classList.add('active');
+  }
+  function openServices(link){
+    directory.classList.add('is-open');
+    directory.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    active(link);
+    directory.scrollTop=0;
+  }
+  function closeServices(){
+    directory.classList.remove('is-open');
+    directory.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+
+  navLinks.forEach(function(link){
+    link.addEventListener('click',function(e){
+      if(link.getAttribute('href')==='#services'){
+        e.preventDefault(); openServices(link);
+      }else{
+        closeServices(); active(link);
+      }
+    });
+  });
+  if(closeButton) closeButton.addEventListener('click',function(){
+    closeServices();
+    const home=Array.from(navLinks).find(a=>a.getAttribute('href')==='#home');
+    if(home) active(home);
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && directory.classList.contains('is-open')){
+      closeServices();
+    }
+  });
+
+  if('IntersectionObserver' in window){
+    const items=Array.from(navLinks).map(a=>({a,id:(a.getAttribute('href')||'').replace('#','')})).filter(x=>x.id);
+    const obs=new IntersectionObserver(function(entries){
+      if(directory.classList.contains('is-open')) return;
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          const x=items.find(v=>v.id===entry.target.id);
+          if(x) active(x.a);
+        }
+      });
+    },{rootMargin:'-25% 0px -60% 0px',threshold:0});
+    items.forEach(x=>{const el=document.getElementById(x.id);if(el)obs.observe(el)});
+  }
+
+  document.querySelectorAll('.yf-lang-btn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('.yf-lang-btn').forEach(x=>x.classList.remove('selected'));
+      btn.classList.add('selected');
+    });
+  });
+
+  const input=document.querySelector('.yf-topbar-search input');
+  const searchBtn=document.querySelector('.yf-topbar-search button');
+  function search(){
+    const q=(input.value||'').trim().toLowerCase();
+    if(!q) return;
+    const sections=Array.from(document.querySelectorAll('section[id]'));
+    const match=sections.find(s=>s.innerText.toLowerCase().includes(q));
+    if(match){
+      closeServices();
+      const link=Array.from(navLinks).find(a=>a.getAttribute('href')==='#'+match.id);
+      if(link) active(link);
+      match.scrollIntoView({behavior:'smooth',block:'start'});
+    }
+  }
+  searchBtn.addEventListener('click',search);
+  input.addEventListener('keydown',e=>{if(e.key==='Enter')search()});
 })();
 </script></body>
 </html>
