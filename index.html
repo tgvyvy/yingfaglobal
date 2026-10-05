@@ -3320,7 +3320,7 @@ header{
   </div>
 </section>
 
-<footer>
+<div id="yf-service-modal" class="yf-service-modal" aria-hidden="true"><div class="yf-service-modal-backdrop" data-service-close></div><div class="yf-service-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="yf-service-modal-title"><button type="button" class="yf-service-modal-close" data-service-close>×</button><div class="yf-service-modal-content"><div class="yf-service-modal-label" id="yf-service-modal-label"></div><h2 id="yf-service-modal-title"></h2><p class="yf-service-modal-overview" id="yf-service-modal-overview"></p><div class="yf-service-detail-grid"><section><h3 id="yf-service-scope-title"></h3><ul id="yf-service-scope"></ul></section><section><h3 id="yf-service-for-title"></h3><p id="yf-service-for"></p></section><section class="yf-service-detail-full"><h3 id="yf-service-approach-title"></h3><p id="yf-service-approach"></p></section></div><div class="yf-service-inquiry"><h3 id="yf-service-support-title"></h3><form id="yf-service-form"><input type="hidden" id="yf-selected-service" name="service"><div class="yf-form-grid"><label><span id="yf-label-name"></span><input id="yf-name" name="name" required></label><label><span id="yf-label-company"></span><input id="yf-company" name="company"></label><label><span id="yf-label-email"></span><input id="yf-email" name="email" type="email" required></label><label><span id="yf-label-contact"></span><input id="yf-contact" name="contact"></label><label><span id="yf-label-country"></span><input id="yf-country" name="country"></label><label class="yf-form-full"><span id="yf-label-message"></span><textarea id="yf-message" name="message" rows="4" required></textarea></label></div><div class="yf-form-actions"><small id="yf-form-required"></small><button type="submit" id="yf-form-send"></button></div></form></div></div></div></div><footer>
   <div class="container">
     <div class="yf-footer-grid">
       <div class="yf-footer-brand">
@@ -4763,3 +4763,147 @@ footer .container,
 }
 
 </style>
+<style>
+.yf-service-card{cursor:pointer!important}.yf-service-modal{position:fixed;inset:0;z-index:99999;display:none}.yf-service-modal.is-open{display:block}.yf-service-modal-backdrop{position:absolute;inset:0;background:rgba(4,18,35,.72);backdrop-filter:blur(3px)}.yf-service-modal-dialog{position:relative;width:min(940px,92vw);max-height:90vh;margin:5vh auto 0;background:#fff;border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.28);overflow:hidden}.yf-service-modal-content{max-height:90vh;overflow-y:auto;padding:34px 38px 32px}.yf-service-modal-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#0d2742;color:#fff;font-size:25px;line-height:1;cursor:pointer;z-index:2}.yf-service-modal-label{color:#b08a3e;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}.yf-service-modal-content h2{color:#0b2a5b;font-size:30px;line-height:1.2;margin:0 48px 12px 0}.yf-service-modal-overview{color:#475467;font-size:14px;line-height:1.65;margin:0 0 24px}.yf-service-detail-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px 30px;padding:22px 0;border-top:1px solid #e7eaf0;border-bottom:1px solid #e7eaf0}.yf-service-detail-grid section{min-width:0}.yf-service-detail-grid h3{color:#0b2a5b;font-size:15px;margin:0 0 10px}.yf-service-detail-grid p,.yf-service-detail-grid li{color:#475467;font-size:13px;line-height:1.6}.yf-service-detail-grid ul{margin:0;padding-left:18px}.yf-service-detail-grid li{margin:0 0 6px}.yf-service-detail-full{grid-column:1/-1}.yf-service-inquiry{margin-top:24px;padding:22px;background:#f5f8fb;border-radius:14px}.yf-service-inquiry>h3{color:#0b2a5b;font-size:18px;margin:0 0 16px}.yf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.yf-form-grid label{display:flex;flex-direction:column;gap:6px;color:#344054;font-size:12px;font-weight:700}.yf-form-grid input,.yf-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d5dbe3;border-radius:8px;background:#fff;padding:10px 11px;font:inherit;font-weight:400;color:#1d2939;outline:none}.yf-form-grid input:focus,.yf-form-grid textarea:focus{border-color:#b08a3e;box-shadow:0 0 0 2px rgba(176,138,62,.12)}.yf-form-full{grid-column:1/-1}.yf-form-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:15px}.yf-form-actions small{color:#667085;font-size:11px}#yf-form-send{border:0;border-radius:24px;background:#0d2742;color:#fff;padding:11px 22px;font-size:12px;font-weight:700;cursor:pointer}@media(max-width:700px){.yf-service-modal-dialog{width:94vw;max-height:94vh;margin:3vh auto 0;border-radius:14px}.yf-service-modal-content{max-height:94vh;padding:28px 18px 22px}.yf-service-modal-content h2{font-size:24px}.yf-service-detail-grid{grid-template-columns:1fr;gap:18px}.yf-service-detail-full{grid-column:auto}.yf-form-grid{grid-template-columns:1fr}.yf-form-full{grid-column:auto}.yf-form-actions{flex-direction:column;align-items:stretch}#yf-form-send{width:100%}}
+</style>
+<style>
+/* ===== V13 SERVICE DETAIL POPUP ===== */
+.yf-service-card{cursor:pointer!important}
+.yf-service-modal{position:fixed;inset:0;z-index:100000;display:none}
+.yf-service-modal.is-open{display:block}
+.yf-service-modal-backdrop{position:absolute;inset:0;background:rgba(4,18,35,.72);backdrop-filter:blur(3px)}
+.yf-service-modal-dialog{position:relative;width:min(940px,92vw);max-height:90vh;margin:5vh auto 0;background:#fff;border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.30);overflow:hidden}
+.yf-service-modal-content{max-height:90vh;overflow-y:auto;padding:34px 38px 32px}
+.yf-service-modal-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#0d2742;color:#fff;font-size:25px;line-height:1;cursor:pointer;z-index:3}
+.yf-service-modal-label{color:#b08a3e;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.yf-service-modal-content h2{color:#0b2a5b;font-size:30px;line-height:1.2;margin:0 48px 12px 0}
+.yf-service-modal-overview{color:#475467;font-size:14px;line-height:1.65;margin:0 0 24px}
+.yf-service-detail-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px 30px;padding:22px 0;border-top:1px solid #e7eaf0;border-bottom:1px solid #e7eaf0}
+.yf-service-detail-grid section{min-width:0}
+.yf-service-detail-grid h3{color:#0b2a5b;font-size:15px;margin:0 0 10px}
+.yf-service-detail-grid p,.yf-service-detail-grid li{color:#475467;font-size:13px;line-height:1.6}
+.yf-service-detail-grid ul{margin:0;padding-left:18px}
+.yf-service-detail-grid li{margin:0 0 6px}
+.yf-service-detail-full{grid-column:1/-1}
+.yf-service-inquiry{margin-top:24px;padding:22px;background:#f5f8fb;border-radius:14px}
+.yf-service-inquiry>h3{color:#0b2a5b;font-size:18px;margin:0 0 16px}
+.yf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.yf-form-grid label{display:flex;flex-direction:column;gap:6px;color:#344054;font-size:12px;font-weight:700}
+.yf-form-grid input,.yf-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d5dbe3;border-radius:8px;background:#fff;padding:10px 11px;font:inherit;font-weight:400;color:#1d2939;outline:none}
+.yf-form-grid input:focus,.yf-form-grid textarea:focus{border-color:#b08a3e;box-shadow:0 0 0 2px rgba(176,138,62,.12)}
+.yf-form-full{grid-column:1/-1}
+.yf-form-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:15px}
+.yf-form-actions small{color:#667085;font-size:11px}
+#yf-form-send{border:0;border-radius:24px;background:#0d2742;color:#fff;padding:11px 22px;font-size:12px;font-weight:700;cursor:pointer}
+@media(max-width:700px){
+ .yf-service-modal-dialog{width:94vw;max-height:94vh;margin:3vh auto 0;border-radius:14px}
+ .yf-service-modal-content{max-height:94vh;padding:28px 18px 22px}
+ .yf-service-modal-content h2{font-size:24px}
+ .yf-service-detail-grid{grid-template-columns:1fr;gap:18px}
+ .yf-service-detail-full{grid-column:auto}
+ .yf-form-grid{grid-template-columns:1fr}
+ .yf-form-full{grid-column:auto}
+ .yf-form-actions{flex-direction:column;align-items:stretch}
+ #yf-form-send{width:100%}
+}
+</style>
+
+<script>
+(function(){
+  const DATA={"close": "Close", "support": "How can we support you?", "name": "Your Name", "company": "Company / Organization", "email": "Email Address", "contact": "Phone / WhatsApp", "country": "Country / Market", "message": "Tell us about your needs", "send": "Send Inquiry", "required": "Please complete the required fields.", "mailIntro": "Service inquiry", "select": "Selected service", "overview": "Overview", "scope": "What we can support", "for": "Suitable for", "approach": "How we work", "label": "SERVICE CONSULTATION", "services": [{"title": "Representative Office (RO) Setup", "overview": "A practical first step for international companies that want to establish a presence in Vietnam, understand the market and build local relationships before committing to full-scale operations.", "scope": ["Market-entry assessment and representative-office structure guidance", "Preparation and coordination of registration documentation", "Liaison and follow-up with relevant authorities and local service providers", "Initial support for office setup, local administration and staffing coordination", "Guidance on the permitted scope of representative-office activities and ongoing compliance"], "for": "International companies, associations and organizations that need a local presence for market research, relationship building and business development.", "approach": "We first review your objectives and proposed activities, then recommend a suitable setup route and coordinate the required steps through completion."}, {"title": "SME & Individual FDI Services", "overview": "End-to-end guidance for foreign SMEs and individual investors entering Vietnam, from choosing an appropriate investment structure to establishing a compliant local business.", "scope": ["Investment structure and ownership planning", "Company establishment and investment-registration coordination", "Business-line and licensing review", "Capital contribution and initial operational setup guidance", "Coordination with accounting, tax, banking and other local professional providers"], "for": "Foreign entrepreneurs, individual investors, family businesses and SMEs planning to establish or invest in a business in Vietnam.", "approach": "We clarify your investment objectives, proposed activities and ownership structure first, then map the practical setup and compliance steps for your case."}, {"title": "Compliance & Operations Support", "overview": "Ongoing operational support designed to help foreign-invested businesses stay organized, compliant and responsive as they operate in Vietnam.", "scope": ["Corporate records, filings and compliance-calendar coordination", "Tax, accounting and administrative coordination with qualified providers", "License, registration and renewal follow-up", "HR and routine administrative support", "Operational issue coordination and communication with local service providers"], "for": "Companies already operating in Vietnam that need reliable local coordination, as well as newly established businesses building their operating foundation.", "approach": "We identify recurring obligations and operational pressure points, establish a clear support workflow and provide ongoing coordination as required."}, {"title": "M&A & Investment Advisory", "overview": "Cross-border transaction support for investors and companies evaluating acquisitions, divestments, strategic investments or partnership opportunities in Vietnam and the region.", "scope": ["Target and opportunity identification", "Preliminary commercial and strategic assessment", "Due-diligence coordination with relevant professional advisors", "Transaction planning, negotiation and documentation coordination", "Post-transaction transition and partner coordination"], "for": "Investors, business owners, strategic buyers and companies considering acquisitions, exits, joint ventures or investment partnerships.", "approach": "We help define the transaction objectives, screen opportunities and coordinate the right financial, legal and specialist advisors for each stage."}, {"title": "Relocation & Lifestyle Services", "overview": "Personalized settlement support for executives, investors and families relocating to Vietnam, making the transition smoother and more efficient from the first arrival onward.", "scope": ["Residential area and housing search coordination", "School, transportation and local-service arrangements", "Arrival and settling-in assistance", "Everyday administrative and lifestyle coordination", "Personal concierge-style support for practical local needs"], "for": "Business owners, executives, investors and families moving to Vietnam for work, investment or longer-term residence.", "approach": "We begin with your priorities, timeline and preferred lifestyle, then coordinate trusted local services around your arrival and ongoing needs."}, {"title": "Green Investment & ESG Advisory", "overview": "Practical support for businesses and investors developing sustainable projects, strengthening ESG practices and preparing for increasingly responsible investment expectations.", "scope": ["ESG readiness and gap assessment", "Sustainability strategy and priority-setting", "Environmental and social risk coordination", "ESG policy, reporting and documentation support", "Green investment and sustainability-project preparation"], "for": "Investors, project owners and companies seeking to improve sustainability performance, attract responsible capital or prepare for ESG-related requirements.", "approach": "We assess your current position, identify priority improvements and coordinate practical actions with relevant technical and professional partners."}, {"title": "Asset Protection & Legal Defense", "overview": "Risk-focused coordination to help businesses and individuals protect valuable assets, strengthen legal preparedness and respond effectively to cross-border disputes or compliance risks.", "scope": ["Business and asset-risk mapping", "Contract and document review coordination", "Legal-risk and compliance issue escalation", "Dispute-response coordination with qualified legal counsel", "Cross-border communication and evidence/document management support"], "for": "Business owners, investors and organizations facing complex contractual, regulatory or cross-border risk.", "approach": "We first identify the nature and urgency of the risk, then coordinate appropriate legal and specialist professionals while keeping communication and case management organized."}, {"title": "Talent & Corporate Training", "overview": "Recruitment and training solutions that help companies build capable teams, improve workplace communication and work more effectively across languages and cultures.", "scope": ["Talent search and recruitment coordination", "Candidate screening and interview support", "Onboarding and workplace communication programs", "Cross-cultural training for international teams", "Customized corporate training based on business needs"], "for": "Foreign-invested companies, growing SMEs and organizations managing Vietnamese and international teams.", "approach": "We identify the roles, skills and communication needs first, then design a practical recruitment or training solution around your organization."}, {"title": "Digital Transformation & Security", "overview": "Business-focused digital support that helps organizations streamline processes, improve information management and strengthen day-to-day data-security practices.", "scope": ["Business-process mapping and improvement", "Digital workflow and tool-selection support", "Document and information-management improvement", "Cybersecurity awareness and basic control coordination", "Technology-vendor and implementation coordination"], "for": "SMEs and international businesses looking to modernize operations without losing control of cost, workflow or information security.", "approach": "We start with the current workflow and business priorities, then identify practical improvements that can be implemented in manageable stages."}, {"title": "Sourcing & Business Matching", "overview": "Cross-border sourcing and business-matching support that connects companies with suitable suppliers, buyers, distributors and strategic partners in Vietnam and international markets.", "scope": ["Supplier and partner search based on your requirements", "Initial screening and capability verification", "Quotation, sample and communication coordination", "Buyer-supplier and strategic partner matching", "Trade-fair, meeting and cross-border business coordination"], "for": "Vietnamese buyers sourcing overseas products, foreign companies seeking Vietnamese suppliers or partners, and businesses exploring new commercial relationships.", "approach": "We clarify specifications, target market and commercial objectives, then search, screen and coordinate introductions with suitable counterparties."}]};
+  const modal=document.getElementById('yf-service-modal');
+  if(!modal || !DATA || !DATA.services) return;
+
+  const cards=Array.from(document.querySelectorAll('.yf-service-card'));
+  const title=document.getElementById('yf-service-modal-title');
+  const label=document.getElementById('yf-service-modal-label');
+  const overview=document.getElementById('yf-service-modal-overview');
+  const scope=document.getElementById('yf-service-scope');
+  const selected=document.getElementById('yf-selected-service');
+  const forText=document.getElementById('yf-service-for');
+  const approach=document.getElementById('yf-service-approach');
+  const form=document.getElementById('yf-service-form');
+
+  const scopeTitle=document.getElementById('yf-service-scope-title');
+  const forTitle=document.getElementById('yf-service-for-title');
+  const approachTitle=document.getElementById('yf-service-approach-title');
+  const supportTitle=document.getElementById('yf-service-support-title');
+
+  label.textContent='SERVICE CONSULTATION';
+  scopeTitle.textContent=DATA.scope;
+  forTitle.textContent=DATA.for;
+  approachTitle.textContent=DATA.approach;
+  supportTitle.textContent=DATA.support;
+  document.getElementById('yf-label-name').textContent=DATA.name;
+  document.getElementById('yf-label-company').textContent=DATA.company;
+  document.getElementById('yf-label-email').textContent=DATA.email;
+  document.getElementById('yf-label-contact').textContent=DATA.contact;
+  document.getElementById('yf-label-country').textContent=DATA.country;
+  document.getElementById('yf-label-message').textContent=DATA.message;
+  document.getElementById('yf-form-required').textContent=DATA.required;
+  document.getElementById('yf-form-send').textContent=DATA.send;
+  document.querySelector('.yf-service-modal-close').setAttribute('aria-label',DATA.close);
+
+  function openService(index){
+    const item=DATA.services[index];
+    if(!item) return;
+    title.textContent=item.title;
+    overview.textContent=item.overview;
+    scope.innerHTML='';
+    item.scope.forEach(function(x){
+      const li=document.createElement('li');
+      li.textContent=x;
+      scope.appendChild(li);
+    });
+    forText.textContent=item.for;
+    approach.textContent=item.approach;
+    selected.value=item.title;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    const scroller=modal.querySelector('.yf-service-modal-content');
+    if(scroller) scroller.scrollTop=0;
+  }
+
+  function closeService(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+
+  cards.forEach(function(card){
+    card.addEventListener('click',function(e){
+      const link=e.target.closest('.yf-learn');
+      if(link) e.preventDefault();
+      const all=Array.from(document.querySelectorAll('.yf-service-card'));
+      const absoluteIndex=all.indexOf(card);
+      if(absoluteIndex<0) return;
+      openService(absoluteIndex % DATA.services.length);
+    });
+  });
+
+  modal.querySelectorAll('[data-service-close]').forEach(function(el){
+    el.addEventListener('click',closeService);
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && modal.classList.contains('is-open')) closeService();
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const fd=new FormData(form);
+    const subject=encodeURIComponent(DATA.mailIntro+': '+fd.get('service'));
+    const body=encodeURIComponent(
+      DATA.select+': '+fd.get('service')+'\\n'+
+      DATA.name+': '+fd.get('name')+'\\n'+
+      DATA.company+': '+fd.get('company')+'\\n'+
+      DATA.email+': '+fd.get('email')+'\\n'+
+      DATA.contact+': '+fd.get('contact')+'\\n'+
+      DATA.country+': '+fd.get('country')+'\\n'+
+      DATA.message+': '+fd.get('message')
+    );
+    window.location.href='mailto:business@yingfaglobal.com?subject='+subject+'&body='+body;
+  });
+})();
+</script>

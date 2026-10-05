@@ -3320,7 +3320,7 @@ header{
   </div>
 </section>
 
-<footer>
+<div id="yf-service-modal" class="yf-service-modal" aria-hidden="true"><div class="yf-service-modal-backdrop" data-service-close></div><div class="yf-service-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="yf-service-modal-title"><button type="button" class="yf-service-modal-close" data-service-close>×</button><div class="yf-service-modal-content"><div class="yf-service-modal-label" id="yf-service-modal-label"></div><h2 id="yf-service-modal-title"></h2><p class="yf-service-modal-overview" id="yf-service-modal-overview"></p><div class="yf-service-detail-grid"><section><h3 id="yf-service-scope-title"></h3><ul id="yf-service-scope"></ul></section><section><h3 id="yf-service-for-title"></h3><p id="yf-service-for"></p></section><section class="yf-service-detail-full"><h3 id="yf-service-approach-title"></h3><p id="yf-service-approach"></p></section></div><div class="yf-service-inquiry"><h3 id="yf-service-support-title"></h3><form id="yf-service-form"><input type="hidden" id="yf-selected-service" name="service"><div class="yf-form-grid"><label><span id="yf-label-name"></span><input id="yf-name" name="name" required></label><label><span id="yf-label-company"></span><input id="yf-company" name="company"></label><label><span id="yf-label-email"></span><input id="yf-email" name="email" type="email" required></label><label><span id="yf-label-contact"></span><input id="yf-contact" name="contact"></label><label><span id="yf-label-country"></span><input id="yf-country" name="country"></label><label class="yf-form-full"><span id="yf-label-message"></span><textarea id="yf-message" name="message" rows="4" required></textarea></label></div><div class="yf-form-actions"><small id="yf-form-required"></small><button type="submit" id="yf-form-send"></button></div></form></div></div></div></div><footer>
   <div class="container">
     <div class="yf-footer-grid">
       <div class="yf-footer-brand">
@@ -4763,3 +4763,147 @@ footer .container,
 }
 
 </style>
+<style>
+.yf-service-card{cursor:pointer!important}.yf-service-modal{position:fixed;inset:0;z-index:99999;display:none}.yf-service-modal.is-open{display:block}.yf-service-modal-backdrop{position:absolute;inset:0;background:rgba(4,18,35,.72);backdrop-filter:blur(3px)}.yf-service-modal-dialog{position:relative;width:min(940px,92vw);max-height:90vh;margin:5vh auto 0;background:#fff;border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.28);overflow:hidden}.yf-service-modal-content{max-height:90vh;overflow-y:auto;padding:34px 38px 32px}.yf-service-modal-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#0d2742;color:#fff;font-size:25px;line-height:1;cursor:pointer;z-index:2}.yf-service-modal-label{color:#b08a3e;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}.yf-service-modal-content h2{color:#0b2a5b;font-size:30px;line-height:1.2;margin:0 48px 12px 0}.yf-service-modal-overview{color:#475467;font-size:14px;line-height:1.65;margin:0 0 24px}.yf-service-detail-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px 30px;padding:22px 0;border-top:1px solid #e7eaf0;border-bottom:1px solid #e7eaf0}.yf-service-detail-grid section{min-width:0}.yf-service-detail-grid h3{color:#0b2a5b;font-size:15px;margin:0 0 10px}.yf-service-detail-grid p,.yf-service-detail-grid li{color:#475467;font-size:13px;line-height:1.6}.yf-service-detail-grid ul{margin:0;padding-left:18px}.yf-service-detail-grid li{margin:0 0 6px}.yf-service-detail-full{grid-column:1/-1}.yf-service-inquiry{margin-top:24px;padding:22px;background:#f5f8fb;border-radius:14px}.yf-service-inquiry>h3{color:#0b2a5b;font-size:18px;margin:0 0 16px}.yf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.yf-form-grid label{display:flex;flex-direction:column;gap:6px;color:#344054;font-size:12px;font-weight:700}.yf-form-grid input,.yf-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d5dbe3;border-radius:8px;background:#fff;padding:10px 11px;font:inherit;font-weight:400;color:#1d2939;outline:none}.yf-form-grid input:focus,.yf-form-grid textarea:focus{border-color:#b08a3e;box-shadow:0 0 0 2px rgba(176,138,62,.12)}.yf-form-full{grid-column:1/-1}.yf-form-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:15px}.yf-form-actions small{color:#667085;font-size:11px}#yf-form-send{border:0;border-radius:24px;background:#0d2742;color:#fff;padding:11px 22px;font-size:12px;font-weight:700;cursor:pointer}@media(max-width:700px){.yf-service-modal-dialog{width:94vw;max-height:94vh;margin:3vh auto 0;border-radius:14px}.yf-service-modal-content{max-height:94vh;padding:28px 18px 22px}.yf-service-modal-content h2{font-size:24px}.yf-service-detail-grid{grid-template-columns:1fr;gap:18px}.yf-service-detail-full{grid-column:auto}.yf-form-grid{grid-template-columns:1fr}.yf-form-full{grid-column:auto}.yf-form-actions{flex-direction:column;align-items:stretch}#yf-form-send{width:100%}}
+</style>
+<style>
+/* ===== V13 SERVICE DETAIL POPUP ===== */
+.yf-service-card{cursor:pointer!important}
+.yf-service-modal{position:fixed;inset:0;z-index:100000;display:none}
+.yf-service-modal.is-open{display:block}
+.yf-service-modal-backdrop{position:absolute;inset:0;background:rgba(4,18,35,.72);backdrop-filter:blur(3px)}
+.yf-service-modal-dialog{position:relative;width:min(940px,92vw);max-height:90vh;margin:5vh auto 0;background:#fff;border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.30);overflow:hidden}
+.yf-service-modal-content{max-height:90vh;overflow-y:auto;padding:34px 38px 32px}
+.yf-service-modal-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#0d2742;color:#fff;font-size:25px;line-height:1;cursor:pointer;z-index:3}
+.yf-service-modal-label{color:#b08a3e;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.yf-service-modal-content h2{color:#0b2a5b;font-size:30px;line-height:1.2;margin:0 48px 12px 0}
+.yf-service-modal-overview{color:#475467;font-size:14px;line-height:1.65;margin:0 0 24px}
+.yf-service-detail-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px 30px;padding:22px 0;border-top:1px solid #e7eaf0;border-bottom:1px solid #e7eaf0}
+.yf-service-detail-grid section{min-width:0}
+.yf-service-detail-grid h3{color:#0b2a5b;font-size:15px;margin:0 0 10px}
+.yf-service-detail-grid p,.yf-service-detail-grid li{color:#475467;font-size:13px;line-height:1.6}
+.yf-service-detail-grid ul{margin:0;padding-left:18px}
+.yf-service-detail-grid li{margin:0 0 6px}
+.yf-service-detail-full{grid-column:1/-1}
+.yf-service-inquiry{margin-top:24px;padding:22px;background:#f5f8fb;border-radius:14px}
+.yf-service-inquiry>h3{color:#0b2a5b;font-size:18px;margin:0 0 16px}
+.yf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.yf-form-grid label{display:flex;flex-direction:column;gap:6px;color:#344054;font-size:12px;font-weight:700}
+.yf-form-grid input,.yf-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d5dbe3;border-radius:8px;background:#fff;padding:10px 11px;font:inherit;font-weight:400;color:#1d2939;outline:none}
+.yf-form-grid input:focus,.yf-form-grid textarea:focus{border-color:#b08a3e;box-shadow:0 0 0 2px rgba(176,138,62,.12)}
+.yf-form-full{grid-column:1/-1}
+.yf-form-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:15px}
+.yf-form-actions small{color:#667085;font-size:11px}
+#yf-form-send{border:0;border-radius:24px;background:#0d2742;color:#fff;padding:11px 22px;font-size:12px;font-weight:700;cursor:pointer}
+@media(max-width:700px){
+ .yf-service-modal-dialog{width:94vw;max-height:94vh;margin:3vh auto 0;border-radius:14px}
+ .yf-service-modal-content{max-height:94vh;padding:28px 18px 22px}
+ .yf-service-modal-content h2{font-size:24px}
+ .yf-service-detail-grid{grid-template-columns:1fr;gap:18px}
+ .yf-service-detail-full{grid-column:auto}
+ .yf-form-grid{grid-template-columns:1fr}
+ .yf-form-full{grid-column:auto}
+ .yf-form-actions{flex-direction:column;align-items:stretch}
+ #yf-form-send{width:100%}
+}
+</style>
+
+<script>
+(function(){
+  const DATA={"close": "關閉", "support": "您需要哪方面的協助？", "name": "姓名", "company": "公司／機構", "email": "電子郵件", "contact": "電話／WhatsApp", "country": "國家／市場", "message": "請告訴我們您的需求", "send": "提交諮詢", "required": "請填寫必填欄位。", "mailIntro": "服務諮詢", "select": "有興趣的服務", "overview": "服務概述", "scope": "我們可以提供的支援", "for": "適合對象", "approach": "我們如何協助", "label": "服務諮詢", "services": [{"title": "設立代表處（RO）", "overview": "適合希望先在越南建立據點、了解市場並拓展當地商業關係，再逐步進入全面營運的國際企業。", "scope": ["評估進入越南市場的方向及代表處架構", "協助準備與整理登記文件", "協調與主管機關及當地服務機構的溝通與進度", "協助辦公室、行政及初期人力安排", "說明代表處可從事的業務範圍及持續合規要求"], "for": "需要在越南進行市場研究、建立商業關係及拓展機會的海外企業、協會與機構。", "approach": "我們先了解您的目標與預計活動，再提出合適的設立方向，並協調相關流程至完成。"}, {"title": "中小企業與個人 FDI 服務", "overview": "為海外中小企業及個人投資者提供從投資架構、設立公司到初期營運的實務支援，協助您更有條理地進入越南市場。", "scope": ["投資架構及股權安排規劃", "投資登記及公司設立流程協調", "營業項目及相關許可要求檢視", "資本金投入及初期營運安排", "協調會計、稅務、銀行及其他當地專業服務"], "for": "有意在越南設立企業或進行投資的海外企業家、個人投資者、家族企業及中小企業。", "approach": "我們先釐清投資目標、業務內容及股權架構，再依個案制定實際的設立與合規流程。"}, {"title": "合規與營運支援", "overview": "為在越南營運的外商及外資企業提供持續性的行政與合規協調，讓日常營運更有條理、更穩定。", "scope": ["公司文件、申報及合規時程管理協調", "與合資格專業機構協調稅務、會計及行政事項", "許可證、登記及續期追蹤", "人力資源及日常行政支援", "協調營運問題及當地服務供應商"], "for": "已在越南營運、需要可靠在地支援的企業，以及正在建立營運基礎的新設公司。", "approach": "我們先整理企業的定期義務與營運痛點，再建立清晰的協作流程，按實際需要提供持續支援。"}, {"title": "跨境併購與投資諮詢", "overview": "為評估收購、出售、策略性投資或合作機會的企業與投資者，提供越南及區域市場的跨境交易協調支援。", "scope": ["尋找及初步篩選投資或合作機會", "商業及策略層面的初步評估", "協調相關專業顧問進行盡職調查", "交易規劃、談判及文件協調", "交易完成後的過渡及合作夥伴協調"], "for": "投資者、企業主、策略性買方，以及考慮併購、出售、合資或投資合作的企業。", "approach": "我們協助釐清交易目標、篩選機會，並在不同階段協調財務、法律及其他專業顧問。"}, {"title": "落地安家與私人管家服務", "overview": "為移居越南的企業家、投資者、高階主管及家庭提供個人化落地支援，讓搬遷與生活安排更加順暢。", "scope": ["住宅及適合居住區域的搜尋協調", "學校、交通及當地服務安排", "抵達越南後的安頓支援", "日常行政及生活事務協調", "針對實際需求提供私人管家式支援"], "for": "因工作、投資或長期居住而移居越南的企業主、高階主管、投資者及家庭。", "approach": "我們先了解您的時間安排、生活需求與優先事項，再協調可信賴的當地服務，協助您順利落地。"}, {"title": "綠色投資與 ESG 諮詢", "overview": "協助企業及投資者推動永續項目、提升 ESG 管理能力，並為日益重視責任投資的市場做好準備。", "scope": ["ESG 現況及差距評估", "永續策略與優先事項規劃", "環境及社會風險協調", "ESG 政策、報告及文件支援", "綠色投資及永續項目準備"], "for": "希望提升永續表現、吸引責任投資資金或因應 ESG 要求的投資者、項目方及企業。", "approach": "我們先評估現況與優先改善領域，再與適合的技術及專業夥伴協調實際執行。"}, {"title": "資產保護與法律維權", "overview": "以風險管理為核心，協助企業及個人提升資產保護與法律準備，在面對跨境爭議或合規風險時更有條理地應對。", "scope": ["企業及資產風險盤點", "協調合約及文件檢視", "法律風險及合規問題的處理協調", "與合資格法律顧問協調爭議處理", "跨境溝通、文件及證據管理支援"], "for": "面對合約、法規、商業或跨境爭議風險的企業主、投資者及機構。", "approach": "我們先判斷問題性質與緊急程度，再協調適合的法律及專業人士，並協助維持清晰的案件管理與溝通。"}, {"title": "人才招聘與跨文化培訓", "overview": "透過人才招聘與企業培訓，協助企業建立合適團隊、改善工作溝通，並提升跨語言及跨文化合作能力。", "scope": ["人才搜尋及招聘協調", "候選人篩選與面試支援", "新人入職及職場溝通培訓", "國際團隊跨文化培訓", "依企業需求設計客製化培訓課程"], "for": "外資企業、成長型中小企業，以及需要管理越南與國際團隊的組織。", "approach": "我們先了解職位、能力與溝通需求，再依企業實際情況設計招聘或培訓方案。"}, {"title": "企業數位化與數據安全", "overview": "以企業實際需求為核心，協助改善流程、資訊管理及日常資料安全，讓數位化能夠逐步落地並產生實際效益。", "scope": ["企業流程盤點與改善", "數位工作流程及工具選擇支援", "文件與資訊管理優化", "資安意識及基本控制協調", "科技供應商及導入流程協調"], "for": "希望推動數位化，同時控制成本、流程與資訊安全的中小企業及國際企業。", "approach": "我們從現有流程與業務優先事項出發，找出可分階段落地的實際改善方案。"}, {"title": "跨境供應鏈與商業對接", "overview": "提供跨境採購與商業媒合支援，協助企業在越南及國際市場尋找合適的供應商、買家、經銷商與策略合作夥伴。", "scope": ["依需求尋找供應商及合作夥伴", "初步篩選與能力確認", "報價、樣品及商務溝通協調", "買家、供應商及策略夥伴媒合", "協助商務會議、展會及跨境交流"], "for": "越南企業尋找海外貨源、海外企業尋找越南供應商或合作夥伴，以及希望拓展商業關係的企業。", "approach": "我們先確認產品規格、目標市場與商業目標，再進行搜尋、篩選並協調與合適對象的對接。"}]};
+  const modal=document.getElementById('yf-service-modal');
+  if(!modal || !DATA || !DATA.services) return;
+
+  const cards=Array.from(document.querySelectorAll('.yf-service-card'));
+  const title=document.getElementById('yf-service-modal-title');
+  const label=document.getElementById('yf-service-modal-label');
+  const overview=document.getElementById('yf-service-modal-overview');
+  const scope=document.getElementById('yf-service-scope');
+  const selected=document.getElementById('yf-selected-service');
+  const forText=document.getElementById('yf-service-for');
+  const approach=document.getElementById('yf-service-approach');
+  const form=document.getElementById('yf-service-form');
+
+  const scopeTitle=document.getElementById('yf-service-scope-title');
+  const forTitle=document.getElementById('yf-service-for-title');
+  const approachTitle=document.getElementById('yf-service-approach-title');
+  const supportTitle=document.getElementById('yf-service-support-title');
+
+  label.textContent='SERVICE CONSULTATION';
+  scopeTitle.textContent=DATA.scope;
+  forTitle.textContent=DATA.for;
+  approachTitle.textContent=DATA.approach;
+  supportTitle.textContent=DATA.support;
+  document.getElementById('yf-label-name').textContent=DATA.name;
+  document.getElementById('yf-label-company').textContent=DATA.company;
+  document.getElementById('yf-label-email').textContent=DATA.email;
+  document.getElementById('yf-label-contact').textContent=DATA.contact;
+  document.getElementById('yf-label-country').textContent=DATA.country;
+  document.getElementById('yf-label-message').textContent=DATA.message;
+  document.getElementById('yf-form-required').textContent=DATA.required;
+  document.getElementById('yf-form-send').textContent=DATA.send;
+  document.querySelector('.yf-service-modal-close').setAttribute('aria-label',DATA.close);
+
+  function openService(index){
+    const item=DATA.services[index];
+    if(!item) return;
+    title.textContent=item.title;
+    overview.textContent=item.overview;
+    scope.innerHTML='';
+    item.scope.forEach(function(x){
+      const li=document.createElement('li');
+      li.textContent=x;
+      scope.appendChild(li);
+    });
+    forText.textContent=item.for;
+    approach.textContent=item.approach;
+    selected.value=item.title;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    const scroller=modal.querySelector('.yf-service-modal-content');
+    if(scroller) scroller.scrollTop=0;
+  }
+
+  function closeService(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+
+  cards.forEach(function(card){
+    card.addEventListener('click',function(e){
+      const link=e.target.closest('.yf-learn');
+      if(link) e.preventDefault();
+      const all=Array.from(document.querySelectorAll('.yf-service-card'));
+      const absoluteIndex=all.indexOf(card);
+      if(absoluteIndex<0) return;
+      openService(absoluteIndex % DATA.services.length);
+    });
+  });
+
+  modal.querySelectorAll('[data-service-close]').forEach(function(el){
+    el.addEventListener('click',closeService);
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && modal.classList.contains('is-open')) closeService();
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const fd=new FormData(form);
+    const subject=encodeURIComponent(DATA.mailIntro+': '+fd.get('service'));
+    const body=encodeURIComponent(
+      DATA.select+': '+fd.get('service')+'\\n'+
+      DATA.name+': '+fd.get('name')+'\\n'+
+      DATA.company+': '+fd.get('company')+'\\n'+
+      DATA.email+': '+fd.get('email')+'\\n'+
+      DATA.contact+': '+fd.get('contact')+'\\n'+
+      DATA.country+': '+fd.get('country')+'\\n'+
+      DATA.message+': '+fd.get('message')
+    );
+    window.location.href='mailto:business@yingfaglobal.com?subject='+subject+'&body='+body;
+  });
+})();
+</script>

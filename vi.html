@@ -3320,7 +3320,7 @@ header{
   </div>
 </section>
 
-<footer>
+<div id="yf-service-modal" class="yf-service-modal" aria-hidden="true"><div class="yf-service-modal-backdrop" data-service-close></div><div class="yf-service-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="yf-service-modal-title"><button type="button" class="yf-service-modal-close" data-service-close>×</button><div class="yf-service-modal-content"><div class="yf-service-modal-label" id="yf-service-modal-label"></div><h2 id="yf-service-modal-title"></h2><p class="yf-service-modal-overview" id="yf-service-modal-overview"></p><div class="yf-service-detail-grid"><section><h3 id="yf-service-scope-title"></h3><ul id="yf-service-scope"></ul></section><section><h3 id="yf-service-for-title"></h3><p id="yf-service-for"></p></section><section class="yf-service-detail-full"><h3 id="yf-service-approach-title"></h3><p id="yf-service-approach"></p></section></div><div class="yf-service-inquiry"><h3 id="yf-service-support-title"></h3><form id="yf-service-form"><input type="hidden" id="yf-selected-service" name="service"><div class="yf-form-grid"><label><span id="yf-label-name"></span><input id="yf-name" name="name" required></label><label><span id="yf-label-company"></span><input id="yf-company" name="company"></label><label><span id="yf-label-email"></span><input id="yf-email" name="email" type="email" required></label><label><span id="yf-label-contact"></span><input id="yf-contact" name="contact"></label><label><span id="yf-label-country"></span><input id="yf-country" name="country"></label><label class="yf-form-full"><span id="yf-label-message"></span><textarea id="yf-message" name="message" rows="4" required></textarea></label></div><div class="yf-form-actions"><small id="yf-form-required"></small><button type="submit" id="yf-form-send"></button></div></form></div></div></div></div><footer>
   <div class="container">
     <div class="yf-footer-grid">
       <div class="yf-footer-brand">
@@ -4763,3 +4763,147 @@ footer .container,
 }
 
 </style>
+<style>
+.yf-service-card{cursor:pointer!important}.yf-service-modal{position:fixed;inset:0;z-index:99999;display:none}.yf-service-modal.is-open{display:block}.yf-service-modal-backdrop{position:absolute;inset:0;background:rgba(4,18,35,.72);backdrop-filter:blur(3px)}.yf-service-modal-dialog{position:relative;width:min(940px,92vw);max-height:90vh;margin:5vh auto 0;background:#fff;border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.28);overflow:hidden}.yf-service-modal-content{max-height:90vh;overflow-y:auto;padding:34px 38px 32px}.yf-service-modal-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#0d2742;color:#fff;font-size:25px;line-height:1;cursor:pointer;z-index:2}.yf-service-modal-label{color:#b08a3e;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}.yf-service-modal-content h2{color:#0b2a5b;font-size:30px;line-height:1.2;margin:0 48px 12px 0}.yf-service-modal-overview{color:#475467;font-size:14px;line-height:1.65;margin:0 0 24px}.yf-service-detail-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px 30px;padding:22px 0;border-top:1px solid #e7eaf0;border-bottom:1px solid #e7eaf0}.yf-service-detail-grid section{min-width:0}.yf-service-detail-grid h3{color:#0b2a5b;font-size:15px;margin:0 0 10px}.yf-service-detail-grid p,.yf-service-detail-grid li{color:#475467;font-size:13px;line-height:1.6}.yf-service-detail-grid ul{margin:0;padding-left:18px}.yf-service-detail-grid li{margin:0 0 6px}.yf-service-detail-full{grid-column:1/-1}.yf-service-inquiry{margin-top:24px;padding:22px;background:#f5f8fb;border-radius:14px}.yf-service-inquiry>h3{color:#0b2a5b;font-size:18px;margin:0 0 16px}.yf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.yf-form-grid label{display:flex;flex-direction:column;gap:6px;color:#344054;font-size:12px;font-weight:700}.yf-form-grid input,.yf-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d5dbe3;border-radius:8px;background:#fff;padding:10px 11px;font:inherit;font-weight:400;color:#1d2939;outline:none}.yf-form-grid input:focus,.yf-form-grid textarea:focus{border-color:#b08a3e;box-shadow:0 0 0 2px rgba(176,138,62,.12)}.yf-form-full{grid-column:1/-1}.yf-form-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:15px}.yf-form-actions small{color:#667085;font-size:11px}#yf-form-send{border:0;border-radius:24px;background:#0d2742;color:#fff;padding:11px 22px;font-size:12px;font-weight:700;cursor:pointer}@media(max-width:700px){.yf-service-modal-dialog{width:94vw;max-height:94vh;margin:3vh auto 0;border-radius:14px}.yf-service-modal-content{max-height:94vh;padding:28px 18px 22px}.yf-service-modal-content h2{font-size:24px}.yf-service-detail-grid{grid-template-columns:1fr;gap:18px}.yf-service-detail-full{grid-column:auto}.yf-form-grid{grid-template-columns:1fr}.yf-form-full{grid-column:auto}.yf-form-actions{flex-direction:column;align-items:stretch}#yf-form-send{width:100%}}
+</style>
+<style>
+/* ===== V13 SERVICE DETAIL POPUP ===== */
+.yf-service-card{cursor:pointer!important}
+.yf-service-modal{position:fixed;inset:0;z-index:100000;display:none}
+.yf-service-modal.is-open{display:block}
+.yf-service-modal-backdrop{position:absolute;inset:0;background:rgba(4,18,35,.72);backdrop-filter:blur(3px)}
+.yf-service-modal-dialog{position:relative;width:min(940px,92vw);max-height:90vh;margin:5vh auto 0;background:#fff;border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.30);overflow:hidden}
+.yf-service-modal-content{max-height:90vh;overflow-y:auto;padding:34px 38px 32px}
+.yf-service-modal-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#0d2742;color:#fff;font-size:25px;line-height:1;cursor:pointer;z-index:3}
+.yf-service-modal-label{color:#b08a3e;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px}
+.yf-service-modal-content h2{color:#0b2a5b;font-size:30px;line-height:1.2;margin:0 48px 12px 0}
+.yf-service-modal-overview{color:#475467;font-size:14px;line-height:1.65;margin:0 0 24px}
+.yf-service-detail-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px 30px;padding:22px 0;border-top:1px solid #e7eaf0;border-bottom:1px solid #e7eaf0}
+.yf-service-detail-grid section{min-width:0}
+.yf-service-detail-grid h3{color:#0b2a5b;font-size:15px;margin:0 0 10px}
+.yf-service-detail-grid p,.yf-service-detail-grid li{color:#475467;font-size:13px;line-height:1.6}
+.yf-service-detail-grid ul{margin:0;padding-left:18px}
+.yf-service-detail-grid li{margin:0 0 6px}
+.yf-service-detail-full{grid-column:1/-1}
+.yf-service-inquiry{margin-top:24px;padding:22px;background:#f5f8fb;border-radius:14px}
+.yf-service-inquiry>h3{color:#0b2a5b;font-size:18px;margin:0 0 16px}
+.yf-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.yf-form-grid label{display:flex;flex-direction:column;gap:6px;color:#344054;font-size:12px;font-weight:700}
+.yf-form-grid input,.yf-form-grid textarea{width:100%;box-sizing:border-box;border:1px solid #d5dbe3;border-radius:8px;background:#fff;padding:10px 11px;font:inherit;font-weight:400;color:#1d2939;outline:none}
+.yf-form-grid input:focus,.yf-form-grid textarea:focus{border-color:#b08a3e;box-shadow:0 0 0 2px rgba(176,138,62,.12)}
+.yf-form-full{grid-column:1/-1}
+.yf-form-actions{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:15px}
+.yf-form-actions small{color:#667085;font-size:11px}
+#yf-form-send{border:0;border-radius:24px;background:#0d2742;color:#fff;padding:11px 22px;font-size:12px;font-weight:700;cursor:pointer}
+@media(max-width:700px){
+ .yf-service-modal-dialog{width:94vw;max-height:94vh;margin:3vh auto 0;border-radius:14px}
+ .yf-service-modal-content{max-height:94vh;padding:28px 18px 22px}
+ .yf-service-modal-content h2{font-size:24px}
+ .yf-service-detail-grid{grid-template-columns:1fr;gap:18px}
+ .yf-service-detail-full{grid-column:auto}
+ .yf-form-grid{grid-template-columns:1fr}
+ .yf-form-full{grid-column:auto}
+ .yf-form-actions{flex-direction:column;align-items:stretch}
+ #yf-form-send{width:100%}
+}
+</style>
+
+<script>
+(function(){
+  const DATA={"close": "Đóng", "support": "Quý khách cần tư vấn gì?", "name": "Họ và tên", "company": "Công ty / Tổ chức", "email": "Email", "contact": "Điện thoại / WhatsApp", "country": "Quốc gia / Thị trường", "message": "Nhu cầu cần tư vấn", "send": "Gửi yêu cầu tư vấn", "required": "Vui lòng điền các thông tin bắt buộc.", "mailIntro": "Yêu cầu tư vấn dịch vụ", "select": "Dịch vụ quan tâm", "overview": "Tổng quan", "scope": "Nội dung chúng tôi hỗ trợ", "for": "Phù hợp với", "approach": "Cách chúng tôi triển khai", "label": "TƯ VẤN DỊCH VỤ", "services": [{"title": "Văn phòng đại diện (RO)", "overview": "Giải pháp phù hợp cho doanh nghiệp quốc tế muốn hiện diện tại Việt Nam, tìm hiểu thị trường và xây dựng quan hệ địa phương trước khi triển khai hoạt động kinh doanh quy mô đầy đủ.", "scope": ["Tư vấn định hướng gia nhập thị trường và mô hình văn phòng đại diện", "Chuẩn bị và phối hợp hồ sơ đăng ký", "Làm việc, theo dõi hồ sơ với cơ quan chức năng và đơn vị dịch vụ liên quan", "Hỗ trợ ban đầu về văn phòng, hành chính và phối hợp nhân sự", "Tư vấn phạm vi hoạt động được phép và các yêu cầu tuân thủ trong quá trình vận hành"], "for": "Doanh nghiệp, hiệp hội và tổ chức nước ngoài cần một hiện diện tại Việt Nam để nghiên cứu thị trường, xây dựng quan hệ và phát triển cơ hội.", "approach": "Chúng tôi tìm hiểu mục tiêu và hoạt động dự kiến, sau đó đề xuất hướng triển khai phù hợp và phối hợp các bước cần thiết đến khi hoàn tất."}, {"title": "Dịch vụ FDI cho SME & Cá nhân", "overview": "Hỗ trợ thực tiễn cho doanh nghiệp vừa và nhỏ và nhà đầu tư cá nhân nước ngoài khi đầu tư vào Việt Nam, từ lựa chọn cấu trúc đầu tư đến thiết lập doanh nghiệp và vận hành ban đầu.", "scope": ["Tư vấn cấu trúc đầu tư và tỷ lệ sở hữu", "Phối hợp thủ tục đăng ký đầu tư và thành lập doanh nghiệp", "Rà soát ngành nghề kinh doanh và yêu cầu giấy phép", "Tư vấn góp vốn và thiết lập hoạt động ban đầu", "Phối hợp với đơn vị kế toán, thuế, ngân hàng và các chuyên gia địa phương"], "for": "Doanh nhân nước ngoài, nhà đầu tư cá nhân, doanh nghiệp gia đình và SME có kế hoạch thành lập hoặc đầu tư vào doanh nghiệp tại Việt Nam.", "approach": "Chúng tôi làm rõ mục tiêu đầu tư, ngành nghề và cơ cấu sở hữu, sau đó xây dựng lộ trình thiết lập và tuân thủ phù hợp với từng trường hợp."}, {"title": "Tuân thủ & Hỗ trợ Vận hành", "overview": "Dịch vụ đồng hành thường xuyên giúp doanh nghiệp có vốn nước ngoài duy trì hồ sơ, nghĩa vụ tuân thủ và hoạt động hằng ngày một cách có hệ thống tại Việt Nam.", "scope": ["Theo dõi hồ sơ doanh nghiệp và lịch nghĩa vụ tuân thủ", "Phối hợp công việc kế toán, thuế và hành chính với đơn vị chuyên môn", "Theo dõi giấy phép, đăng ký và thời hạn gia hạn", "Hỗ trợ nhân sự và các công việc hành chính thường xuyên", "Điều phối các vấn đề vận hành và làm việc với nhà cung cấp dịch vụ địa phương"], "for": "Doanh nghiệp đang hoạt động tại Việt Nam cần một đầu mối hỗ trợ tại địa phương, cũng như doanh nghiệp mới thành lập đang xây dựng nền tảng vận hành.", "approach": "Chúng tôi rà soát các nghĩa vụ định kỳ và điểm cần hỗ trợ, thiết lập quy trình phối hợp rõ ràng và đồng hành theo nhu cầu thực tế."}, {"title": "M&A & Tư vấn Đầu tư", "overview": "Hỗ trợ các giao dịch xuyên biên giới dành cho nhà đầu tư và doanh nghiệp đang xem xét mua bán, thoái vốn, đầu tư chiến lược hoặc hợp tác tại Việt Nam và khu vực.", "scope": ["Tìm kiếm và sàng lọc cơ hội đầu tư hoặc đối tác", "Đánh giá sơ bộ về thương mại và chiến lược", "Phối hợp thẩm định với các chuyên gia phù hợp", "Hỗ trợ lập kế hoạch giao dịch, đàm phán và phối hợp hồ sơ", "Hỗ trợ điều phối giai đoạn chuyển tiếp sau giao dịch"], "for": "Nhà đầu tư, chủ doanh nghiệp, bên mua chiến lược và doanh nghiệp đang xem xét M&A, thoái vốn, liên doanh hoặc hợp tác đầu tư.", "approach": "Chúng tôi cùng xác định mục tiêu giao dịch, sàng lọc cơ hội và kết nối các chuyên gia tài chính, pháp lý và chuyên môn cần thiết cho từng giai đoạn."}, {"title": "Định cư & Dịch vụ Đời sống", "overview": "Dịch vụ hỗ trợ cá nhân hóa dành cho doanh nhân, nhà đầu tư, chuyên gia và gia đình chuyển đến Việt Nam, giúp quá trình ổn định cuộc sống diễn ra thuận tiện và hiệu quả hơn.", "scope": ["Tìm kiếm và phối hợp nhà ở, khu vực sinh sống phù hợp", "Hỗ trợ sắp xếp trường học, phương tiện và dịch vụ địa phương", "Hỗ trợ khi mới đến và ổn định cuộc sống", "Điều phối các công việc hành chính và nhu cầu sinh hoạt", "Hỗ trợ theo mô hình concierge đối với các nhu cầu thực tế tại địa phương"], "for": "Chủ doanh nghiệp, lãnh đạo, nhà đầu tư và gia đình chuyển đến Việt Nam để làm việc, đầu tư hoặc sinh sống dài hạn.", "approach": "Chúng tôi bắt đầu từ nhu cầu, thời gian và phong cách sống của khách hàng, sau đó điều phối các dịch vụ địa phương phù hợp."}, {"title": "Đầu tư Xanh & Tư vấn ESG", "overview": "Hỗ trợ doanh nghiệp và nhà đầu tư xây dựng dự án bền vững, nâng cao thực hành ESG và chuẩn bị tốt hơn trước yêu cầu ngày càng cao của thị trường vốn có trách nhiệm.", "scope": ["Đánh giá mức độ sẵn sàng và khoảng trống ESG", "Xây dựng định hướng và ưu tiên về phát triển bền vững", "Điều phối đánh giá rủi ro môi trường và xã hội", "Hỗ trợ chính sách, báo cáo và hồ sơ ESG", "Chuẩn bị dự án xanh và định hướng tiếp cận nguồn vốn phù hợp"], "for": "Nhà đầu tư, chủ dự án và doanh nghiệp muốn nâng cao hiệu quả bền vững, thu hút nguồn vốn có trách nhiệm hoặc đáp ứng yêu cầu ESG.", "approach": "Chúng tôi đánh giá hiện trạng, xác định các ưu tiên cần cải thiện và phối hợp với các chuyên gia kỹ thuật, chuyên môn phù hợp để triển khai."}, {"title": "Bảo vệ Tài sản & Pháp lý", "overview": "Giải pháp điều phối tập trung vào quản trị rủi ro, giúp doanh nghiệp và cá nhân chủ động bảo vệ tài sản, tăng mức độ sẵn sàng pháp lý và xử lý các vấn đề tranh chấp hoặc tuân thủ xuyên biên giới.", "scope": ["Rà soát và lập bản đồ rủi ro tài sản, kinh doanh", "Phối hợp rà soát hợp đồng và hồ sơ", "Điều phối xử lý các vấn đề pháp lý và tuân thủ", "Phối hợp với luật sư đủ điều kiện khi phát sinh tranh chấp", "Hỗ trợ quản lý hồ sơ, chứng cứ và trao đổi xuyên biên giới"], "for": "Chủ doanh nghiệp, nhà đầu tư và tổ chức đang đối mặt với rủi ro hợp đồng, pháp lý, quản lý hoặc tranh chấp xuyên biên giới.", "approach": "Chúng tôi xác định tính chất và mức độ khẩn cấp của vấn đề, sau đó phối hợp với luật sư và chuyên gia phù hợp để quản lý vụ việc một cách có hệ thống."}, {"title": "Đào tạo & Nhân sự", "overview": "Giải pháp tuyển dụng và đào tạo giúp doanh nghiệp xây dựng đội ngũ phù hợp, nâng cao giao tiếp tại nơi làm việc và tăng hiệu quả hợp tác giữa các nền văn hóa.", "scope": ["Tìm kiếm và phối hợp tuyển dụng nhân sự", "Sàng lọc ứng viên và hỗ trợ phỏng vấn", "Đào tạo hội nhập và giao tiếp trong công việc", "Đào tạo giao tiếp liên văn hóa cho đội ngũ quốc tế", "Thiết kế chương trình đào tạo doanh nghiệp theo nhu cầu"], "for": "Doanh nghiệp có vốn nước ngoài, SME đang mở rộng và tổ chức quản lý đội ngũ Việt Nam cùng nhân sự quốc tế.", "approach": "Chúng tôi xác định vị trí, năng lực và nhu cầu giao tiếp, sau đó xây dựng giải pháp tuyển dụng hoặc đào tạo phù hợp với doanh nghiệp."}, {"title": "Chuyển đổi số & Bảo mật", "overview": "Hỗ trợ chuyển đổi số theo hướng thực tế, giúp doanh nghiệp tinh gọn quy trình, quản lý thông tin tốt hơn và nâng cao nhận thức về an toàn dữ liệu trong hoạt động hằng ngày.", "scope": ["Rà soát và cải tiến quy trình kinh doanh", "Tư vấn quy trình số và lựa chọn công cụ phù hợp", "Cải thiện quản lý tài liệu và thông tin", "Phối hợp xây dựng nhận thức và kiểm soát an toàn dữ liệu cơ bản", "Điều phối nhà cung cấp công nghệ và quá trình triển khai"], "for": "SME và doanh nghiệp quốc tế muốn hiện đại hóa hoạt động nhưng vẫn kiểm soát tốt chi phí, quy trình và an toàn thông tin.", "approach": "Chúng tôi bắt đầu từ quy trình hiện tại và mục tiêu kinh doanh, sau đó xác định các cải tiến thực tế có thể triển khai từng bước."}, {"title": "Kết nối Cung ứng & Giao thương", "overview": "Dịch vụ tìm nguồn cung và kết nối kinh doanh xuyên biên giới, giúp doanh nghiệp tìm được nhà cung cấp, người mua, nhà phân phối và đối tác phù hợp tại Việt Nam và quốc tế.", "scope": ["Tìm kiếm nhà cung cấp và đối tác theo yêu cầu", "Sàng lọc ban đầu và xác minh năng lực", "Điều phối báo giá, mẫu hàng và trao đổi thương mại", "Kết nối người mua – nhà cung cấp và đối tác chiến lược", "Hỗ trợ cuộc họp, hội chợ và giao thương xuyên biên giới"], "for": "Doanh nghiệp Việt Nam tìm nguồn hàng quốc tế, doanh nghiệp nước ngoài tìm nhà cung cấp hoặc đối tác Việt Nam và doanh nghiệp muốn mở rộng quan hệ thương mại.", "approach": "Chúng tôi làm rõ tiêu chuẩn sản phẩm, thị trường mục tiêu và mục tiêu thương mại, sau đó tìm kiếm, sàng lọc và điều phối kết nối với đối tác phù hợp."}]};
+  const modal=document.getElementById('yf-service-modal');
+  if(!modal || !DATA || !DATA.services) return;
+
+  const cards=Array.from(document.querySelectorAll('.yf-service-card'));
+  const title=document.getElementById('yf-service-modal-title');
+  const label=document.getElementById('yf-service-modal-label');
+  const overview=document.getElementById('yf-service-modal-overview');
+  const scope=document.getElementById('yf-service-scope');
+  const selected=document.getElementById('yf-selected-service');
+  const forText=document.getElementById('yf-service-for');
+  const approach=document.getElementById('yf-service-approach');
+  const form=document.getElementById('yf-service-form');
+
+  const scopeTitle=document.getElementById('yf-service-scope-title');
+  const forTitle=document.getElementById('yf-service-for-title');
+  const approachTitle=document.getElementById('yf-service-approach-title');
+  const supportTitle=document.getElementById('yf-service-support-title');
+
+  label.textContent='SERVICE CONSULTATION';
+  scopeTitle.textContent=DATA.scope;
+  forTitle.textContent=DATA.for;
+  approachTitle.textContent=DATA.approach;
+  supportTitle.textContent=DATA.support;
+  document.getElementById('yf-label-name').textContent=DATA.name;
+  document.getElementById('yf-label-company').textContent=DATA.company;
+  document.getElementById('yf-label-email').textContent=DATA.email;
+  document.getElementById('yf-label-contact').textContent=DATA.contact;
+  document.getElementById('yf-label-country').textContent=DATA.country;
+  document.getElementById('yf-label-message').textContent=DATA.message;
+  document.getElementById('yf-form-required').textContent=DATA.required;
+  document.getElementById('yf-form-send').textContent=DATA.send;
+  document.querySelector('.yf-service-modal-close').setAttribute('aria-label',DATA.close);
+
+  function openService(index){
+    const item=DATA.services[index];
+    if(!item) return;
+    title.textContent=item.title;
+    overview.textContent=item.overview;
+    scope.innerHTML='';
+    item.scope.forEach(function(x){
+      const li=document.createElement('li');
+      li.textContent=x;
+      scope.appendChild(li);
+    });
+    forText.textContent=item.for;
+    approach.textContent=item.approach;
+    selected.value=item.title;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    const scroller=modal.querySelector('.yf-service-modal-content');
+    if(scroller) scroller.scrollTop=0;
+  }
+
+  function closeService(){
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+  }
+
+  cards.forEach(function(card){
+    card.addEventListener('click',function(e){
+      const link=e.target.closest('.yf-learn');
+      if(link) e.preventDefault();
+      const all=Array.from(document.querySelectorAll('.yf-service-card'));
+      const absoluteIndex=all.indexOf(card);
+      if(absoluteIndex<0) return;
+      openService(absoluteIndex % DATA.services.length);
+    });
+  });
+
+  modal.querySelectorAll('[data-service-close]').forEach(function(el){
+    el.addEventListener('click',closeService);
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape' && modal.classList.contains('is-open')) closeService();
+  });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const fd=new FormData(form);
+    const subject=encodeURIComponent(DATA.mailIntro+': '+fd.get('service'));
+    const body=encodeURIComponent(
+      DATA.select+': '+fd.get('service')+'\\n'+
+      DATA.name+': '+fd.get('name')+'\\n'+
+      DATA.company+': '+fd.get('company')+'\\n'+
+      DATA.email+': '+fd.get('email')+'\\n'+
+      DATA.contact+': '+fd.get('contact')+'\\n'+
+      DATA.country+': '+fd.get('country')+'\\n'+
+      DATA.message+': '+fd.get('message')
+    );
+    window.location.href='mailto:business@yingfaglobal.com?subject='+subject+'&body='+body;
+  });
+})();
+</script>
