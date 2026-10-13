@@ -2620,6 +2620,68 @@ body { padding-top: 106px !important; }
 }
 </style>
 
+
+<style id="yf-v37-final-visual-fixes">
+/* V37: remove the stray blue horizontal rule associated with the Services view/header. */
+.yf-services-directory,
+#services.yf-services-directory,
+.yf-services-directory-inner {
+  border-top: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+.yf-services-directory::before,
+.yf-services-directory::after,
+#services.yf-services-directory::before,
+#services.yf-services-directory::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+/* Keep the Services header area clean: no stray blue rule below the navigation. */
+.yf-sticky-shell > header,
+.yf-sticky-shell > header .navbar,
+.yf-sticky-shell > header .nav {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+.yf-sticky-shell > header::before,
+.yf-sticky-shell > header::after,
+.yf-sticky-shell > header .navbar::before,
+.yf-sticky-shell > header .navbar::after {
+  content: none !important;
+  display: none !important;
+}
+/* Center the supporting sentence directly beneath the About heading. */
+.yf-about-profile-heading-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+.yf-about-profile-heading-wrap .yf-about-profile-heading {
+  width: 100% !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.yf-about-profile-heading-wrap .yf-about-profile-slogan {
+  display: block !important;
+  width: min(720px, 100%) !important;
+  max-width: 720px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+</style>
+
 </head>
 <body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone" aria-hidden="true">☎</span>联系我们</a><nav class="yf-topbar-languages" aria-label="语言"><a class="yf-lang-btn yf-lang-current" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
 <!-- =========================
