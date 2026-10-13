@@ -2620,6 +2620,44 @@ body { padding-top: 106px !important; }
 }
 </style>
 
+
+<style id="yf-news-full-page-mode">
+/* Dedicated News view: show the full updates list while preserving the shared header and footer. */
+body.yf-news-page-mode > section:not(#news),
+body.yf-news-page-mode > .yf-cta-strip { display:none !important; }
+body.yf-news-page-mode #news { display:block !important; min-height:calc(100vh - 150px); padding-top:clamp(34px,5vw,64px); scroll-margin-top:150px; }
+body.yf-news-page-mode #news .heading-row { align-items:flex-start; margin-bottom:28px; }
+body.yf-news-page-mode #yf-view-all-news { display:none !important; }
+body.yf-news-page-mode .yf-news-carousel { overflow:visible; }
+body.yf-news-page-mode #yf-home-news-track { display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px 28px; width:100%; transform:none !important; transition:none !important; will-change:auto; }
+body.yf-news-page-mode .yf-home-news-card { min-width:0; width:auto; flex:initial !important; padding:18px 16px; border:1px solid #e6eaf0; border-radius:12px; background:#fff; box-shadow:0 5px 18px rgba(15,35,60,.045); }
+body.yf-news-page-mode .yf-home-news-card:hover { border-color:#c5a15a; box-shadow:0 10px 24px rgba(15,35,60,.08); }
+body.yf-news-page-mode .yf-sticky-shell a[href="#news"] { color:#b08a3e !important; }
+@media(max-width:900px){ body.yf-news-page-mode #yf-home-news-track { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; } }
+@media(max-width:600px){ body.yf-news-page-mode #news { padding-top:28px; } body.yf-news-page-mode #yf-home-news-track { grid-template-columns:1fr; gap:14px; } body.yf-news-page-mode .yf-home-news-card { padding:16px 14px; } }
+</style>
+
+
+<style id="yf-news-page-banner-v44">
+/* V44: dedicated editorial banner on the full News page only; home news section remains unchanged. */
+.yf-news-page-banner{display:none;}
+body.yf-news-page-mode #news{padding-top:0 !important;}
+body.yf-news-page-mode #news .yf-news-page-banner{
+  display:flex; align-items:center; position:relative; width:100%; min-height:250px;
+  box-sizing:border-box; overflow:hidden;
+  background-image:linear-gradient(90deg,rgba(8,28,76,.91) 0%,rgba(10,40,100,.76) 46%,rgba(8,26,65,.35) 100%),url('hero-hcm-skyline.jpg');
+  background-size:cover; background-position:center 48%;
+  padding:clamp(36px,5.5vw,70px) max(5%,calc((100% - 1200px)/2));
+}
+body.yf-news-page-mode .yf-news-page-banner-content{max-width:760px; position:relative; z-index:1;}
+body.yf-news-page-mode .yf-news-page-banner h1{margin:0; color:#fff; font-size:clamp(32px,4vw,48px); line-height:1.15; font-weight:750; letter-spacing:.01em;}
+body.yf-news-page-mode .yf-news-page-banner-rule{display:block;width:66px;height:5px;background:#c6a15b;margin:20px 0 16px;border-radius:1px;}
+body.yf-news-page-mode .yf-news-page-banner p{margin:0;max-width:660px;color:rgba(255,255,255,.9);font-size:clamp(14px,1.5vw,17px);line-height:1.65;}
+body.yf-news-page-mode #news > .container{padding-top:clamp(28px,4vw,46px);}
+body.yf-news-page-mode #news .heading-row{display:none !important;}
+@media(max-width:600px){body.yf-news-page-mode #news .yf-news-page-banner{min-height:190px;padding:30px 22px;background-position:center;}body.yf-news-page-mode .yf-news-page-banner-rule{margin:14px 0 11px;width:52px;height:4px;}body.yf-news-page-mode #news > .container{padding-top:24px;}}
+</style>
+
 </head>
 <body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="contact-zh-cn.html"><span class="yf-phone" aria-hidden="true">☎</span>联系我们</a><nav class="yf-topbar-languages" aria-label="语言"><a class="yf-lang-btn yf-lang-current" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
 <!-- =========================
@@ -3334,6 +3372,13 @@ body { padding-top: 106px !important; }
      NEWS
 ========================= -->
 <section class="section yf-home-news" id="news">
+<div class="yf-news-page-banner" aria-label="最新动态">
+  <div class="yf-news-page-banner-content">
+    <h1>最新动态</h1>
+    <span class="yf-news-page-banner-rule" aria-hidden="true"></span>
+    <p>聚焦越南及国际市场的商业、投资与跨境合作资讯。</p>
+  </div>
+</div>
 <div class="container">
 <div class="heading-row section-heading">
 <div>
@@ -4153,6 +4198,27 @@ body.yf-services-is-open #profile,
 body.yf-services-is-open #news,
 body.yf-services-is-open .yf-cta-strip { display: none !important; }
 </style>
+
+
+<script id="yf-news-full-page-mode-script">
+(function(){
+  function syncNewsPageMode(){
+    var isNews = window.location.hash.toLowerCase() === '#news';
+    document.body.classList.toggle('yf-news-page-mode', isNews);
+    if(isNews){
+      var track=document.getElementById('yf-home-news-track');
+      if(track) track.style.transform='none';
+      window.setTimeout(function(){
+        var section=document.getElementById('news');
+        if(section) section.scrollIntoView({block:'start',behavior:'auto'});
+      }, 60);
+    }
+  }
+  window.addEventListener('hashchange',syncNewsPageMode);
+  window.addEventListener('load',syncNewsPageMode);
+  syncNewsPageMode();
+})();
+</script>
 
 </body>
 </html>
