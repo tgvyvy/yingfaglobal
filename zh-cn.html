@@ -2620,70 +2620,8 @@ body { padding-top: 106px !important; }
 }
 </style>
 
-
-<style id="yf-v37-final-visual-fixes">
-/* V37: remove the stray blue horizontal rule associated with the Services view/header. */
-.yf-services-directory,
-#services.yf-services-directory,
-.yf-services-directory-inner {
-  border-top: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-  background-image: none !important;
-}
-.yf-services-directory::before,
-.yf-services-directory::after,
-#services.yf-services-directory::before,
-#services.yf-services-directory::after {
-  content: none !important;
-  display: none !important;
-  border: 0 !important;
-  box-shadow: none !important;
-}
-/* Keep the Services header area clean: no stray blue rule below the navigation. */
-.yf-sticky-shell > header,
-.yf-sticky-shell > header .navbar,
-.yf-sticky-shell > header .nav {
-  border-top: 0 !important;
-  border-bottom: 0 !important;
-  box-shadow: none !important;
-}
-.yf-sticky-shell > header::before,
-.yf-sticky-shell > header::after,
-.yf-sticky-shell > header .navbar::before,
-.yf-sticky-shell > header .navbar::after {
-  content: none !important;
-  display: none !important;
-}
-/* Center the supporting sentence directly beneath the About heading. */
-.yf-about-profile-heading-wrap {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
-}
-.yf-about-profile-heading-wrap .yf-about-profile-heading {
-  width: 100% !important;
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-.yf-about-profile-heading-wrap .yf-about-profile-slogan {
-  display: block !important;
-  width: min(720px, 100%) !important;
-  max-width: 720px !important;
-  margin: 0 auto !important;
-  text-align: center !important;
-}
-</style>
-
 </head>
-<body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone" aria-hidden="true">☎</span>联系我们</a><nav class="yf-topbar-languages" aria-label="语言"><a class="yf-lang-btn yf-lang-current" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
+<body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="contact-zh-cn.html"><span class="yf-phone" aria-hidden="true">☎</span>联系我们</a><nav class="yf-topbar-languages" aria-label="语言"><a class="yf-lang-btn yf-lang-current" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
 <!-- =========================
      HEADER
 ========================= -->
@@ -2698,7 +2636,7 @@ body { padding-top: 106px !important; }
 <a href="#about">关于我们</a>
 <a href="#profile">公司简介</a>
 <a href="#news">新闻</a>
-<a href="#contact">联络我们</a>
+<a href="contact-zh-cn.html">联络我们</a>
 </nav>
 </div>
 </header>
@@ -2707,23 +2645,23 @@ body { padding-top: 106px !important; }
      FLOATING CONTACT
 ========================= -->
 <div class="floating-contact">
-<a class="float-btn whatsapp" href="#contact" title="WhatsApp">
+<a class="float-btn whatsapp" href="contact-zh-cn.html" title="WhatsApp">
 <img alt="" src="https://cdn.simpleicons.org/whatsapp/25D366"/>
 <span>WhatsApp</span>
 </a>
-<a class="float-btn wechat" href="#contact" title="WeChat">
+<a class="float-btn wechat" href="contact-zh-cn.html" title="WeChat">
 <img alt="" src="https://cdn.simpleicons.org/wechat/07C160"/>
 <span>WeChat</span>
 </a>
-<a class="float-btn line" href="#contact" title="LINE">
+<a class="float-btn line" href="contact-zh-cn.html" title="LINE">
 <img alt="" src="https://cdn.simpleicons.org/line/00C300"/>
 <span>LINE</span>
 </a>
-<a class="float-btn messenger" href="#contact" title="Messenger">
+<a class="float-btn messenger" href="contact-zh-cn.html" title="Messenger">
 <img alt="" src="https://cdn.simpleicons.org/messenger/0084FF"/>
 <span>Messenger</span>
 </a>
-<a class="float-btn zalo" href="#contact" title="Zalo">
+<a class="float-btn zalo" href="contact-zh-cn.html" title="Zalo">
 <svg aria-label="Zalo" class="zalo-logo" height="27" style="flex:0 0 27px;" viewbox="0 0 64 64" width="27">
 <rect fill="#0068FF" height="62" rx="17" width="62" x="1" y="1"></rect>
 <path d="M16 12h31c8.3 0 15 6.7 15 15v15c0 8.3-6.7 15-15 15H29L13 61l5-10h-2C7.7 51 1 44.3 1 36V27c0-8.3 6.7-15 15-15z" fill="#FFFFFF"></path>
@@ -2752,7 +2690,7 @@ body { padding-top: 106px !important; }
     连接越南及全球市场中的合适伙伴、机会与资源。
 </p>
 <div class="buttons">
-<a class="btn btn-primary" href="#contact">
+<a class="btn btn-primary" href="contact-zh-cn.html">
     与顾问洽谈 →
 </a>
 <a class="btn btn-gold yf-open-services" data-services-open="" href="#services">
@@ -3053,7 +2991,7 @@ body { padding-top: 106px !important; }
     padding-top:25px;
 }
   </style>
-<div class="container"><div class="yf-services-heading"><div class="yf-services-label">我们的服务</div><h2>服务项目</h2><p>提供整合式解决方案，协助企业在越南及国际市场建立、运营、保障并持续成长。</p></div><div class="yf-services-carousel"><button aria-label="Previous services" class="yf-carousel-arrow yf-carousel-prev" type="button">❮</button><div class="yf-services-window"><div class="yf-services-track"><div class="yf-service-card"><div class="yf-service-image"><img alt="设立代表处（RO）" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>设立代表处（RO）</h3><p>协助企业在越南建立合规的本地据点，用于市场研究、建立商业关系及拓展机会，为后续全面运营做好准备。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="中小企业与个人 FDI 服务" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>中小企业与个人 FDI 服务</h3><p>为中小企业及个人投资者提供投资架构、许可、公司设立及合规进入越南市场的实用顾问服务。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="合规与运营支持" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>合规与运营支持</h3><p>提供企业合规、税务及行政协调、牌照义务与日常运营等持续性支持，协助企业稳健运营。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="跨境并购（M&amp;A）与投资顾问" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>跨境并购（M&amp;A）与投资顾问</h3><p>为跨境并购、股权或资产交易、投资机会评估及战略决策提供专业顾问支持。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="落地安家与生活管家服务" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>落地安家与生活管家服务</h3><p>为投资者、企业高管及家庭提供越南落地与生活安排支持，协助顺利建立稳定的本地生活。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="绿色投资与 ESG 顾问" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>绿色投资与 ESG 顾问</h3><p>协助企业与投资者推动可持续项目、ESG 实践、责任投资及具有长期环境与社会价值的发展。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="资产保护与法律维权" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>资产保护与法律维权</h3><p>协助企业及个人保护资产、管理法律风险，并协调处理跨境争议及合规挑战。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="人才与企业培训" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>人才与企业培训</h3><p>提供人才招聘协调及企业培训，提升团队能力、职场沟通及跨文化合作能力。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="企业数字化转型与安全" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>企业数字化转型与安全</h3><p>提供以企业需求为导向的数字化转型、流程优化及数据安全支持，提升运营效率与信息安全。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="跨境采购与商务对接" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>跨境采购与商务对接</h3><p>协助企业寻找合适供应商、产品及商业伙伴，连接越南与国际市场的供应链及合作机会。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div></div></div><button aria-label="Next services" class="yf-carousel-arrow yf-carousel-next" type="button">❯</button><div class="yf-carousel-dots"><button aria-label="Services 1" class="yf-carousel-dot active" type="button"></button><button aria-label="Services 2" class="yf-carousel-dot" type="button"></button><button aria-label="Services 3" class="yf-carousel-dot" type="button"></button></div></div></div>
+<div class="container"><div class="yf-services-heading"><div class="yf-services-label">我们的服务</div><h2>服务项目</h2><p>提供整合式解决方案，协助企业在越南及国际市场建立、运营、保障并持续成长。</p></div><div class="yf-services-carousel"><button aria-label="Previous services" class="yf-carousel-arrow yf-carousel-prev" type="button">❮</button><div class="yf-services-window"><div class="yf-services-track"><div class="yf-service-card"><div class="yf-service-image"><img alt="设立代表处（RO）" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>设立代表处（RO）</h3><p>协助企业在越南建立合规的本地据点，用于市场研究、建立商业关系及拓展机会，为后续全面运营做好准备。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="中小企业与个人 FDI 服务" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>中小企业与个人 FDI 服务</h3><p>为中小企业及个人投资者提供投资架构、许可、公司设立及合规进入越南市场的实用顾问服务。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="合规与运营支持" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>合规与运营支持</h3><p>提供企业合规、税务及行政协调、牌照义务与日常运营等持续性支持，协助企业稳健运营。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="跨境并购（M&amp;A）与投资顾问" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>跨境并购（M&amp;A）与投资顾问</h3><p>为跨境并购、股权或资产交易、投资机会评估及战略决策提供专业顾问支持。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="落地安家与生活管家服务" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>落地安家与生活管家服务</h3><p>为投资者、企业高管及家庭提供越南落地与生活安排支持，协助顺利建立稳定的本地生活。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="绿色投资与 ESG 顾问" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>绿色投资与 ESG 顾问</h3><p>协助企业与投资者推动可持续项目、ESG 实践、责任投资及具有长期环境与社会价值的发展。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="资产保护与法律维权" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>资产保护与法律维权</h3><p>协助企业及个人保护资产、管理法律风险，并协调处理跨境争议及合规挑战。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="人才与企业培训" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>人才与企业培训</h3><p>提供人才招聘协调及企业培训，提升团队能力、职场沟通及跨文化合作能力。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="企业数字化转型与安全" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>企业数字化转型与安全</h3><p>提供以企业需求为导向的数字化转型、流程优化及数据安全支持，提升运营效率与信息安全。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="跨境采购与商务对接" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>跨境采购与商务对接</h3><p>协助企业寻找合适供应商、产品及商业伙伴，连接越南与国际市场的供应链及合作机会。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div></div></div><button aria-label="Next services" class="yf-carousel-arrow yf-carousel-next" type="button">❯</button><div class="yf-carousel-dots"><button aria-label="Services 1" class="yf-carousel-dot active" type="button"></button><button aria-label="Services 2" class="yf-carousel-dot" type="button"></button><button aria-label="Services 3" class="yf-carousel-dot" type="button"></button></div></div></div>
 
 
 <script>
@@ -3096,7 +3034,7 @@ body { padding-top: 106px !important; }
 <!-- =========================
      MARKET ENTRY DETAIL
 ========================= -->
-<section aria-hidden="true" class="yf-services-directory" id="services-directory"><div class="yf-services-directory-inner"><section aria-label="Services overview" class="yf-services-hero"><div class="yf-services-slides"><article class="yf-services-slide is-active" data-slide="0"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">设立代表处（RO）</h2><p class="yf-services-slide-summary">协助企业在越南建立合规的本地据点，用于市场研究、建立商业关系及拓展机会，为后续全面运营做好准备。</p></div><div class="yf-services-slide-image"><img alt="设立代表处（RO）" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="1"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">中小企业与个人 FDI 服务</h2><p class="yf-services-slide-summary">为中小企业及个人投资者提供投资架构、许可、公司设立及合规进入越南市场的实用顾问服务。</p></div><div class="yf-services-slide-image"><img alt="中小企业与个人 FDI 服务" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="2"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">合规与运营支持</h2><p class="yf-services-slide-summary">提供企业合规、税务及行政协调、牌照义务与日常运营等持续性支持，协助企业稳健运营。</p></div><div class="yf-services-slide-image"><img alt="合规与运营支持" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="3"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">跨境并购（M&amp;A）与投资顾问</h2><p class="yf-services-slide-summary">为跨境并购、股权或资产交易、投资机会评估及战略决策提供专业顾问支持。</p></div><div class="yf-services-slide-image"><img alt="跨境并购（M&amp;A）与投资顾问" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="4"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">落地安家与生活管家服务</h2><p class="yf-services-slide-summary">为投资者、企业高管及家庭提供越南落地与生活安排支持，协助顺利建立稳定的本地生活。</p></div><div class="yf-services-slide-image"><img alt="落地安家与生活管家服务" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="5"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">绿色投资与 ESG 顾问</h2><p class="yf-services-slide-summary">协助企业与投资者推动可持续项目、ESG 实践、责任投资及具有长期环境与社会价值的发展。</p></div><div class="yf-services-slide-image"><img alt="绿色投资与 ESG 顾问" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="6"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">资产保护与法律维权</h2><p class="yf-services-slide-summary">协助企业及个人保护资产、管理法律风险，并协调处理跨境争议及合规挑战。</p></div><div class="yf-services-slide-image"><img alt="资产保护与法律维权" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="7"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">人才与企业培训</h2><p class="yf-services-slide-summary">提供人才招聘协调及企业培训，提升团队能力、职场沟通及跨文化合作能力。</p></div><div class="yf-services-slide-image"><img alt="人才与企业培训" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="8"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">企业数字化转型与安全</h2><p class="yf-services-slide-summary">提供以企业需求为导向的数字化转型、流程优化及数据安全支持，提升运营效率与信息安全。</p></div><div class="yf-services-slide-image"><img alt="企业数字化转型与安全" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="9"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">跨境采购与商务对接</h2><p class="yf-services-slide-summary">协助企业寻找合适供应商、产品及商业伙伴，连接越南与国际市场的供应链及合作机会。</p></div><div class="yf-services-slide-image"><img alt="跨境采购与商务对接" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article></div><button aria-label="Previous service" class="yf-services-arrow yf-services-prev" type="button">‹</button><button aria-label="Next service" class="yf-services-arrow yf-services-next" type="button">›</button><div class="yf-services-dots"><button aria-label="Service 1" class="yf-services-dot is-active" data-slide-to="0" type="button"></button><button aria-label="Service 2" class="yf-services-dot" data-slide-to="1" type="button"></button><button aria-label="Service 3" class="yf-services-dot" data-slide-to="2" type="button"></button><button aria-label="Service 4" class="yf-services-dot" data-slide-to="3" type="button"></button><button aria-label="Service 5" class="yf-services-dot" data-slide-to="4" type="button"></button><button aria-label="Service 6" class="yf-services-dot" data-slide-to="5" type="button"></button><button aria-label="Service 7" class="yf-services-dot" data-slide-to="6" type="button"></button><button aria-label="Service 8" class="yf-services-dot" data-slide-to="7" type="button"></button><button aria-label="Service 9" class="yf-services-dot" data-slide-to="8" type="button"></button><button aria-label="Service 10" class="yf-services-dot" data-slide-to="9" type="button"></button></div></section><div class="yf-services-directory-header"><h2>服务项目</h2><p>探索 Ying Fa Global 的完整跨境商务及企业支持方案。</p></div><div class="yf-services-directory-grid"><div class="yf-service-card"><div class="yf-service-image"><img alt="设立代表处（RO）" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>设立代表处（RO）</h3><p>协助企业在越南建立合规的本地据点，用于市场研究、建立商业关系及拓展机会，为后续全面运营做好准备。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="中小企业与个人 FDI 服务" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>中小企业与个人 FDI 服务</h3><p>为中小企业及个人投资者提供投资架构、许可、公司设立及合规进入越南市场的实用顾问服务。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="合规与运营支持" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>合规与运营支持</h3><p>提供企业合规、税务及行政协调、牌照义务与日常运营等持续性支持，协助企业稳健运营。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="跨境并购（M&amp;A）与投资顾问" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>跨境并购（M&amp;A）与投资顾问</h3><p>为跨境并购、股权或资产交易、投资机会评估及战略决策提供专业顾问支持。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="落地安家与生活管家服务" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>落地安家与生活管家服务</h3><p>为投资者、企业高管及家庭提供越南落地与生活安排支持，协助顺利建立稳定的本地生活。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="绿色投资与 ESG 顾问" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>绿色投资与 ESG 顾问</h3><p>协助企业与投资者推动可持续项目、ESG 实践、责任投资及具有长期环境与社会价值的发展。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="资产保护与法律维权" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>资产保护与法律维权</h3><p>协助企业及个人保护资产、管理法律风险，并协调处理跨境争议及合规挑战。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="人才与企业培训" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>人才与企业培训</h3><p>提供人才招聘协调及企业培训，提升团队能力、职场沟通及跨文化合作能力。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="企业数字化转型与安全" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>企业数字化转型与安全</h3><p>提供以企业需求为导向的数字化转型、流程优化及数据安全支持，提升运营效率与信息安全。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="跨境采购与商务对接" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>跨境采购与商务对接</h3><p>协助企业寻找合适供应商、产品及商业伙伴，连接越南与国际市场的供应链及合作机会。</p><a class="yf-learn" href="#contact">了解更多 →</a></div></div></div></div>
+<section aria-hidden="true" class="yf-services-directory" id="services-directory"><div class="yf-services-directory-inner"><section aria-label="Services overview" class="yf-services-hero"><div class="yf-services-slides"><article class="yf-services-slide is-active" data-slide="0"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">设立代表处（RO）</h2><p class="yf-services-slide-summary">协助企业在越南建立合规的本地据点，用于市场研究、建立商业关系及拓展机会，为后续全面运营做好准备。</p></div><div class="yf-services-slide-image"><img alt="设立代表处（RO）" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="1"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">中小企业与个人 FDI 服务</h2><p class="yf-services-slide-summary">为中小企业及个人投资者提供投资架构、许可、公司设立及合规进入越南市场的实用顾问服务。</p></div><div class="yf-services-slide-image"><img alt="中小企业与个人 FDI 服务" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="2"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">合规与运营支持</h2><p class="yf-services-slide-summary">提供企业合规、税务及行政协调、牌照义务与日常运营等持续性支持，协助企业稳健运营。</p></div><div class="yf-services-slide-image"><img alt="合规与运营支持" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="3"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">跨境并购（M&amp;A）与投资顾问</h2><p class="yf-services-slide-summary">为跨境并购、股权或资产交易、投资机会评估及战略决策提供专业顾问支持。</p></div><div class="yf-services-slide-image"><img alt="跨境并购（M&amp;A）与投资顾问" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="4"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">落地安家与生活管家服务</h2><p class="yf-services-slide-summary">为投资者、企业高管及家庭提供越南落地与生活安排支持，协助顺利建立稳定的本地生活。</p></div><div class="yf-services-slide-image"><img alt="落地安家与生活管家服务" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="5"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">绿色投资与 ESG 顾问</h2><p class="yf-services-slide-summary">协助企业与投资者推动可持续项目、ESG 实践、责任投资及具有长期环境与社会价值的发展。</p></div><div class="yf-services-slide-image"><img alt="绿色投资与 ESG 顾问" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="6"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">资产保护与法律维权</h2><p class="yf-services-slide-summary">协助企业及个人保护资产、管理法律风险，并协调处理跨境争议及合规挑战。</p></div><div class="yf-services-slide-image"><img alt="资产保护与法律维权" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="7"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">人才与企业培训</h2><p class="yf-services-slide-summary">提供人才招聘协调及企业培训，提升团队能力、职场沟通及跨文化合作能力。</p></div><div class="yf-services-slide-image"><img alt="人才与企业培训" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="8"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">企业数字化转型与安全</h2><p class="yf-services-slide-summary">提供以企业需求为导向的数字化转型、流程优化及数据安全支持，提升运营效率与信息安全。</p></div><div class="yf-services-slide-image"><img alt="企业数字化转型与安全" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="9"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">跨境采购与商务对接</h2><p class="yf-services-slide-summary">协助企业寻找合适供应商、产品及商业伙伴，连接越南与国际市场的供应链及合作机会。</p></div><div class="yf-services-slide-image"><img alt="跨境采购与商务对接" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article></div><button aria-label="Previous service" class="yf-services-arrow yf-services-prev" type="button">‹</button><button aria-label="Next service" class="yf-services-arrow yf-services-next" type="button">›</button><div class="yf-services-dots"><button aria-label="Service 1" class="yf-services-dot is-active" data-slide-to="0" type="button"></button><button aria-label="Service 2" class="yf-services-dot" data-slide-to="1" type="button"></button><button aria-label="Service 3" class="yf-services-dot" data-slide-to="2" type="button"></button><button aria-label="Service 4" class="yf-services-dot" data-slide-to="3" type="button"></button><button aria-label="Service 5" class="yf-services-dot" data-slide-to="4" type="button"></button><button aria-label="Service 6" class="yf-services-dot" data-slide-to="5" type="button"></button><button aria-label="Service 7" class="yf-services-dot" data-slide-to="6" type="button"></button><button aria-label="Service 8" class="yf-services-dot" data-slide-to="7" type="button"></button><button aria-label="Service 9" class="yf-services-dot" data-slide-to="8" type="button"></button><button aria-label="Service 10" class="yf-services-dot" data-slide-to="9" type="button"></button></div></section><div class="yf-services-directory-header"><h2>服务项目</h2><p>探索 Ying Fa Global 的完整跨境商务及企业支持方案。</p></div><div class="yf-services-directory-grid"><div class="yf-service-card"><div class="yf-service-image"><img alt="设立代表处（RO）" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>设立代表处（RO）</h3><p>协助企业在越南建立合规的本地据点，用于市场研究、建立商业关系及拓展机会，为后续全面运营做好准备。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="中小企业与个人 FDI 服务" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>中小企业与个人 FDI 服务</h3><p>为中小企业及个人投资者提供投资架构、许可、公司设立及合规进入越南市场的实用顾问服务。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="合规与运营支持" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>合规与运营支持</h3><p>提供企业合规、税务及行政协调、牌照义务与日常运营等持续性支持，协助企业稳健运营。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="跨境并购（M&amp;A）与投资顾问" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>跨境并购（M&amp;A）与投资顾问</h3><p>为跨境并购、股权或资产交易、投资机会评估及战略决策提供专业顾问支持。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="落地安家与生活管家服务" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>落地安家与生活管家服务</h3><p>为投资者、企业高管及家庭提供越南落地与生活安排支持，协助顺利建立稳定的本地生活。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="绿色投资与 ESG 顾问" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>绿色投资与 ESG 顾问</h3><p>协助企业与投资者推动可持续项目、ESG 实践、责任投资及具有长期环境与社会价值的发展。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="资产保护与法律维权" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>资产保护与法律维权</h3><p>协助企业及个人保护资产、管理法律风险，并协调处理跨境争议及合规挑战。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="人才与企业培训" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>人才与企业培训</h3><p>提供人才招聘协调及企业培训，提升团队能力、职场沟通及跨文化合作能力。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="企业数字化转型与安全" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>企业数字化转型与安全</h3><p>提供以企业需求为导向的数字化转型、流程优化及数据安全支持，提升运营效率与信息安全。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="跨境采购与商务对接" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>跨境采购与商务对接</h3><p>协助企业寻找合适供应商、产品及商业伙伴，连接越南与国际市场的供应链及合作机会。</p><a class="yf-learn" href="contact-zh-cn.html">了解更多 →</a></div></div></div></div>
 <section class="yf-services-inquiry" id="service-inquiry" aria-labelledby="yf-services-inquiry-title">
 <div class="yf-services-inquiry-head"><div class="yf-services-inquiry-eyebrow">服务咨询</div><h2 id="yf-services-inquiry-title">让我们探讨您的业务需求</h2><p>请告诉我们您的业务需求。我们的团队将查看您的咨询内容，并与您联系，进一步讨论后续安排。</p></div>
 <form class="yf-services-inquiry-form" data-yf-services-inquiry action="https://formsubmit.co/ajax/info@yingfaglobal.com" method="POST">
@@ -3296,7 +3234,7 @@ body { padding-top: 106px !important; }
 <p>
     提供给探索越南机会的国际企业之市场信息。
 </p>
-<a class="learn" href="#contact">
+<a class="learn" href="contact-zh-cn.html">
     了解更多 →
 </a>
 </div>
@@ -3310,7 +3248,7 @@ body { padding-top: 106px !important; }
 <p>
     中国与越南之间的沟通、贸易及商业合作。
 </p>
-<a class="learn" href="#contact">
+<a class="learn" href="contact-zh-cn.html">
     了解更多 →
 </a>
 </div>
@@ -3324,7 +3262,7 @@ body { padding-top: 106px !important; }
 <p>
     提供国际市场与企业发展的实用观点。
 </p>
-<a class="learn" href="#contact">
+<a class="learn" href="contact-zh-cn.html">
     了解更多 →
 </a>
 </div>
@@ -3338,7 +3276,7 @@ body { padding-top: 106px !important; }
 <p>
     协助企业寻找越南及区域内的投资机会。
 </p>
-<a class="learn" href="#contact">
+<a class="learn" href="contact-zh-cn.html">
     了解更多 →
 </a>
 </div>
@@ -3421,7 +3359,7 @@ body { padding-top: 106px !important; }
       <h2>携手合作</h2>
       <p>欢迎与我们的团队联系，了解 Ying Fa Global 如何协助实现您的商业目标。</p>
     </div>
-    <a class="yf-cta-button" href="#contact">联系我们 →</a>
+    <a class="yf-cta-button" href="contact-zh-cn.html">联系我们 →</a>
   </div>
 </section>
 
@@ -3481,7 +3419,7 @@ body { padding-top: 106px !important; }
           <a href="#about">关于我们</a>
           <a href="#profile">公司简介</a>
           <a href="#news">新闻</a>
-          <a href="#contact">联系我们</a>
+          <a href="contact-zh-cn.html">联系我们</a>
         </div>
       </div>
 
@@ -3520,12 +3458,12 @@ body { padding-top: 106px !important; }
       <div class="yf-connect">
         <h4 class="yf-footer-title">关注我们</h4>
         <div class="yf-socials">
-          <a class="yf-social" href="#contact" title="LinkedIn" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-          <a class="yf-social" href="#contact" title="WhatsApp" aria-label="WhatsApp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/whatsapp.svg" alt="WhatsApp"></a>
-          <a class="yf-social" href="#contact" title="WeChat" aria-label="WeChat"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/wechat.svg" alt="WeChat"></a>
-          <a class="yf-social" href="#contact" title="LINE" aria-label="LINE"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/line.svg" alt="LINE"></a>
-          <a class="yf-social" href="#contact" title="Facebook" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/facebook.svg" alt="Facebook"></a>
-          <a class="yf-social" href="#contact" title="YouTube" aria-label="YouTube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/youtube.svg" alt="YouTube"></a>
+          <a class="yf-social" href="contact-zh-cn.html" title="LinkedIn" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+          <a class="yf-social" href="contact-zh-cn.html" title="WhatsApp" aria-label="WhatsApp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/whatsapp.svg" alt="WhatsApp"></a>
+          <a class="yf-social" href="contact-zh-cn.html" title="WeChat" aria-label="WeChat"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/wechat.svg" alt="WeChat"></a>
+          <a class="yf-social" href="contact-zh-cn.html" title="LINE" aria-label="LINE"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/line.svg" alt="LINE"></a>
+          <a class="yf-social" href="contact-zh-cn.html" title="Facebook" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/facebook.svg" alt="Facebook"></a>
+          <a class="yf-social" href="contact-zh-cn.html" title="YouTube" aria-label="YouTube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/youtube.svg" alt="YouTube"></a>
         </div>
         <div class="yf-connect-text">关注 Ying Fa Global，掌握最新动态、专业洞察与商业机会。</div>
       </div>
@@ -3534,9 +3472,9 @@ body { padding-top: 106px !important; }
     <div class="yf-footer-bottom">
       <div>© 2026 Ying Fa Global. 保留所有权利。</div>
       <div class="yf-footer-bottom-links">
-        <a href="#contact">隐私政策</a>
-        <a href="#contact">使用条款</a>
-        <a href="#contact">网站地图</a>
+        <a href="contact-zh-cn.html">隐私政策</a>
+        <a href="contact-zh-cn.html">使用条款</a>
+        <a href="contact-zh-cn.html">网站地图</a>
       </div>
     </div>
   </div>
