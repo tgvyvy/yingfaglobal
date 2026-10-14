@@ -4255,6 +4255,27 @@ body.yf-services-is-open .yf-cta-strip { display: none !important; }
 .yf-services-directory.is-open{padding-bottom:0!important;}
 </style>
 
+
+<style id="yf-services-about-spacing-v48">
+/* V48: Align the top edge of the Services and About views with the News banner. */
+body.yf-services-hash-mode #services { padding-top: 0 !important; margin-top: 0 !important; }
+body.yf-about-page-mode #about { padding-top: 0 !important; margin-top: 0 !important; }
+@media (max-width:700px) {
+  body.yf-services-hash-mode #services { padding-top: 0 !important; }
+  body.yf-about-page-mode #about { padding-top: 0 !important; }
+}
+</style>
+<script id="yf-services-about-spacing-v48-script">
+(function(){
+  function syncSpacingMode(){
+    document.body.classList.toggle('yf-services-hash-mode', window.location.hash.toLowerCase() === '#services');
+  }
+  window.addEventListener('hashchange', syncSpacingMode);
+  window.addEventListener('load', syncSpacingMode);
+  syncSpacingMode();
+})();
+</script>
+
 </body>
 </html>
 
