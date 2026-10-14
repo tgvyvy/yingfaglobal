@@ -2620,55 +2620,8 @@ body { padding-top: 106px !important; }
 }
 </style>
 
-
-<style id="yf-news-full-page-mode">
-/* Dedicated News view: show the full updates list while preserving the shared header and footer. */
-body.yf-news-page-mode > section:not(#news),
-body.yf-news-page-mode > .yf-cta-strip { display:none !important; }
-body.yf-news-page-mode #news { display:block !important; min-height:calc(100vh - 150px); padding-top:clamp(34px,5vw,64px); scroll-margin-top:150px; }
-body.yf-news-page-mode #news .heading-row { align-items:flex-start; margin-bottom:28px; }
-body.yf-news-page-mode #yf-view-all-news { display:none !important; }
-body.yf-news-page-mode .yf-news-carousel { overflow:visible; }
-body.yf-news-page-mode #yf-home-news-track { display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px 28px; width:100%; transform:none !important; transition:none !important; will-change:auto; }
-body.yf-news-page-mode .yf-home-news-card { min-width:0; width:auto; flex:initial !important; padding:18px 16px; border:1px solid #e6eaf0; border-radius:12px; background:#fff; box-shadow:0 5px 18px rgba(15,35,60,.045); }
-body.yf-news-page-mode .yf-home-news-card:hover { border-color:#c5a15a; box-shadow:0 10px 24px rgba(15,35,60,.08); }
-body.yf-news-page-mode .yf-sticky-shell a[href="#news"] { color:#b08a3e !important; }
-@media(max-width:900px){ body.yf-news-page-mode #yf-home-news-track { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; } }
-@media(max-width:600px){ body.yf-news-page-mode #news { padding-top:28px; } body.yf-news-page-mode #yf-home-news-track { grid-template-columns:1fr; gap:14px; } body.yf-news-page-mode .yf-home-news-card { padding:16px 14px; } }
-</style>
-
-
-<style id="yf-news-page-banner-v44">
-/* V44: dedicated editorial banner on the full News page only; home news section remains unchanged. */
-.yf-news-page-banner{display:none;}
-body.yf-news-page-mode #news{padding-top:0 !important;}
-body.yf-news-page-mode #news .yf-news-page-banner{
-  display:flex; align-items:center; position:relative; width:100%; min-height:250px;
-  box-sizing:border-box; overflow:hidden;
-  background-image:linear-gradient(90deg,rgba(8,28,76,.91) 0%,rgba(10,40,100,.76) 46%,rgba(8,26,65,.35) 100%),url('hero-hcm-skyline.jpg');
-  background-size:cover; background-position:center 48%;
-  padding:clamp(36px,5.5vw,70px) max(5%,calc((100% - 1200px)/2));
-}
-body.yf-news-page-mode .yf-news-page-banner-content{max-width:760px; position:relative; z-index:1;}
-body.yf-news-page-mode .yf-news-page-banner h1{margin:0; color:#fff; font-size:clamp(32px,4vw,48px); line-height:1.15; font-weight:750; letter-spacing:.01em;}
-body.yf-news-page-mode .yf-news-page-banner-rule{display:block;width:66px;height:5px;background:#c6a15b;margin:20px 0 16px;border-radius:1px;}
-body.yf-news-page-mode .yf-news-page-banner p{margin:0;max-width:660px;color:rgba(255,255,255,.9);font-size:clamp(14px,1.5vw,17px);line-height:1.65;}
-body.yf-news-page-mode #news > .container{padding-top:clamp(28px,4vw,46px);}
-body.yf-news-page-mode #news .heading-row{display:none !important;}
-@media(max-width:600px){body.yf-news-page-mode #news .yf-news-page-banner{min-height:190px;padding:30px 22px;background-position:center;}body.yf-news-page-mode .yf-news-page-banner-rule{margin:14px 0 11px;width:52px;height:4px;}body.yf-news-page-mode #news > .container{padding-top:24px;}}
-</style>
-
-
-<style id="yf-services-banner-align-v50">
-/* V50: consistent Services banner position and divider removal across all four languages. */
-body.yf-services-is-open .yf-services-directory{top:60px !important;}
-body.yf-services-is-open .yf-services-directory-inner{padding-top:0 !important;margin-top:0 !important;}
-body.yf-services-is-open .yf-sticky-shell > header{border-bottom:0 !important;box-shadow:none !important;}
-body.yf-services-is-open .yf-sticky-shell > header::after{display:none !important;content:none !important;}
-</style>
-
 </head>
-<body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="contact-vi.html"><span class="yf-phone" aria-hidden="true">☎</span>Liên hệ</a><nav class="yf-topbar-languages" aria-label="Ngôn ngữ"><a class="yf-lang-btn" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn yf-lang-current" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
+<body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone" aria-hidden="true">☎</span>Liên hệ</a><nav class="yf-topbar-languages" aria-label="Ngôn ngữ"><a class="yf-lang-btn" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn yf-lang-current" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
 <!-- =========================
      HEADER
 ========================= -->
@@ -2683,7 +2636,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <a href="#about">Giới thiệu</a>
 <a href="#profile">Hồ sơ</a>
 <a href="#news">Tin tức</a>
-<a href="contact-vi.html">Liên hệ</a>
+<a href="#contact">Liên hệ</a>
 </nav>
 </div>
 </header>
@@ -2692,23 +2645,23 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
      FLOATING CONTACT
 ========================= -->
 <div class="floating-contact">
-<a class="float-btn whatsapp" href="contact-vi.html" title="WhatsApp">
+<a class="float-btn whatsapp" href="#contact" title="WhatsApp">
 <img alt="" src="https://cdn.simpleicons.org/whatsapp/25D366"/>
 <span>WhatsApp</span>
 </a>
-<a class="float-btn wechat" href="contact-vi.html" title="WeChat">
+<a class="float-btn wechat" href="#contact" title="WeChat">
 <img alt="" src="https://cdn.simpleicons.org/wechat/07C160"/>
 <span>WeChat</span>
 </a>
-<a class="float-btn line" href="contact-vi.html" title="LINE">
+<a class="float-btn line" href="#contact" title="LINE">
 <img alt="" src="https://cdn.simpleicons.org/line/00C300"/>
 <span>LINE</span>
 </a>
-<a class="float-btn messenger" href="contact-vi.html" title="Messenger">
+<a class="float-btn messenger" href="#contact" title="Messenger">
 <img alt="" src="https://cdn.simpleicons.org/messenger/0084FF"/>
 <span>Messenger</span>
 </a>
-<a class="float-btn zalo" href="contact-vi.html" title="Zalo">
+<a class="float-btn zalo" href="#contact" title="Zalo">
 <svg aria-label="Zalo" class="zalo-logo" height="27" style="flex:0 0 27px;" viewbox="0 0 64 64" width="27">
 <rect fill="#0068FF" height="62" rx="17" width="62" x="1" y="1"></rect>
 <path d="M16 12h31c8.3 0 15 6.7 15 15v15c0 8.3-6.7 15-15 15H29L13 61l5-10h-2C7.7 51 1 44.3 1 36V27c0-8.3 6.7-15 15-15z" fill="#FFFFFF"></path>
@@ -2739,7 +2692,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     đúng đối tác, cơ hội và thị trường tại Việt Nam cũng như trên thế giới.
 </p>
 <div class="buttons">
-<a class="btn btn-primary" href="contact-vi.html">
+<a class="btn btn-primary" href="#contact">
     Trao đổi với Chuyên gia →
 </a>
 <a class="btn btn-gold yf-open-services" data-services-open="" href="#services">
@@ -3040,7 +2993,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     padding-top:25px;
 }
   </style>
-<div class="container"><div class="yf-services-heading"><div class="yf-services-label">CHÚNG TÔI LÀM GÌ</div><h2>Dịch vụ của chúng tôi</h2><p>Các giải pháp tích hợp giúp doanh nghiệp thành lập, vận hành, bảo vệ và phát triển tại Việt Nam và trên thị trường quốc tế.</p></div><div class="yf-services-carousel"><button aria-label="Previous services" class="yf-carousel-arrow yf-carousel-prev" type="button">❮</button><div class="yf-services-window"><div class="yf-services-track"><div class="yf-service-card"><div class="yf-service-image"><img alt="Văn phòng đại diện (RO)" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Văn phòng đại diện (RO)</h3><p>Hỗ trợ doanh nghiệp thiết lập hiện diện hợp pháp tại Việt Nam để nghiên cứu thị trường, xây dựng quan hệ và phát triển cơ hội trước khi triển khai hoạt động quy mô đầy đủ.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Dịch vụ FDI cho SME &amp; Cá nhân" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Dịch vụ FDI cho SME &amp; Cá nhân</h3><p>Tư vấn thực tiễn cho doanh nghiệp vừa và nhỏ và nhà đầu tư cá nhân về cấu trúc đầu tư, giấy phép, thành lập doanh nghiệp và gia nhập thị trường Việt Nam đúng quy định.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Tuân thủ &amp; Hậu cần Vận hành" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Tuân thủ &amp; Hậu cần Vận hành</h3><p>Hỗ trợ liên tục về tuân thủ doanh nghiệp, thuế, hành chính, giấy phép và phối hợp các công việc cần thiết trong quá trình vận hành.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="M&amp;A &amp; Tư vấn Đầu tư" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>M&amp;A &amp; Tư vấn Đầu tư</h3><p>Tư vấn các giao dịch mua bán và sáp nhập xuyên biên giới, cơ hội đầu tư, đánh giá giao dịch và định hướng chiến lược.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Định cư &amp; Dịch vụ Đời sống" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Định cư &amp; Dịch vụ Đời sống</h3><p>Hỗ trợ nhà đầu tư, chuyên gia và gia đình khi chuyển đến Việt Nam, từ ổn định cuộc sống đến các nhu cầu địa phương và hỗ trợ cá nhân.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Đầu tư Xanh &amp; Tư vấn ESG" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Đầu tư Xanh &amp; Tư vấn ESG</h3><p>Đồng hành cùng doanh nghiệp và nhà đầu tư trong các dự án bền vững, thực hành ESG, đầu tư có trách nhiệm và tạo giá trị môi trường – xã hội dài hạn.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Bảo vệ Tài sản &amp; Pháp lý" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Bảo vệ Tài sản &amp; Pháp lý</h3><p>Hỗ trợ phối hợp nhằm bảo vệ tài sản doanh nghiệp và cá nhân, kiểm soát rủi ro pháp lý và xử lý các vấn đề tranh chấp hoặc tuân thủ xuyên biên giới.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Đào tạo Nhân sự &amp; Doanh nghiệp" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Đào tạo Nhân sự &amp; Doanh nghiệp</h3><p>Hỗ trợ tuyển dụng và đào tạo doanh nghiệp nhằm phát triển nhân sự, nâng cao giao tiếp tại nơi làm việc và năng lực làm việc đa văn hóa.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Chuyển đổi Số &amp; Bảo mật" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Chuyển đổi Số &amp; Bảo mật</h3><p>Tư vấn chuyển đổi số, cải tiến quy trình và bảo mật dữ liệu theo định hướng kinh doanh, giúp doanh nghiệp vận hành hiệu quả và an toàn hơn.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Kết nối Cung ứng &amp; Giao thương" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Kết nối Cung ứng &amp; Giao thương</h3><p>Tìm kiếm nhà cung cấp và kết nối doanh nghiệp với đối tác phù hợp, sản phẩm và cơ hội thương mại tại Việt Nam và các thị trường quốc tế.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div></div></div><button aria-label="Next services" class="yf-carousel-arrow yf-carousel-next" type="button">❯</button><div class="yf-carousel-dots"><button aria-label="Services 1" class="yf-carousel-dot active" type="button"></button><button aria-label="Services 2" class="yf-carousel-dot" type="button"></button><button aria-label="Services 3" class="yf-carousel-dot" type="button"></button></div></div></div>
+<div class="container"><div class="yf-services-heading"><div class="yf-services-label">CHÚNG TÔI LÀM GÌ</div><h2>Dịch vụ của chúng tôi</h2><p>Các giải pháp tích hợp giúp doanh nghiệp thành lập, vận hành, bảo vệ và phát triển tại Việt Nam và trên thị trường quốc tế.</p></div><div class="yf-services-carousel"><button aria-label="Previous services" class="yf-carousel-arrow yf-carousel-prev" type="button">❮</button><div class="yf-services-window"><div class="yf-services-track"><div class="yf-service-card"><div class="yf-service-image"><img alt="Văn phòng đại diện (RO)" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Văn phòng đại diện (RO)</h3><p>Hỗ trợ doanh nghiệp thiết lập hiện diện hợp pháp tại Việt Nam để nghiên cứu thị trường, xây dựng quan hệ và phát triển cơ hội trước khi triển khai hoạt động quy mô đầy đủ.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Dịch vụ FDI cho SME &amp; Cá nhân" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Dịch vụ FDI cho SME &amp; Cá nhân</h3><p>Tư vấn thực tiễn cho doanh nghiệp vừa và nhỏ và nhà đầu tư cá nhân về cấu trúc đầu tư, giấy phép, thành lập doanh nghiệp và gia nhập thị trường Việt Nam đúng quy định.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Tuân thủ &amp; Hậu cần Vận hành" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Tuân thủ &amp; Hậu cần Vận hành</h3><p>Hỗ trợ liên tục về tuân thủ doanh nghiệp, thuế, hành chính, giấy phép và phối hợp các công việc cần thiết trong quá trình vận hành.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="M&amp;A &amp; Tư vấn Đầu tư" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>M&amp;A &amp; Tư vấn Đầu tư</h3><p>Tư vấn các giao dịch mua bán và sáp nhập xuyên biên giới, cơ hội đầu tư, đánh giá giao dịch và định hướng chiến lược.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Định cư &amp; Dịch vụ Đời sống" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Định cư &amp; Dịch vụ Đời sống</h3><p>Hỗ trợ nhà đầu tư, chuyên gia và gia đình khi chuyển đến Việt Nam, từ ổn định cuộc sống đến các nhu cầu địa phương và hỗ trợ cá nhân.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Đầu tư Xanh &amp; Tư vấn ESG" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Đầu tư Xanh &amp; Tư vấn ESG</h3><p>Đồng hành cùng doanh nghiệp và nhà đầu tư trong các dự án bền vững, thực hành ESG, đầu tư có trách nhiệm và tạo giá trị môi trường – xã hội dài hạn.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Bảo vệ Tài sản &amp; Pháp lý" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Bảo vệ Tài sản &amp; Pháp lý</h3><p>Hỗ trợ phối hợp nhằm bảo vệ tài sản doanh nghiệp và cá nhân, kiểm soát rủi ro pháp lý và xử lý các vấn đề tranh chấp hoặc tuân thủ xuyên biên giới.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Đào tạo Nhân sự &amp; Doanh nghiệp" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Đào tạo Nhân sự &amp; Doanh nghiệp</h3><p>Hỗ trợ tuyển dụng và đào tạo doanh nghiệp nhằm phát triển nhân sự, nâng cao giao tiếp tại nơi làm việc và năng lực làm việc đa văn hóa.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Chuyển đổi Số &amp; Bảo mật" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Chuyển đổi Số &amp; Bảo mật</h3><p>Tư vấn chuyển đổi số, cải tiến quy trình và bảo mật dữ liệu theo định hướng kinh doanh, giúp doanh nghiệp vận hành hiệu quả và an toàn hơn.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Kết nối Cung ứng &amp; Giao thương" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Kết nối Cung ứng &amp; Giao thương</h3><p>Tìm kiếm nhà cung cấp và kết nối doanh nghiệp với đối tác phù hợp, sản phẩm và cơ hội thương mại tại Việt Nam và các thị trường quốc tế.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div></div></div><button aria-label="Next services" class="yf-carousel-arrow yf-carousel-next" type="button">❯</button><div class="yf-carousel-dots"><button aria-label="Services 1" class="yf-carousel-dot active" type="button"></button><button aria-label="Services 2" class="yf-carousel-dot" type="button"></button><button aria-label="Services 3" class="yf-carousel-dot" type="button"></button></div></div></div>
 
 
 <script>
@@ -3083,7 +3036,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <!-- =========================
      MARKET ENTRY DETAIL
 ========================= -->
-<section aria-hidden="true" class="yf-services-directory" id="services-directory"><div class="yf-services-directory-inner"><section aria-label="Services overview" class="yf-services-hero"><div class="yf-services-slides"><article class="yf-services-slide is-active" data-slide="0"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Văn phòng đại diện (RO)</h2><p class="yf-services-slide-summary">Hỗ trợ doanh nghiệp thiết lập hiện diện hợp pháp tại Việt Nam để nghiên cứu thị trường, xây dựng quan hệ và phát triển cơ hội trước khi triển khai hoạt động quy mô đầy đủ.</p></div><div class="yf-services-slide-image"><img alt="Văn phòng đại diện (RO)" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="1"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Dịch vụ FDI cho SME &amp; Cá nhân</h2><p class="yf-services-slide-summary">Tư vấn thực tiễn cho doanh nghiệp vừa và nhỏ và nhà đầu tư cá nhân về cấu trúc đầu tư, giấy phép, thành lập doanh nghiệp và gia nhập thị trường Việt Nam đúng quy định.</p></div><div class="yf-services-slide-image"><img alt="Dịch vụ FDI cho SME &amp; Cá nhân" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="2"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Tuân thủ &amp; Hậu cần Vận hành</h2><p class="yf-services-slide-summary">Hỗ trợ liên tục về tuân thủ doanh nghiệp, thuế, hành chính, giấy phép và phối hợp các công việc cần thiết trong quá trình vận hành.</p></div><div class="yf-services-slide-image"><img alt="Tuân thủ &amp; Hậu cần Vận hành" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="3"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">M&amp;A &amp; Tư vấn Đầu tư</h2><p class="yf-services-slide-summary">Tư vấn các giao dịch mua bán và sáp nhập xuyên biên giới, cơ hội đầu tư, đánh giá giao dịch và định hướng chiến lược.</p></div><div class="yf-services-slide-image"><img alt="M&amp;A &amp; Tư vấn Đầu tư" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="4"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Định cư &amp; Dịch vụ Đời sống</h2><p class="yf-services-slide-summary">Hỗ trợ nhà đầu tư, chuyên gia và gia đình khi chuyển đến Việt Nam, từ ổn định cuộc sống đến các nhu cầu địa phương và hỗ trợ cá nhân.</p></div><div class="yf-services-slide-image"><img alt="Định cư &amp; Dịch vụ Đời sống" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="5"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Đầu tư Xanh &amp; Tư vấn ESG</h2><p class="yf-services-slide-summary">Đồng hành cùng doanh nghiệp và nhà đầu tư trong các dự án bền vững, thực hành ESG, đầu tư có trách nhiệm và tạo giá trị môi trường – xã hội dài hạn.</p></div><div class="yf-services-slide-image"><img alt="Đầu tư Xanh &amp; Tư vấn ESG" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="6"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Bảo vệ Tài sản &amp; Pháp lý</h2><p class="yf-services-slide-summary">Hỗ trợ phối hợp nhằm bảo vệ tài sản doanh nghiệp và cá nhân, kiểm soát rủi ro pháp lý và xử lý các vấn đề tranh chấp hoặc tuân thủ xuyên biên giới.</p></div><div class="yf-services-slide-image"><img alt="Bảo vệ Tài sản &amp; Pháp lý" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="7"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Đào tạo Nhân sự &amp; Doanh nghiệp</h2><p class="yf-services-slide-summary">Hỗ trợ tuyển dụng và đào tạo doanh nghiệp nhằm phát triển nhân sự, nâng cao giao tiếp tại nơi làm việc và năng lực làm việc đa văn hóa.</p></div><div class="yf-services-slide-image"><img alt="Đào tạo Nhân sự &amp; Doanh nghiệp" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="8"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Chuyển đổi Số &amp; Bảo mật</h2><p class="yf-services-slide-summary">Tư vấn chuyển đổi số, cải tiến quy trình và bảo mật dữ liệu theo định hướng kinh doanh, giúp doanh nghiệp vận hành hiệu quả và an toàn hơn.</p></div><div class="yf-services-slide-image"><img alt="Chuyển đổi Số &amp; Bảo mật" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="9"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Kết nối Cung ứng &amp; Giao thương</h2><p class="yf-services-slide-summary">Tìm kiếm nhà cung cấp và kết nối doanh nghiệp với đối tác phù hợp, sản phẩm và cơ hội thương mại tại Việt Nam và các thị trường quốc tế.</p></div><div class="yf-services-slide-image"><img alt="Kết nối Cung ứng &amp; Giao thương" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article></div><button aria-label="Previous service" class="yf-services-arrow yf-services-prev" type="button">‹</button><button aria-label="Next service" class="yf-services-arrow yf-services-next" type="button">›</button><div class="yf-services-dots"><button aria-label="Service 1" class="yf-services-dot is-active" data-slide-to="0" type="button"></button><button aria-label="Service 2" class="yf-services-dot" data-slide-to="1" type="button"></button><button aria-label="Service 3" class="yf-services-dot" data-slide-to="2" type="button"></button><button aria-label="Service 4" class="yf-services-dot" data-slide-to="3" type="button"></button><button aria-label="Service 5" class="yf-services-dot" data-slide-to="4" type="button"></button><button aria-label="Service 6" class="yf-services-dot" data-slide-to="5" type="button"></button><button aria-label="Service 7" class="yf-services-dot" data-slide-to="6" type="button"></button><button aria-label="Service 8" class="yf-services-dot" data-slide-to="7" type="button"></button><button aria-label="Service 9" class="yf-services-dot" data-slide-to="8" type="button"></button><button aria-label="Service 10" class="yf-services-dot" data-slide-to="9" type="button"></button></div></section><div class="yf-services-directory-header"><h2>Dịch vụ của chúng tôi</h2><p>Khám phá hệ thống giải pháp hỗ trợ kinh doanh và kết nối xuyên biên giới của Ying Fa Global.</p></div><div class="yf-services-directory-grid"><div class="yf-service-card"><div class="yf-service-image"><img alt="Văn phòng đại diện (RO)" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Văn phòng đại diện (RO)</h3><p>Hỗ trợ doanh nghiệp thiết lập hiện diện hợp pháp tại Việt Nam để nghiên cứu thị trường, xây dựng quan hệ và phát triển cơ hội trước khi triển khai hoạt động quy mô đầy đủ.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Dịch vụ FDI cho SME &amp; Cá nhân" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Dịch vụ FDI cho SME &amp; Cá nhân</h3><p>Tư vấn thực tiễn cho doanh nghiệp vừa và nhỏ và nhà đầu tư cá nhân về cấu trúc đầu tư, giấy phép, thành lập doanh nghiệp và gia nhập thị trường Việt Nam đúng quy định.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Tuân thủ &amp; Hậu cần Vận hành" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Tuân thủ &amp; Hậu cần Vận hành</h3><p>Hỗ trợ liên tục về tuân thủ doanh nghiệp, thuế, hành chính, giấy phép và phối hợp các công việc cần thiết trong quá trình vận hành.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="M&amp;A &amp; Tư vấn Đầu tư" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>M&amp;A &amp; Tư vấn Đầu tư</h3><p>Tư vấn các giao dịch mua bán và sáp nhập xuyên biên giới, cơ hội đầu tư, đánh giá giao dịch và định hướng chiến lược.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Định cư &amp; Dịch vụ Đời sống" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Định cư &amp; Dịch vụ Đời sống</h3><p>Hỗ trợ nhà đầu tư, chuyên gia và gia đình khi chuyển đến Việt Nam, từ ổn định cuộc sống đến các nhu cầu địa phương và hỗ trợ cá nhân.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Đầu tư Xanh &amp; Tư vấn ESG" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Đầu tư Xanh &amp; Tư vấn ESG</h3><p>Đồng hành cùng doanh nghiệp và nhà đầu tư trong các dự án bền vững, thực hành ESG, đầu tư có trách nhiệm và tạo giá trị môi trường – xã hội dài hạn.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Bảo vệ Tài sản &amp; Pháp lý" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Bảo vệ Tài sản &amp; Pháp lý</h3><p>Hỗ trợ phối hợp nhằm bảo vệ tài sản doanh nghiệp và cá nhân, kiểm soát rủi ro pháp lý và xử lý các vấn đề tranh chấp hoặc tuân thủ xuyên biên giới.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Đào tạo Nhân sự &amp; Doanh nghiệp" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Đào tạo Nhân sự &amp; Doanh nghiệp</h3><p>Hỗ trợ tuyển dụng và đào tạo doanh nghiệp nhằm phát triển nhân sự, nâng cao giao tiếp tại nơi làm việc và năng lực làm việc đa văn hóa.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Chuyển đổi Số &amp; Bảo mật" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Chuyển đổi Số &amp; Bảo mật</h3><p>Tư vấn chuyển đổi số, cải tiến quy trình và bảo mật dữ liệu theo định hướng kinh doanh, giúp doanh nghiệp vận hành hiệu quả và an toàn hơn.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Kết nối Cung ứng &amp; Giao thương" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Kết nối Cung ứng &amp; Giao thương</h3><p>Tìm kiếm nhà cung cấp và kết nối doanh nghiệp với đối tác phù hợp, sản phẩm và cơ hội thương mại tại Việt Nam và các thị trường quốc tế.</p><a class="yf-learn" href="contact-vi.html">Tìm hiểu thêm →</a></div></div></div></div>
+<section aria-hidden="true" class="yf-services-directory" id="services-directory"><div class="yf-services-directory-inner"><section aria-label="Services overview" class="yf-services-hero"><div class="yf-services-slides"><article class="yf-services-slide is-active" data-slide="0"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Văn phòng đại diện (RO)</h2><p class="yf-services-slide-summary">Hỗ trợ doanh nghiệp thiết lập hiện diện hợp pháp tại Việt Nam để nghiên cứu thị trường, xây dựng quan hệ và phát triển cơ hội trước khi triển khai hoạt động quy mô đầy đủ.</p></div><div class="yf-services-slide-image"><img alt="Văn phòng đại diện (RO)" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="1"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Dịch vụ FDI cho SME &amp; Cá nhân</h2><p class="yf-services-slide-summary">Tư vấn thực tiễn cho doanh nghiệp vừa và nhỏ và nhà đầu tư cá nhân về cấu trúc đầu tư, giấy phép, thành lập doanh nghiệp và gia nhập thị trường Việt Nam đúng quy định.</p></div><div class="yf-services-slide-image"><img alt="Dịch vụ FDI cho SME &amp; Cá nhân" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="2"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Tuân thủ &amp; Hậu cần Vận hành</h2><p class="yf-services-slide-summary">Hỗ trợ liên tục về tuân thủ doanh nghiệp, thuế, hành chính, giấy phép và phối hợp các công việc cần thiết trong quá trình vận hành.</p></div><div class="yf-services-slide-image"><img alt="Tuân thủ &amp; Hậu cần Vận hành" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="3"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">M&amp;A &amp; Tư vấn Đầu tư</h2><p class="yf-services-slide-summary">Tư vấn các giao dịch mua bán và sáp nhập xuyên biên giới, cơ hội đầu tư, đánh giá giao dịch và định hướng chiến lược.</p></div><div class="yf-services-slide-image"><img alt="M&amp;A &amp; Tư vấn Đầu tư" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="4"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Định cư &amp; Dịch vụ Đời sống</h2><p class="yf-services-slide-summary">Hỗ trợ nhà đầu tư, chuyên gia và gia đình khi chuyển đến Việt Nam, từ ổn định cuộc sống đến các nhu cầu địa phương và hỗ trợ cá nhân.</p></div><div class="yf-services-slide-image"><img alt="Định cư &amp; Dịch vụ Đời sống" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="5"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Đầu tư Xanh &amp; Tư vấn ESG</h2><p class="yf-services-slide-summary">Đồng hành cùng doanh nghiệp và nhà đầu tư trong các dự án bền vững, thực hành ESG, đầu tư có trách nhiệm và tạo giá trị môi trường – xã hội dài hạn.</p></div><div class="yf-services-slide-image"><img alt="Đầu tư Xanh &amp; Tư vấn ESG" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="6"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Bảo vệ Tài sản &amp; Pháp lý</h2><p class="yf-services-slide-summary">Hỗ trợ phối hợp nhằm bảo vệ tài sản doanh nghiệp và cá nhân, kiểm soát rủi ro pháp lý và xử lý các vấn đề tranh chấp hoặc tuân thủ xuyên biên giới.</p></div><div class="yf-services-slide-image"><img alt="Bảo vệ Tài sản &amp; Pháp lý" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="7"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Đào tạo Nhân sự &amp; Doanh nghiệp</h2><p class="yf-services-slide-summary">Hỗ trợ tuyển dụng và đào tạo doanh nghiệp nhằm phát triển nhân sự, nâng cao giao tiếp tại nơi làm việc và năng lực làm việc đa văn hóa.</p></div><div class="yf-services-slide-image"><img alt="Đào tạo Nhân sự &amp; Doanh nghiệp" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="8"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Chuyển đổi Số &amp; Bảo mật</h2><p class="yf-services-slide-summary">Tư vấn chuyển đổi số, cải tiến quy trình và bảo mật dữ liệu theo định hướng kinh doanh, giúp doanh nghiệp vận hành hiệu quả và an toàn hơn.</p></div><div class="yf-services-slide-image"><img alt="Chuyển đổi Số &amp; Bảo mật" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="9"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Kết nối Cung ứng &amp; Giao thương</h2><p class="yf-services-slide-summary">Tìm kiếm nhà cung cấp và kết nối doanh nghiệp với đối tác phù hợp, sản phẩm và cơ hội thương mại tại Việt Nam và các thị trường quốc tế.</p></div><div class="yf-services-slide-image"><img alt="Kết nối Cung ứng &amp; Giao thương" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article></div><button aria-label="Previous service" class="yf-services-arrow yf-services-prev" type="button">‹</button><button aria-label="Next service" class="yf-services-arrow yf-services-next" type="button">›</button><div class="yf-services-dots"><button aria-label="Service 1" class="yf-services-dot is-active" data-slide-to="0" type="button"></button><button aria-label="Service 2" class="yf-services-dot" data-slide-to="1" type="button"></button><button aria-label="Service 3" class="yf-services-dot" data-slide-to="2" type="button"></button><button aria-label="Service 4" class="yf-services-dot" data-slide-to="3" type="button"></button><button aria-label="Service 5" class="yf-services-dot" data-slide-to="4" type="button"></button><button aria-label="Service 6" class="yf-services-dot" data-slide-to="5" type="button"></button><button aria-label="Service 7" class="yf-services-dot" data-slide-to="6" type="button"></button><button aria-label="Service 8" class="yf-services-dot" data-slide-to="7" type="button"></button><button aria-label="Service 9" class="yf-services-dot" data-slide-to="8" type="button"></button><button aria-label="Service 10" class="yf-services-dot" data-slide-to="9" type="button"></button></div></section><div class="yf-services-directory-header"><h2>Dịch vụ của chúng tôi</h2><p>Khám phá hệ thống giải pháp hỗ trợ kinh doanh và kết nối xuyên biên giới của Ying Fa Global.</p></div><div class="yf-services-directory-grid"><div class="yf-service-card"><div class="yf-service-image"><img alt="Văn phòng đại diện (RO)" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Văn phòng đại diện (RO)</h3><p>Hỗ trợ doanh nghiệp thiết lập hiện diện hợp pháp tại Việt Nam để nghiên cứu thị trường, xây dựng quan hệ và phát triển cơ hội trước khi triển khai hoạt động quy mô đầy đủ.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Dịch vụ FDI cho SME &amp; Cá nhân" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Dịch vụ FDI cho SME &amp; Cá nhân</h3><p>Tư vấn thực tiễn cho doanh nghiệp vừa và nhỏ và nhà đầu tư cá nhân về cấu trúc đầu tư, giấy phép, thành lập doanh nghiệp và gia nhập thị trường Việt Nam đúng quy định.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Tuân thủ &amp; Hậu cần Vận hành" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Tuân thủ &amp; Hậu cần Vận hành</h3><p>Hỗ trợ liên tục về tuân thủ doanh nghiệp, thuế, hành chính, giấy phép và phối hợp các công việc cần thiết trong quá trình vận hành.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="M&amp;A &amp; Tư vấn Đầu tư" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>M&amp;A &amp; Tư vấn Đầu tư</h3><p>Tư vấn các giao dịch mua bán và sáp nhập xuyên biên giới, cơ hội đầu tư, đánh giá giao dịch và định hướng chiến lược.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Định cư &amp; Dịch vụ Đời sống" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Định cư &amp; Dịch vụ Đời sống</h3><p>Hỗ trợ nhà đầu tư, chuyên gia và gia đình khi chuyển đến Việt Nam, từ ổn định cuộc sống đến các nhu cầu địa phương và hỗ trợ cá nhân.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Đầu tư Xanh &amp; Tư vấn ESG" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Đầu tư Xanh &amp; Tư vấn ESG</h3><p>Đồng hành cùng doanh nghiệp và nhà đầu tư trong các dự án bền vững, thực hành ESG, đầu tư có trách nhiệm và tạo giá trị môi trường – xã hội dài hạn.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Bảo vệ Tài sản &amp; Pháp lý" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Bảo vệ Tài sản &amp; Pháp lý</h3><p>Hỗ trợ phối hợp nhằm bảo vệ tài sản doanh nghiệp và cá nhân, kiểm soát rủi ro pháp lý và xử lý các vấn đề tranh chấp hoặc tuân thủ xuyên biên giới.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Đào tạo Nhân sự &amp; Doanh nghiệp" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Đào tạo Nhân sự &amp; Doanh nghiệp</h3><p>Hỗ trợ tuyển dụng và đào tạo doanh nghiệp nhằm phát triển nhân sự, nâng cao giao tiếp tại nơi làm việc và năng lực làm việc đa văn hóa.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Chuyển đổi Số &amp; Bảo mật" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Chuyển đổi Số &amp; Bảo mật</h3><p>Tư vấn chuyển đổi số, cải tiến quy trình và bảo mật dữ liệu theo định hướng kinh doanh, giúp doanh nghiệp vận hành hiệu quả và an toàn hơn.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Kết nối Cung ứng &amp; Giao thương" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Kết nối Cung ứng &amp; Giao thương</h3><p>Tìm kiếm nhà cung cấp và kết nối doanh nghiệp với đối tác phù hợp, sản phẩm và cơ hội thương mại tại Việt Nam và các thị trường quốc tế.</p><a class="yf-learn" href="#contact">Tìm hiểu thêm →</a></div></div></div></div>
 <section class="yf-services-inquiry" id="service-inquiry" aria-labelledby="yf-services-inquiry-title">
 <div class="yf-services-inquiry-head"><div class="yf-services-inquiry-eyebrow">YÊU CẦU DỊCH VỤ</div><h2 id="yf-services-inquiry-title">Trao đổi về nhu cầu kinh doanh của bạn</h2><p>Hãy cho chúng tôi biết nhu cầu của doanh nghiệp. Đội ngũ Ying Fa Global sẽ xem xét thông tin và liên hệ để trao đổi về các bước tiếp theo.</p></div>
 <form class="yf-services-inquiry-form" data-yf-services-inquiry action="https://formsubmit.co/ajax/info@yingfaglobal.com" method="POST">
@@ -3283,7 +3236,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <p>
     Thông tin dành cho doanh nghiệp quốc tế tìm kiếm cơ hội tại Việt Nam.
 </p>
-<a class="learn" href="contact-vi.html">
+<a class="learn" href="#contact">
     Xem thêm →
 </a>
 </div>
@@ -3297,7 +3250,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <p>
     Giao tiếp, thương mại và hợp tác kinh doanh giữa Trung Quốc và Việt Nam.
 </p>
-<a class="learn" href="contact-vi.html">
+<a class="learn" href="#contact">
     Xem thêm →
 </a>
 </div>
@@ -3311,7 +3264,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <p>
     Góc nhìn thực tiễn về thị trường quốc tế và phát triển kinh doanh.
 </p>
-<a class="learn" href="contact-vi.html">
+<a class="learn" href="#contact">
     Xem thêm →
 </a>
 </div>
@@ -3325,7 +3278,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <p>
     Hỗ trợ doanh nghiệp tìm kiếm cơ hội đầu tư tại Việt Nam và khu vực.
 </p>
-<a class="learn" href="contact-vi.html">
+<a class="learn" href="#contact">
     Xem thêm →
 </a>
 </div>
@@ -3383,13 +3336,6 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
      NEWS
 ========================= -->
 <section class="section yf-home-news" id="news">
-<div class="yf-news-page-banner" aria-label="Cập nhật mới nhất">
-  <div class="yf-news-page-banner-content">
-    <h1>Cập nhật mới nhất</h1>
-    <span class="yf-news-page-banner-rule" aria-hidden="true"></span>
-    <p>Thông tin kinh doanh, đầu tư và cơ hội hợp tác xuyên biên giới tại Việt Nam và quốc tế.</p>
-  </div>
-</div>
 <div class="container">
 <div class="heading-row section-heading">
 <div>
@@ -3415,7 +3361,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
       <h2>Cùng hợp tác với chúng tôi</h2>
       <p>Kết nối với đội ngũ của chúng tôi để trao đổi về cách Ying Fa Global có thể hỗ trợ mục tiêu kinh doanh của bạn.</p>
     </div>
-    <a class="yf-cta-button" href="contact-vi.html">Liên hệ với chúng tôi →</a>
+    <a class="yf-cta-button" href="#contact">Liên hệ với chúng tôi →</a>
   </div>
 </section>
 
@@ -3475,7 +3421,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
           <a href="#about">Giới thiệu</a>
           <a href="#profile">Hồ sơ</a>
           <a href="#news">Tin tức</a>
-          <a href="contact-vi.html">Liên hệ</a>
+          <a href="#contact">Liên hệ</a>
         </div>
       </div>
 
@@ -3514,12 +3460,12 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
       <div class="yf-connect">
         <h4 class="yf-footer-title">Kết nối với chúng tôi</h4>
         <div class="yf-socials">
-          <a class="yf-social" href="contact-vi.html" title="LinkedIn" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-          <a class="yf-social" href="contact-vi.html" title="WhatsApp" aria-label="WhatsApp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/whatsapp.svg" alt="WhatsApp"></a>
-          <a class="yf-social" href="contact-vi.html" title="WeChat" aria-label="WeChat"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/wechat.svg" alt="WeChat"></a>
-          <a class="yf-social" href="contact-vi.html" title="LINE" aria-label="LINE"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/line.svg" alt="LINE"></a>
-          <a class="yf-social" href="contact-vi.html" title="Facebook" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/facebook.svg" alt="Facebook"></a>
-          <a class="yf-social" href="contact-vi.html" title="YouTube" aria-label="YouTube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/youtube.svg" alt="YouTube"></a>
+          <a class="yf-social" href="#contact" title="LinkedIn" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+          <a class="yf-social" href="#contact" title="WhatsApp" aria-label="WhatsApp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/whatsapp.svg" alt="WhatsApp"></a>
+          <a class="yf-social" href="#contact" title="WeChat" aria-label="WeChat"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/wechat.svg" alt="WeChat"></a>
+          <a class="yf-social" href="#contact" title="LINE" aria-label="LINE"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/line.svg" alt="LINE"></a>
+          <a class="yf-social" href="#contact" title="Facebook" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/facebook.svg" alt="Facebook"></a>
+          <a class="yf-social" href="#contact" title="YouTube" aria-label="YouTube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/youtube.svg" alt="YouTube"></a>
         </div>
         <div class="yf-connect-text">Theo dõi Ying Fa Global để cập nhật những thông tin, kiến thức và cơ hội mới nhất.</div>
       </div>
@@ -3528,9 +3474,9 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     <div class="yf-footer-bottom">
       <div>© 2026 Ying Fa Global. Bảo lưu mọi quyền.</div>
       <div class="yf-footer-bottom-links">
-        <a href="contact-vi.html">Chính sách bảo mật</a>
-        <a href="contact-vi.html">Điều khoản sử dụng</a>
-        <a href="contact-vi.html">Sơ đồ trang</a>
+        <a href="#contact">Chính sách bảo mật</a>
+        <a href="#contact">Điều khoản sử dụng</a>
+        <a href="#contact">Sơ đồ trang</a>
       </div>
     </div>
   </div>
@@ -3911,29 +3857,11 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     navLinks.forEach(a=>a.classList.remove('active'));
     if(link) link.classList.add('active');
   }
-  function ensureServicesFooter(){
-    if(directory.querySelector('.yf-services-footer-copy')) return;
-    const footer=document.querySelector('body > footer');
-    if(!footer) return;
-    const copy=footer.cloneNode(true);
-    copy.classList.add('yf-services-footer-copy');
-    copy.setAttribute('aria-label','Footer');
-    directory.appendChild(copy);
-    copy.querySelectorAll('a[href="#services"]').forEach(function(a){
-      a.addEventListener('click',function(e){e.preventDefault();openServices(a);});
-    });
-    copy.querySelectorAll('a[href^="#"]:not([href="#services"])').forEach(function(a){
-      a.addEventListener('click',function(){closeServices();});
-    });
-  }
   function openServices(link){
-    ensureServicesFooter();
     directory.classList.add('is-open');
     directory.setAttribute('aria-hidden','false');
     document.body.style.overflow=''; document.body.style.overflowY='auto';
     active(link);
-    if(window.location.hash!=='#services') history.replaceState(null,'','#services');
-    window.scrollTo({top:0,behavior:'auto'});
     directory.scrollTop=0;
   }
   function closeServices(){
@@ -3942,16 +3870,13 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     document.body.style.overflow='';
   }
 
-  document.querySelectorAll('a[href="#services"]').forEach(function(link){
-    link.addEventListener('click',function(e){
-      e.preventDefault();
-      openServices(link);
-    });
-  });
   navLinks.forEach(function(link){
-    if(link.getAttribute('href')==='#services') return;
-    link.addEventListener('click',function(){
-      closeServices(); active(link);
+    link.addEventListener('click',function(e){
+      if(link.getAttribute('href')==='#services'){
+        e.preventDefault(); openServices(link);
+      }else{
+        closeServices(); active(link);
+      }
     });
   });
   document.addEventListener('keydown',function(e){
@@ -4229,35 +4154,6 @@ body.yf-services-is-open #business-solutions,
 body.yf-services-is-open #profile,
 body.yf-services-is-open #news,
 body.yf-services-is-open .yf-cta-strip { display: none !important; }
-</style>
-
-
-<script id="yf-news-full-page-mode-script">
-(function(){
-  function syncNewsPageMode(){
-    var isNews = window.location.hash.toLowerCase() === '#news';
-    document.body.classList.toggle('yf-news-page-mode', isNews);
-    if(isNews){
-      var track=document.getElementById('yf-home-news-track');
-      if(track) track.style.transform='none';
-      window.setTimeout(function(){
-        var section=document.getElementById('news');
-        if(section) section.scrollIntoView({block:'start',behavior:'auto'});
-      }, 60);
-    }
-  }
-  window.addEventListener('hashchange',syncNewsPageMode);
-  window.addEventListener('load',syncNewsPageMode);
-  syncNewsPageMode();
-})();
-</script>
-
-
-<style id="yf-services-footer-and-hash-fix">
-/* Services view: show the existing site footer at the end of the service directory. */
-.yf-services-footer-copy{display:block!important;position:relative!important;width:100%!important;margin-top:38px!important;z-index:1!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;}
-.yf-services-footer-copy .container{width:94%!important;max-width:1400px!important;margin:0 auto!important;}
-.yf-services-directory.is-open{padding-bottom:0!important;}
 </style>
 
 </body>

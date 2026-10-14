@@ -2620,56 +2620,8 @@ body { padding-top: 106px !important; }
 }
 </style>
 
-
-<style id="yf-news-full-page-mode">
-/* Dedicated News view: show the full updates list while preserving the shared header and footer. */
-body.yf-news-page-mode > section:not(#news),
-body.yf-news-page-mode > .yf-cta-strip { display:none !important; }
-body.yf-news-page-mode #news { display:block !important; min-height:calc(100vh - 150px); padding-top:clamp(34px,5vw,64px); scroll-margin-top:150px; }
-body.yf-news-page-mode #news .heading-row { align-items:flex-start; margin-bottom:28px; }
-body.yf-news-page-mode #yf-view-all-news { display:none !important; }
-body.yf-news-page-mode .yf-news-carousel { overflow:visible; }
-body.yf-news-page-mode #yf-home-news-track { display:grid !important; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px 28px; width:100%; transform:none !important; transition:none !important; will-change:auto; }
-body.yf-news-page-mode .yf-home-news-card { min-width:0; width:auto; flex:initial !important; padding:18px 16px; border:1px solid #e6eaf0; border-radius:12px; background:#fff; box-shadow:0 5px 18px rgba(15,35,60,.045); }
-body.yf-news-page-mode .yf-home-news-card:hover { border-color:#c5a15a; box-shadow:0 10px 24px rgba(15,35,60,.08); }
-body.yf-news-page-mode .yf-sticky-shell a[href="#news"] { color:#b08a3e !important; }
-@media(max-width:900px){ body.yf-news-page-mode #yf-home-news-track { grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; } }
-@media(max-width:600px){ body.yf-news-page-mode #news { padding-top:28px; } body.yf-news-page-mode #yf-home-news-track { grid-template-columns:1fr; gap:14px; } body.yf-news-page-mode .yf-home-news-card { padding:16px 14px; } }
-</style>
-
-
-<style id="yf-news-page-banner-v44">
-/* V44: dedicated editorial banner on the full News page only; home news section remains unchanged. */
-.yf-news-page-banner{display:none;}
-body.yf-news-page-mode #news{padding-top:0 !important;}
-body.yf-news-page-mode #news .yf-news-page-banner{
-  display:flex; align-items:center; position:relative; width:100%; min-height:250px;
-  box-sizing:border-box; overflow:hidden;
-  background-image:linear-gradient(90deg,rgba(8,28,76,.91) 0%,rgba(10,40,100,.76) 46%,rgba(8,26,65,.35) 100%),url('hero-hcm-skyline.jpg');
-  background-size:cover; background-position:center 48%;
-  padding:clamp(36px,5.5vw,70px) max(5%,calc((100% - 1200px)/2));
-}
-body.yf-news-page-mode .yf-news-page-banner-content{max-width:760px; position:relative; z-index:1;}
-body.yf-news-page-mode .yf-news-page-banner h1{margin:0; color:#fff; font-size:clamp(32px,4vw,48px); line-height:1.15; font-weight:750; letter-spacing:.01em;}
-body.yf-news-page-mode .yf-news-page-banner-rule{display:block;width:66px;height:5px;background:#c6a15b;margin:20px 0 16px;border-radius:1px;}
-body.yf-news-page-mode .yf-news-page-banner p{margin:0;max-width:660px;color:rgba(255,255,255,.9);font-size:clamp(14px,1.5vw,17px);line-height:1.65;}
-body.yf-news-page-mode #news > .container{padding-top:clamp(28px,4vw,46px);}
-body.yf-news-page-mode #news .heading-row{display:none !important;}
-@media(max-width:600px){body.yf-news-page-mode #news .yf-news-page-banner{min-height:190px;padding:30px 22px;background-position:center;}body.yf-news-page-mode .yf-news-page-banner-rule{margin:14px 0 11px;width:52px;height:4px;}body.yf-news-page-mode #news > .container{padding-top:24px;}}
-</style>
-
-
-
-<style id="yf-services-banner-align-v50">
-/* V50: consistent Services banner position and divider removal across all four languages. */
-body.yf-services-is-open .yf-services-directory{top:60px !important;}
-body.yf-services-is-open .yf-services-directory-inner{padding-top:0 !important;margin-top:0 !important;}
-body.yf-services-is-open .yf-sticky-shell > header{border-bottom:0 !important;box-shadow:none !important;}
-body.yf-services-is-open .yf-sticky-shell > header::after{display:none !important;content:none !important;}
-</style>
-
 </head>
-<body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="contact.html"><span class="yf-phone" aria-hidden="true">☎</span>Contact Us</a><nav class="yf-topbar-languages" aria-label="Language"><a class="yf-lang-btn" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn yf-lang-current" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
+<body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone" aria-hidden="true">☎</span>Contact Us</a><nav class="yf-topbar-languages" aria-label="Language"><a class="yf-lang-btn" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn yf-lang-current" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
 <!-- =========================
      HEADER
 ========================= -->
@@ -2684,7 +2636,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <a href="#about">About</a>
 <a href="#profile">Profile</a>
 <a href="#news">News</a>
-<a href="contact.html">Contact</a>
+<a href="#contact">Contact</a>
 </nav>
 </div>
 </header>
@@ -2693,23 +2645,23 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
      FLOATING CONTACT
 ========================= -->
 <div class="floating-contact">
-<a class="float-btn whatsapp" href="contact.html" title="WhatsApp">
+<a class="float-btn whatsapp" href="#contact" title="WhatsApp">
 <img alt="" src="https://cdn.simpleicons.org/whatsapp/25D366"/>
 <span>WhatsApp</span>
 </a>
-<a class="float-btn wechat" href="contact.html" title="WeChat">
+<a class="float-btn wechat" href="#contact" title="WeChat">
 <img alt="" src="https://cdn.simpleicons.org/wechat/07C160"/>
 <span>WeChat</span>
 </a>
-<a class="float-btn line" href="contact.html" title="LINE">
+<a class="float-btn line" href="#contact" title="LINE">
 <img alt="" src="https://cdn.simpleicons.org/line/00C300"/>
 <span>LINE</span>
 </a>
-<a class="float-btn messenger" href="contact.html" title="Messenger">
+<a class="float-btn messenger" href="#contact" title="Messenger">
 <img alt="" src="https://cdn.simpleicons.org/messenger/0084FF"/>
 <span>Messenger</span>
 </a>
-<a class="float-btn zalo" href="contact.html" title="Zalo">
+<a class="float-btn zalo" href="#contact" title="Zalo">
 <svg aria-label="Zalo" class="zalo-logo" height="27" style="flex:0 0 27px;" viewbox="0 0 64 64" width="27">
 <rect fill="#0068FF" height="62" rx="17" width="62" x="1" y="1"></rect>
 <path d="M16 12h31c8.3 0 15 6.7 15 15v15c0 8.3-6.7 15-15 15H29L13 61l5-10h-2C7.7 51 1 44.3 1 36V27c0-8.3 6.7-15 15-15z" fill="#FFFFFF"></path>
@@ -2740,7 +2692,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     the right partners, opportunities and markets in Vietnam and around the world.
 </p>
 <div class="buttons">
-<a class="btn btn-primary" href="contact.html">
+<a class="btn btn-primary" href="#contact">
     Talk to a Consultant →
 </a>
 <a class="btn btn-gold yf-open-services" data-services-open="" href="#services">
@@ -3041,7 +2993,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     padding-top:25px;
 }
   </style>
-<div class="container"><div class="yf-services-heading"><div class="yf-services-label">WHAT WE DO</div><h2>Our Services</h2><p>Integrated solutions designed to help businesses establish, operate, protect and grow across Vietnam and international markets.</p></div><div class="yf-services-carousel"><button aria-label="Previous services" class="yf-carousel-arrow yf-carousel-prev" type="button">❮</button><div class="yf-services-window"><div class="yf-services-track"><div class="yf-service-card"><div class="yf-service-image"><img alt="Representative Office (RO) Setup" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Representative Office (RO) Setup</h3><p>Establish a compliant local presence in Vietnam for market research, relationship building and opportunity development before full-scale operations.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="SME &amp; Individual FDI Services" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>SME &amp; Individual FDI Services</h3><p>Practical guidance for SMEs and individual investors on investment structures, licensing, company establishment and compliant market entry in Vietnam.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Compliance &amp; Operations Support" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Compliance &amp; Operations Support</h3><p>Ongoing support for corporate compliance, tax and administrative coordination, licensing obligations and day-to-day business operations.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="M&amp;A &amp; Investment Advisory" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>M&amp;A &amp; Investment Advisory</h3><p>Advisory support for cross-border acquisitions, divestments, investment opportunities, transaction assessment and strategic decision-making.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Relocation &amp; Lifestyle Services" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Relocation &amp; Lifestyle Services</h3><p>Coordinated support for executives, investors and families relocating to Vietnam, covering settlement, local arrangements and personal assistance.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Green Investment &amp; ESG Advisory" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Green Investment &amp; ESG Advisory</h3><p>Guidance for businesses and investors pursuing sustainable projects, ESG practices, responsible investment and long-term environmental and social value.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Asset Protection &amp; Legal Defense" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Asset Protection &amp; Legal Defense</h3><p>Practical coordination to help protect business and personal assets, manage legal risks and respond to cross-border disputes or compliance challenges.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Talent &amp; Corporate Training" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Talent &amp; Corporate Training</h3><p>Recruitment coordination and corporate training designed to strengthen talent, workplace communication and cross-cultural capabilities.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Digital Transformation &amp; Security" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Digital Transformation &amp; Security</h3><p>Business-focused digital transformation, process improvement and data-security support to help organizations operate efficiently and securely.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Sourcing &amp; Business Matching" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Sourcing &amp; Business Matching</h3><p>Supplier sourcing and business matching that connect companies with qualified partners, products and commercial opportunities across Vietnam and international markets.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div></div></div><button aria-label="Next services" class="yf-carousel-arrow yf-carousel-next" type="button">❯</button><div class="yf-carousel-dots"><button aria-label="Services 1" class="yf-carousel-dot active" type="button"></button><button aria-label="Services 2" class="yf-carousel-dot" type="button"></button><button aria-label="Services 3" class="yf-carousel-dot" type="button"></button></div></div></div>
+<div class="container"><div class="yf-services-heading"><div class="yf-services-label">WHAT WE DO</div><h2>Our Services</h2><p>Integrated solutions designed to help businesses establish, operate, protect and grow across Vietnam and international markets.</p></div><div class="yf-services-carousel"><button aria-label="Previous services" class="yf-carousel-arrow yf-carousel-prev" type="button">❮</button><div class="yf-services-window"><div class="yf-services-track"><div class="yf-service-card"><div class="yf-service-image"><img alt="Representative Office (RO) Setup" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Representative Office (RO) Setup</h3><p>Establish a compliant local presence in Vietnam for market research, relationship building and opportunity development before full-scale operations.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="SME &amp; Individual FDI Services" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>SME &amp; Individual FDI Services</h3><p>Practical guidance for SMEs and individual investors on investment structures, licensing, company establishment and compliant market entry in Vietnam.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Compliance &amp; Operations Support" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Compliance &amp; Operations Support</h3><p>Ongoing support for corporate compliance, tax and administrative coordination, licensing obligations and day-to-day business operations.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="M&amp;A &amp; Investment Advisory" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>M&amp;A &amp; Investment Advisory</h3><p>Advisory support for cross-border acquisitions, divestments, investment opportunities, transaction assessment and strategic decision-making.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Relocation &amp; Lifestyle Services" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Relocation &amp; Lifestyle Services</h3><p>Coordinated support for executives, investors and families relocating to Vietnam, covering settlement, local arrangements and personal assistance.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Green Investment &amp; ESG Advisory" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Green Investment &amp; ESG Advisory</h3><p>Guidance for businesses and investors pursuing sustainable projects, ESG practices, responsible investment and long-term environmental and social value.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Asset Protection &amp; Legal Defense" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Asset Protection &amp; Legal Defense</h3><p>Practical coordination to help protect business and personal assets, manage legal risks and respond to cross-border disputes or compliance challenges.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Talent &amp; Corporate Training" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Talent &amp; Corporate Training</h3><p>Recruitment coordination and corporate training designed to strengthen talent, workplace communication and cross-cultural capabilities.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Digital Transformation &amp; Security" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Digital Transformation &amp; Security</h3><p>Business-focused digital transformation, process improvement and data-security support to help organizations operate efficiently and securely.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Sourcing &amp; Business Matching" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Sourcing &amp; Business Matching</h3><p>Supplier sourcing and business matching that connect companies with qualified partners, products and commercial opportunities across Vietnam and international markets.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div></div></div><button aria-label="Next services" class="yf-carousel-arrow yf-carousel-next" type="button">❯</button><div class="yf-carousel-dots"><button aria-label="Services 1" class="yf-carousel-dot active" type="button"></button><button aria-label="Services 2" class="yf-carousel-dot" type="button"></button><button aria-label="Services 3" class="yf-carousel-dot" type="button"></button></div></div></div>
 
 
 <script>
@@ -3084,7 +3036,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <!-- =========================
      MARKET ENTRY DETAIL
 ========================= -->
-<section aria-hidden="true" class="yf-services-directory" id="services-directory"><div class="yf-services-directory-inner"><section aria-label="Services overview" class="yf-services-hero"><div class="yf-services-slides"><article class="yf-services-slide is-active" data-slide="0"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Representative Office (RO) Setup</h2><p class="yf-services-slide-summary">Establish a compliant local presence in Vietnam for market research, relationship building and opportunity development before full-scale operations.</p></div><div class="yf-services-slide-image"><img alt="Representative Office (RO) Setup" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="1"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">SME &amp; Individual FDI Services</h2><p class="yf-services-slide-summary">Practical guidance for SMEs and individual investors on investment structures, licensing, company establishment and compliant market entry in Vietnam.</p></div><div class="yf-services-slide-image"><img alt="SME &amp; Individual FDI Services" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="2"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Compliance &amp; Operations Support</h2><p class="yf-services-slide-summary">Ongoing support for corporate compliance, tax and administrative coordination, licensing obligations and day-to-day business operations.</p></div><div class="yf-services-slide-image"><img alt="Compliance &amp; Operations Support" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="3"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">M&amp;A &amp; Investment Advisory</h2><p class="yf-services-slide-summary">Advisory support for cross-border acquisitions, divestments, investment opportunities, transaction assessment and strategic decision-making.</p></div><div class="yf-services-slide-image"><img alt="M&amp;A &amp; Investment Advisory" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="4"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Relocation &amp; Lifestyle Services</h2><p class="yf-services-slide-summary">Coordinated support for executives, investors and families relocating to Vietnam, covering settlement, local arrangements and personal assistance.</p></div><div class="yf-services-slide-image"><img alt="Relocation &amp; Lifestyle Services" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="5"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Green Investment &amp; ESG Advisory</h2><p class="yf-services-slide-summary">Guidance for businesses and investors pursuing sustainable projects, ESG practices, responsible investment and long-term environmental and social value.</p></div><div class="yf-services-slide-image"><img alt="Green Investment &amp; ESG Advisory" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="6"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Asset Protection &amp; Legal Defense</h2><p class="yf-services-slide-summary">Practical coordination to help protect business and personal assets, manage legal risks and respond to cross-border disputes or compliance challenges.</p></div><div class="yf-services-slide-image"><img alt="Asset Protection &amp; Legal Defense" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="7"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Talent &amp; Corporate Training</h2><p class="yf-services-slide-summary">Recruitment coordination and corporate training designed to strengthen talent, workplace communication and cross-cultural capabilities.</p></div><div class="yf-services-slide-image"><img alt="Talent &amp; Corporate Training" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="8"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Digital Transformation &amp; Security</h2><p class="yf-services-slide-summary">Business-focused digital transformation, process improvement and data-security support to help organizations operate efficiently and securely.</p></div><div class="yf-services-slide-image"><img alt="Digital Transformation &amp; Security" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="9"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Sourcing &amp; Business Matching</h2><p class="yf-services-slide-summary">Supplier sourcing and business matching that connect companies with qualified partners, products and commercial opportunities across Vietnam and international markets.</p></div><div class="yf-services-slide-image"><img alt="Sourcing &amp; Business Matching" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article></div><button aria-label="Previous service" class="yf-services-arrow yf-services-prev" type="button">‹</button><button aria-label="Next service" class="yf-services-arrow yf-services-next" type="button">›</button><div class="yf-services-dots"><button aria-label="Service 1" class="yf-services-dot is-active" data-slide-to="0" type="button"></button><button aria-label="Service 2" class="yf-services-dot" data-slide-to="1" type="button"></button><button aria-label="Service 3" class="yf-services-dot" data-slide-to="2" type="button"></button><button aria-label="Service 4" class="yf-services-dot" data-slide-to="3" type="button"></button><button aria-label="Service 5" class="yf-services-dot" data-slide-to="4" type="button"></button><button aria-label="Service 6" class="yf-services-dot" data-slide-to="5" type="button"></button><button aria-label="Service 7" class="yf-services-dot" data-slide-to="6" type="button"></button><button aria-label="Service 8" class="yf-services-dot" data-slide-to="7" type="button"></button><button aria-label="Service 9" class="yf-services-dot" data-slide-to="8" type="button"></button><button aria-label="Service 10" class="yf-services-dot" data-slide-to="9" type="button"></button></div></section><div class="yf-services-directory-header"><h2>Our Services</h2><p>Explore our full range of cross-border business and support solutions.</p></div><div class="yf-services-directory-grid"><div class="yf-service-card"><div class="yf-service-image"><img alt="Representative Office (RO) Setup" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Representative Office (RO) Setup</h3><p>Establish a compliant local presence in Vietnam for market research, relationship building and opportunity development before full-scale operations.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="SME &amp; Individual FDI Services" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>SME &amp; Individual FDI Services</h3><p>Practical guidance for SMEs and individual investors on investment structures, licensing, company establishment and compliant market entry in Vietnam.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Compliance &amp; Operations Support" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Compliance &amp; Operations Support</h3><p>Ongoing support for corporate compliance, tax and administrative coordination, licensing obligations and day-to-day business operations.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="M&amp;A &amp; Investment Advisory" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>M&amp;A &amp; Investment Advisory</h3><p>Advisory support for cross-border acquisitions, divestments, investment opportunities, transaction assessment and strategic decision-making.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Relocation &amp; Lifestyle Services" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Relocation &amp; Lifestyle Services</h3><p>Coordinated support for executives, investors and families relocating to Vietnam, covering settlement, local arrangements and personal assistance.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Green Investment &amp; ESG Advisory" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Green Investment &amp; ESG Advisory</h3><p>Guidance for businesses and investors pursuing sustainable projects, ESG practices, responsible investment and long-term environmental and social value.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Asset Protection &amp; Legal Defense" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Asset Protection &amp; Legal Defense</h3><p>Practical coordination to help protect business and personal assets, manage legal risks and respond to cross-border disputes or compliance challenges.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Talent &amp; Corporate Training" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Talent &amp; Corporate Training</h3><p>Recruitment coordination and corporate training designed to strengthen talent, workplace communication and cross-cultural capabilities.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Digital Transformation &amp; Security" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Digital Transformation &amp; Security</h3><p>Business-focused digital transformation, process improvement and data-security support to help organizations operate efficiently and securely.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Sourcing &amp; Business Matching" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Sourcing &amp; Business Matching</h3><p>Supplier sourcing and business matching that connect companies with qualified partners, products and commercial opportunities across Vietnam and international markets.</p><a class="yf-learn" href="contact.html">Learn More →</a></div></div></div></div>
+<section aria-hidden="true" class="yf-services-directory" id="services-directory"><div class="yf-services-directory-inner"><section aria-label="Services overview" class="yf-services-hero"><div class="yf-services-slides"><article class="yf-services-slide is-active" data-slide="0"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Representative Office (RO) Setup</h2><p class="yf-services-slide-summary">Establish a compliant local presence in Vietnam for market research, relationship building and opportunity development before full-scale operations.</p></div><div class="yf-services-slide-image"><img alt="Representative Office (RO) Setup" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="1"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">SME &amp; Individual FDI Services</h2><p class="yf-services-slide-summary">Practical guidance for SMEs and individual investors on investment structures, licensing, company establishment and compliant market entry in Vietnam.</p></div><div class="yf-services-slide-image"><img alt="SME &amp; Individual FDI Services" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="2"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Compliance &amp; Operations Support</h2><p class="yf-services-slide-summary">Ongoing support for corporate compliance, tax and administrative coordination, licensing obligations and day-to-day business operations.</p></div><div class="yf-services-slide-image"><img alt="Compliance &amp; Operations Support" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="3"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">M&amp;A &amp; Investment Advisory</h2><p class="yf-services-slide-summary">Advisory support for cross-border acquisitions, divestments, investment opportunities, transaction assessment and strategic decision-making.</p></div><div class="yf-services-slide-image"><img alt="M&amp;A &amp; Investment Advisory" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="4"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Relocation &amp; Lifestyle Services</h2><p class="yf-services-slide-summary">Coordinated support for executives, investors and families relocating to Vietnam, covering settlement, local arrangements and personal assistance.</p></div><div class="yf-services-slide-image"><img alt="Relocation &amp; Lifestyle Services" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="5"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Green Investment &amp; ESG Advisory</h2><p class="yf-services-slide-summary">Guidance for businesses and investors pursuing sustainable projects, ESG practices, responsible investment and long-term environmental and social value.</p></div><div class="yf-services-slide-image"><img alt="Green Investment &amp; ESG Advisory" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="6"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Asset Protection &amp; Legal Defense</h2><p class="yf-services-slide-summary">Practical coordination to help protect business and personal assets, manage legal risks and respond to cross-border disputes or compliance challenges.</p></div><div class="yf-services-slide-image"><img alt="Asset Protection &amp; Legal Defense" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="7"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Talent &amp; Corporate Training</h2><p class="yf-services-slide-summary">Recruitment coordination and corporate training designed to strengthen talent, workplace communication and cross-cultural capabilities.</p></div><div class="yf-services-slide-image"><img alt="Talent &amp; Corporate Training" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="8"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Digital Transformation &amp; Security</h2><p class="yf-services-slide-summary">Business-focused digital transformation, process improvement and data-security support to help organizations operate efficiently and securely.</p></div><div class="yf-services-slide-image"><img alt="Digital Transformation &amp; Security" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article><article class="yf-services-slide" data-slide="9"><div class="yf-services-slide-copy"><h2 class="yf-services-slide-title">Sourcing &amp; Business Matching</h2><p class="yf-services-slide-summary">Supplier sourcing and business matching that connect companies with qualified partners, products and commercial opportunities across Vietnam and international markets.</p></div><div class="yf-services-slide-image"><img alt="Sourcing &amp; Business Matching" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div></article></div><button aria-label="Previous service" class="yf-services-arrow yf-services-prev" type="button">‹</button><button aria-label="Next service" class="yf-services-arrow yf-services-next" type="button">›</button><div class="yf-services-dots"><button aria-label="Service 1" class="yf-services-dot is-active" data-slide-to="0" type="button"></button><button aria-label="Service 2" class="yf-services-dot" data-slide-to="1" type="button"></button><button aria-label="Service 3" class="yf-services-dot" data-slide-to="2" type="button"></button><button aria-label="Service 4" class="yf-services-dot" data-slide-to="3" type="button"></button><button aria-label="Service 5" class="yf-services-dot" data-slide-to="4" type="button"></button><button aria-label="Service 6" class="yf-services-dot" data-slide-to="5" type="button"></button><button aria-label="Service 7" class="yf-services-dot" data-slide-to="6" type="button"></button><button aria-label="Service 8" class="yf-services-dot" data-slide-to="7" type="button"></button><button aria-label="Service 9" class="yf-services-dot" data-slide-to="8" type="button"></button><button aria-label="Service 10" class="yf-services-dot" data-slide-to="9" type="button"></button></div></section><div class="yf-services-directory-header"><h2>Our Services</h2><p>Explore our full range of cross-border business and support solutions.</p></div><div class="yf-services-directory-grid"><div class="yf-service-card"><div class="yf-service-image"><img alt="Representative Office (RO) Setup" src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Representative Office (RO) Setup</h3><p>Establish a compliant local presence in Vietnam for market research, relationship building and opportunity development before full-scale operations.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="SME &amp; Individual FDI Services" src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>SME &amp; Individual FDI Services</h3><p>Practical guidance for SMEs and individual investors on investment structures, licensing, company establishment and compliant market entry in Vietnam.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Compliance &amp; Operations Support" src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Compliance &amp; Operations Support</h3><p>Ongoing support for corporate compliance, tax and administrative coordination, licensing obligations and day-to-day business operations.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="M&amp;A &amp; Investment Advisory" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>M&amp;A &amp; Investment Advisory</h3><p>Advisory support for cross-border acquisitions, divestments, investment opportunities, transaction assessment and strategic decision-making.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Relocation &amp; Lifestyle Services" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Relocation &amp; Lifestyle Services</h3><p>Coordinated support for executives, investors and families relocating to Vietnam, covering settlement, local arrangements and personal assistance.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Green Investment &amp; ESG Advisory" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Green Investment &amp; ESG Advisory</h3><p>Guidance for businesses and investors pursuing sustainable projects, ESG practices, responsible investment and long-term environmental and social value.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Asset Protection &amp; Legal Defense" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Asset Protection &amp; Legal Defense</h3><p>Practical coordination to help protect business and personal assets, manage legal risks and respond to cross-border disputes or compliance challenges.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Talent &amp; Corporate Training" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Talent &amp; Corporate Training</h3><p>Recruitment coordination and corporate training designed to strengthen talent, workplace communication and cross-cultural capabilities.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Digital Transformation &amp; Security" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Digital Transformation &amp; Security</h3><p>Business-focused digital transformation, process improvement and data-security support to help organizations operate efficiently and securely.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div><div class="yf-service-card"><div class="yf-service-image"><img alt="Sourcing &amp; Business Matching" src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/></div><div class="yf-service-content"><h3>Sourcing &amp; Business Matching</h3><p>Supplier sourcing and business matching that connect companies with qualified partners, products and commercial opportunities across Vietnam and international markets.</p><a class="yf-learn" href="#contact">Learn More →</a></div></div></div></div>
 <section class="yf-services-inquiry" id="service-inquiry" aria-labelledby="yf-services-inquiry-title">
 <div class="yf-services-inquiry-head"><div class="yf-services-inquiry-eyebrow">SERVICE INQUIRY</div><h2 id="yf-services-inquiry-title">Let’s Discuss Your Business Needs</h2><p>Tell us about your business requirements. Our team will review your inquiry and contact you to discuss the next steps.</p></div>
 <form class="yf-services-inquiry-form" data-yf-services-inquiry action="https://formsubmit.co/ajax/info@yingfaglobal.com" method="POST">
@@ -3288,7 +3240,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <p>
     Insights for international businesses exploring opportunities in Vietnam.
 </p>
-<a class="learn" href="contact.html">
+<a class="learn" href="#contact">
     Learn More →
 </a>
 </div>
@@ -3302,7 +3254,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <p>
     Communication, trade and business cooperation between China and Vietnam.
 </p>
-<a class="learn" href="contact.html">
+<a class="learn" href="#contact">
     Learn More →
 </a>
 </div>
@@ -3316,7 +3268,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <p>
     Practical perspectives on international markets and business development.
 </p>
-<a class="learn" href="contact.html">
+<a class="learn" href="#contact">
     Learn More →
 </a>
 </div>
@@ -3330,7 +3282,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
 <p>
     Assistance for companies seeking investment opportunities in Vietnam and the region.
 </p>
-<a class="learn" href="contact.html">
+<a class="learn" href="#contact">
     Learn More →
 </a>
 </div>
@@ -3388,13 +3340,6 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
      NEWS
 ========================= -->
 <section class="section yf-home-news" id="news">
-<div class="yf-news-page-banner" aria-label="Latest Updates">
-  <div class="yf-news-page-banner-content">
-    <h1>Latest Updates</h1>
-    <span class="yf-news-page-banner-rule" aria-hidden="true"></span>
-    <p>Business, investment and cross-border developments relevant to Vietnam and international markets.</p>
-  </div>
-</div>
 <div class="container">
 <div class="heading-row section-heading">
 <div>
@@ -3420,7 +3365,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
       <h2>Let's Work Together</h2>
       <p>Connect with our team to discuss how Ying Fa Global can support your business goals.</p>
     </div>
-    <a class="yf-cta-button" href="contact.html">Contact Us →</a>
+    <a class="yf-cta-button" href="#contact">Contact Us →</a>
   </div>
 </section>
 
@@ -3480,7 +3425,7 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
           <a href="#about">About</a>
           <a href="#profile">Profile</a>
           <a href="#news">News</a>
-          <a href="contact.html">Contact</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
 
@@ -3519,12 +3464,12 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
       <div class="yf-connect">
         <h4 class="yf-footer-title">Connect With Us</h4>
         <div class="yf-socials">
-          <a class="yf-social" href="contact.html" title="LinkedIn" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
-          <a class="yf-social" href="contact.html" title="WhatsApp" aria-label="WhatsApp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/whatsapp.svg" alt="WhatsApp"></a>
-          <a class="yf-social" href="contact.html" title="WeChat" aria-label="WeChat"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/wechat.svg" alt="WeChat"></a>
-          <a class="yf-social" href="contact.html" title="LINE" aria-label="LINE"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/line.svg" alt="LINE"></a>
-          <a class="yf-social" href="contact.html" title="Facebook" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/facebook.svg" alt="Facebook"></a>
-          <a class="yf-social" href="contact.html" title="YouTube" aria-label="YouTube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/youtube.svg" alt="YouTube"></a>
+          <a class="yf-social" href="#contact" title="LinkedIn" aria-label="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+          <a class="yf-social" href="#contact" title="WhatsApp" aria-label="WhatsApp"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/whatsapp.svg" alt="WhatsApp"></a>
+          <a class="yf-social" href="#contact" title="WeChat" aria-label="WeChat"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/wechat.svg" alt="WeChat"></a>
+          <a class="yf-social" href="#contact" title="LINE" aria-label="LINE"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/line.svg" alt="LINE"></a>
+          <a class="yf-social" href="#contact" title="Facebook" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/facebook.svg" alt="Facebook"></a>
+          <a class="yf-social" href="#contact" title="YouTube" aria-label="YouTube"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v16/icons/youtube.svg" alt="YouTube"></a>
         </div>
         <div class="yf-connect-text">Follow Ying Fa Global for the latest updates, insights and opportunities.</div>
       </div>
@@ -3533,9 +3478,9 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     <div class="yf-footer-bottom">
       <div>© 2026 Ying Fa Global. All rights reserved.</div>
       <div class="yf-footer-bottom-links">
-        <a href="contact.html">Privacy Policy</a>
-        <a href="contact.html">Terms of Use</a>
-        <a href="contact.html">Sitemap</a>
+        <a href="#contact">Privacy Policy</a>
+        <a href="#contact">Terms of Use</a>
+        <a href="#contact">Sitemap</a>
       </div>
     </div>
   </div>
@@ -3916,29 +3861,11 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     navLinks.forEach(a=>a.classList.remove('active'));
     if(link) link.classList.add('active');
   }
-  function ensureServicesFooter(){
-    if(directory.querySelector('.yf-services-footer-copy')) return;
-    const footer=document.querySelector('body > footer');
-    if(!footer) return;
-    const copy=footer.cloneNode(true);
-    copy.classList.add('yf-services-footer-copy');
-    copy.setAttribute('aria-label','Footer');
-    directory.appendChild(copy);
-    copy.querySelectorAll('a[href="#services"]').forEach(function(a){
-      a.addEventListener('click',function(e){e.preventDefault();openServices(a);});
-    });
-    copy.querySelectorAll('a[href^="#"]:not([href="#services"])').forEach(function(a){
-      a.addEventListener('click',function(){closeServices();});
-    });
-  }
   function openServices(link){
-    ensureServicesFooter();
     directory.classList.add('is-open');
     directory.setAttribute('aria-hidden','false');
     document.body.style.overflow=''; document.body.style.overflowY='auto';
     active(link);
-    if(window.location.hash!=='#services') history.replaceState(null,'','#services');
-    window.scrollTo({top:0,behavior:'auto'});
     directory.scrollTop=0;
   }
   function closeServices(){
@@ -3947,16 +3874,13 @@ body.yf-services-is-open .yf-sticky-shell > header::after{display:none !importan
     document.body.style.overflow='';
   }
 
-  document.querySelectorAll('a[href="#services"]').forEach(function(link){
-    link.addEventListener('click',function(e){
-      e.preventDefault();
-      openServices(link);
-    });
-  });
   navLinks.forEach(function(link){
-    if(link.getAttribute('href')==='#services') return;
-    link.addEventListener('click',function(){
-      closeServices(); active(link);
+    link.addEventListener('click',function(e){
+      if(link.getAttribute('href')==='#services'){
+        e.preventDefault(); openServices(link);
+      }else{
+        closeServices(); active(link);
+      }
     });
   });
   document.addEventListener('keydown',function(e){
@@ -4234,35 +4158,6 @@ body.yf-services-is-open #business-solutions,
 body.yf-services-is-open #profile,
 body.yf-services-is-open #news,
 body.yf-services-is-open .yf-cta-strip { display: none !important; }
-</style>
-
-
-<script id="yf-news-full-page-mode-script">
-(function(){
-  function syncNewsPageMode(){
-    var isNews = window.location.hash.toLowerCase() === '#news';
-    document.body.classList.toggle('yf-news-page-mode', isNews);
-    if(isNews){
-      var track=document.getElementById('yf-home-news-track');
-      if(track) track.style.transform='none';
-      window.setTimeout(function(){
-        var section=document.getElementById('news');
-        if(section) section.scrollIntoView({block:'start',behavior:'auto'});
-      }, 60);
-    }
-  }
-  window.addEventListener('hashchange',syncNewsPageMode);
-  window.addEventListener('load',syncNewsPageMode);
-  syncNewsPageMode();
-})();
-</script>
-
-
-<style id="yf-services-footer-and-hash-fix">
-/* Services view: show the existing site footer at the end of the service directory. */
-.yf-services-footer-copy{display:block!important;position:relative!important;width:100%!important;margin-top:38px!important;z-index:1!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;}
-.yf-services-footer-copy .container{width:94%!important;max-width:1400px!important;margin:0 auto!important;}
-.yf-services-directory.is-open{padding-bottom:0!important;}
 </style>
 
 </body>
