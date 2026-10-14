@@ -3902,11 +3902,29 @@ body.yf-news-page-mode #news .heading-row{display:none !important;}
     navLinks.forEach(a=>a.classList.remove('active'));
     if(link) link.classList.add('active');
   }
+  function ensureServicesFooter(){
+    if(directory.querySelector('.yf-services-footer-copy')) return;
+    const footer=document.querySelector('body > footer');
+    if(!footer) return;
+    const copy=footer.cloneNode(true);
+    copy.classList.add('yf-services-footer-copy');
+    copy.setAttribute('aria-label','Footer');
+    directory.appendChild(copy);
+    copy.querySelectorAll('a[href="#services"]').forEach(function(a){
+      a.addEventListener('click',function(e){e.preventDefault();openServices(a);});
+    });
+    copy.querySelectorAll('a[href^="#"]:not([href="#services"])').forEach(function(a){
+      a.addEventListener('click',function(){closeServices();});
+    });
+  }
   function openServices(link){
+    ensureServicesFooter();
     directory.classList.add('is-open');
     directory.setAttribute('aria-hidden','false');
     document.body.style.overflow=''; document.body.style.overflowY='auto';
     active(link);
+    if(window.location.hash!=='#services') history.replaceState(null,'','#services');
+    window.scrollTo({top:0,behavior:'auto'});
     directory.scrollTop=0;
   }
   function closeServices(){
@@ -3915,13 +3933,16 @@ body.yf-news-page-mode #news .heading-row{display:none !important;}
     document.body.style.overflow='';
   }
 
-  navLinks.forEach(function(link){
+  document.querySelectorAll('a[href="#services"]').forEach(function(link){
     link.addEventListener('click',function(e){
-      if(link.getAttribute('href')==='#services'){
-        e.preventDefault(); openServices(link);
-      }else{
-        closeServices(); active(link);
-      }
+      e.preventDefault();
+      openServices(link);
+    });
+  });
+  navLinks.forEach(function(link){
+    if(link.getAttribute('href')==='#services') return;
+    link.addEventListener('click',function(){
+      closeServices(); active(link);
     });
   });
   document.addEventListener('keydown',function(e){
@@ -4221,6 +4242,14 @@ body.yf-services-is-open .yf-cta-strip { display: none !important; }
   syncNewsPageMode();
 })();
 </script>
+
+
+<style id="yf-services-footer-and-hash-fix">
+/* Services view: show the existing site footer at the end of the service directory. */
+.yf-services-footer-copy{display:block!important;position:relative!important;width:100%!important;margin-top:38px!important;z-index:1!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;}
+.yf-services-footer-copy .container{width:94%!important;max-width:1400px!important;margin:0 auto!important;}
+.yf-services-directory.is-open{padding-bottom:0!important;}
+</style>
 
 </body>
 </html>
