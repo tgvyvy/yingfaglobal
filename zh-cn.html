@@ -3856,6 +3856,8 @@ body { padding-top: 106px !important; }
     if(link) link.classList.add('active');
   }
   function openServices(link){
+    // Keep the URL in sync with the Services view in every language.
+    if(window.location.hash !== '#services') history.replaceState(null, '', '#services');
     directory.classList.add('is-open');
     directory.setAttribute('aria-hidden','false');
     document.body.style.overflow=''; document.body.style.overflowY='auto';
