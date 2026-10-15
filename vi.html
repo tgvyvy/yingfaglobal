@@ -4161,6 +4161,44 @@ body.yf-services-is-open #home.hero{display:none !important;}
 
 </style>
 
+
+<script id="yf-services-footer-v59">
+/* Put the footer immediately after Service Inquiry, at the bottom of the Services view. */
+(function(){
+  function placeServicesFooter(){
+    var inquiry=document.getElementById('service-inquiry');
+    var footer=document.querySelector('body > footer, footer');
+    if(!inquiry || !footer || document.querySelector('.yf-services-footer-copy')) return;
+    var copy=footer.cloneNode(true);
+    copy.classList.add('yf-services-footer-copy');
+    copy.removeAttribute('id');
+    inquiry.insertAdjacentElement('afterend',copy);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',placeServicesFooter,{once:true});
+  else placeServicesFooter();
+})();
+</script>
+
+
+<style id="services-floating-contact-restore-v60">
+/* Restore the fixed contact icons above the Services overlay on every language page. */
+.floating-contact{
+  position:fixed !important;
+  right:12px !important;
+  top:72% !important;
+  bottom:auto !important;
+  transform:translateY(-50%) !important;
+  display:flex !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  pointer-events:auto !important;
+  z-index:2147483000 !important;
+}
+@media(max-width:700px){
+  .floating-contact{top:auto !important;bottom:14px !important;right:8px !important;transform:none !important;}
+}
+</style>
+
 </body>
 </html>
 
