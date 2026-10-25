@@ -5412,13 +5412,21 @@ footer .container,
     });
   });
 
-  document.querySelectorAll('[data-footer-service-index]').forEach(function(link){
-    link.addEventListener('click',function(e){
-      e.preventDefault();
-      const index=Number(link.getAttribute('data-footer-service-index'));
-      openService(index);
-    });
-  });
+  // V71: delegate footer service clicks at document level so links continue
+  // to work consistently from every menu/view and if the footer is re-rendered.
+  // Capture phase prevents other navigation handlers from swallowing the click.
+  document.addEventListener('click',function(e){
+    const link=e.target && e.target.closest ? e.target.closest('[data-footer-service-index]') : null;
+    if(!link) return;
+    const rawIndex=link.getAttribute('data-footer-service-index');
+    if(rawIndex===null || rawIndex.trim()==='') return;
+    const index=Number(rawIndex);
+    if(!Number.isInteger(index) || index<0 || index>=DATA.services.length) return;
+    e.preventDefault();
+    e.stopPropagation();
+    if(typeof e.stopImmediatePropagation==='function') e.stopImmediatePropagation();
+    openService(index);
+  },true);
 
   modal.querySelectorAll('[data-service-close]').forEach(function(el){
     el.addEventListener('click',closeService);
