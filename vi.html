@@ -5392,6 +5392,26 @@ footer .container,
     });
   });
 
+
+  // V70: clicking the active Services banner opens the matching service detail modal.
+  document.querySelectorAll('.yf-services-slide').forEach(function(slide){
+    slide.style.cursor='pointer';
+    slide.setAttribute('role','button');
+    slide.setAttribute('tabindex','0');
+    slide.addEventListener('click',function(e){
+      if(e.target.closest('a,button,input,textarea,select')) return;
+      const index=Number(slide.getAttribute('data-slide'));
+      if(Number.isInteger(index)) openService(index);
+    });
+    slide.addEventListener('keydown',function(e){
+      if(e.key==='Enter' || e.key===' '){
+        e.preventDefault();
+        const index=Number(slide.getAttribute('data-slide'));
+        if(Number.isInteger(index)) openService(index);
+      }
+    });
+  });
+
   document.querySelectorAll('[data-footer-service-index]').forEach(function(link){
     link.addEventListener('click',function(e){
       e.preventDefault();
