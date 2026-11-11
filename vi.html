@@ -4023,11 +4023,11 @@ body { padding-top: 106px !important; }
 .yf-home-news-card h3{font-size:20px;line-height:1.3;color:#0b2a5b;margin:0 0 11px;font-weight:800}
 .yf-home-news-card p{font-size:13px;line-height:1.6;color:#667085;margin:0 0 13px}
 .yf-home-news-card .news-source{font-size:10px;color:#475467;font-weight:700}
-.yf-all-news-modal,.yf-news-modal{display:none;position:fixed;inset:0;z-index:100001}
+.yf-all-news-modal,.yf-news-modal{display:none;position:fixed;inset:0;z-index:100001;overflow:hidden;overscroll-behavior:contain}
 .yf-all-news-modal.is-open,.yf-news-modal.is-open{display:block}
 .yf-all-news-backdrop,.yf-news-backdrop{position:absolute;inset:0;background:rgba(4,18,35,.72);backdrop-filter:blur(3px)}
-.yf-all-news-dialog{position:relative;width:min(1100px,94vw);max-height:90vh;margin:5vh auto 0;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 25px 80px rgba(0,0,0,.3)}
-.yf-all-news-content{max-height:90vh;overflow-y:auto;padding:34px 38px}
+.yf-all-news-dialog{position:relative;width:min(1100px,94vw);height:90vh;max-height:90vh;margin:5vh auto 0;background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 25px 80px rgba(0,0,0,.3);overscroll-behavior:contain}
+.yf-all-news-content{flex:1 1 auto;min-height:0;height:100%;overflow-y:auto;overflow-x:hidden;padding:34px 38px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;scrollbar-gutter:stable}
 .yf-all-news-content h2{color:#0b2a5b;font-size:31px;line-height:1.2;margin:0 0 9px}
 .yf-all-news-content>p{color:#667085;font-size:14px;line-height:1.6;margin:0 0 24px}
 .yf-all-news-close,.yf-news-close{position:absolute;right:14px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:#0d2742;color:#fff;font-size:25px;cursor:pointer;z-index:2}
@@ -4091,7 +4091,7 @@ body { padding-top: 106px !important; }
    a.addEventListener('click',()=>openDetail(item)); return a;
  }
  function renderHome(){
-   track.innerHTML=''; NEWS.items.slice(0,20).forEach(item=>track.appendChild(cardHTML(item)));
+   track.innerHTML=''; NEWS.items.slice(0,6).forEach(item=>track.appendChild(cardHTML(item)));
    current=Math.min(current,Math.max(0,NEWS.items.length-visibleCount())); updatePosition();
  }
  function updatePosition(){
@@ -4103,17 +4103,26 @@ body { padding-top: 106px !important; }
    const max=Math.max(0,NEWS.items.length-visibleCount()); current=current>=max?0:current+1; updatePosition();
  }
  function start(){clearInterval(timer);timer=setInterval(next,6000);}
- function openAll(){
-   const list=document.getElementById('yf-all-news-list');list.innerHTML='';
-   NEWS.items.slice(0,20).forEach(item=>{
+ let newsScrollY=0;
+ function lockNewsPageScroll(){newsScrollY=window.scrollY||window.pageYOffset||0;document.body.dataset.yfNewsScrollY=String(newsScrollY);document.body.style.position='fixed';document.body.style.top='-'+newsScrollY+'px';document.body.style.left='0';document.body.style.right='0';document.body.style.width='100%';document.body.style.overflow='hidden';document.documentElement.style.overscrollBehavior='none';}
+ function unlockNewsPageScroll(){const y=Number(document.body.dataset.yfNewsScrollY||newsScrollY||0);document.body.style.position='';document.body.style.top='';document.body.style.left='';document.body.style.right='';document.body.style.width='';document.body.style.overflow='';document.documentElement.style.overscrollBehavior='';delete document.body.dataset.yfNewsScrollY;window.scrollTo(0,y);}
+ const allNewsPanel=allModal.querySelector('.yf-all-news-content');
+ if(allNewsPanel){allNewsPanel.addEventListener('wheel',e=>e.stopPropagation(),{passive:true});allNewsPanel.addEventListener('touchmove',e=>e.stopPropagation(),{passive:true});}
+ function renderAllList(){
+   const list=document.getElementById('yf-all-news-list');if(!list)return;list.innerHTML='';
+   NEWS.items.slice(0,100).forEach(item=>{
      const el=document.createElement('article');el.className='yf-all-news-item';
      el.innerHTML='<div class="date"></div><h3></h3><p></p><div class="source"></div>';
      el.querySelector('.date').textContent=item.date;el.querySelector('h3').textContent=item.title;el.querySelector('p').textContent=item.summary;el.querySelector('.source').textContent=item.source;
      el.addEventListener('click',()=>{closeAll();openDetail(item);});list.appendChild(el);
    });
-   allModal.classList.add('is-open');allModal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';clearInterval(timer);
  }
- function closeAll(){allModal.classList.remove('is-open');allModal.setAttribute('aria-hidden','true');document.body.style.overflow='';start();}
+ function openAll(){
+   renderAllList();
+   allModal.classList.add('is-open');allModal.setAttribute('aria-hidden','false');lockNewsPageScroll();clearInterval(timer);
+   const panel=allModal.querySelector('.yf-all-news-content');if(panel){panel.scrollTop=0;panel.focus({preventScroll:true});}
+ }
+ function closeAll(){allModal.classList.remove('is-open');allModal.setAttribute('aria-hidden','true');unlockNewsPageScroll();start();}
  function openDetail(item){
    document.getElementById('yf-news-modal-source').textContent=item.source;document.getElementById('yf-news-modal-title').textContent=item.title;document.getElementById('yf-news-modal-date').textContent=item.date;document.getElementById('yf-news-modal-summary').textContent=item.summary;
    const link=document.getElementById('yf-news-source-link');link.textContent=NEWS.view+' — '+item.source;link.href=item.url;
@@ -4130,10 +4139,42 @@ body { padding-top: 106px !important; }
    try{
      const r=await fetch('news-feed.json?ts='+Date.now(),{cache:'no-store'});
      if(!r.ok)return;const fresh=await r.json();
-     if(fresh&&fresh[locale]&&Array.isArray(fresh[locale].items)&&fresh[locale].items.length){NEWS=fresh[locale];applyTexts();renderHome();}
+     if(fresh&&fresh[locale]&&Array.isArray(fresh[locale].items)&&fresh[locale].items.length){NEWS=fresh[locale];NEWS.items=NEWS.items.slice(0,100);applyTexts();renderHome();}
    }catch(e){}
  }
- loadFresh();
+ /* Live refresh on every visit. Search multiple focused RSS feeds and merge real articles. */
+ async function refreshLiveNews(){
+   const cfg={
+     en:{hl:'en-US',gl:'US',ceid:'US:en',qs:['Vietnam economy GDP growth inflation consumption 2026','Vietnam foreign direct investment FDI new projects 2026','Vietnam foreign investors market entry business environment reforms','Vietnam manufacturing factories industrial parks investment 2026','Vietnam exports imports trade agreements supply chains 2026','Vietnam logistics ports airports seaports infrastructure projects','Vietnam transport infrastructure expressways railways airports 2026','Vietnam renewable energy power grid solar wind investment','Vietnam digital economy technology semiconductor data center investment','Vietnam tourism international visitors hospitality investment 2026','Vietnam retail consumer market e-commerce growth 2026','Vietnam real estate industrial property office market investment','Vietnam tax policy investment law business regulations 2026','Vietnam public private partnership infrastructure projects 2026','Vietnam startup innovation venture capital investment','Vietnam agriculture food processing exports investment','Vietnam healthcare education services foreign investment','Vietnam banking finance capital market stock market foreign investors','Ho Chi Minh City investment FDI industrial zones 2026','Vietnam regional investment opportunities Da Nang Hai Phong Binh Duong Dong Nai']},
+     vi:{hl:'vi-VN',gl:'VN',ceid:'VN:vi',qs:['Việt Nam tăng trưởng GDP kinh tế tiêu dùng lạm phát 2026','Việt Nam thu hút vốn đầu tư trực tiếp nước ngoài FDI dự án mới 2026','Việt Nam cải cách môi trường đầu tư thủ tục gia nhập thị trường','Việt Nam khu công nghiệp nhà máy sản xuất dự án đầu tư 2026','Việt Nam xuất nhập khẩu thương mại hiệp định chuỗi cung ứng 2026','Việt Nam logistics cảng biển cảng hàng không hạ tầng 2026','Việt Nam cao tốc đường sắt sân bay dự án hạ tầng giao thông','Việt Nam năng lượng tái tạo điện gió điện mặt trời lưới điện đầu tư','Việt Nam kinh tế số công nghệ bán dẫn trung tâm dữ liệu đầu tư','Việt Nam du lịch khách quốc tế khách sạn đầu tư 2026','Việt Nam thị trường bán lẻ tiêu dùng thương mại điện tử 2026','Việt Nam bất động sản công nghiệp văn phòng thị trường đầu tư','Việt Nam chính sách thuế luật đầu tư quy định doanh nghiệp 2026','Việt Nam hợp tác công tư PPP dự án hạ tầng 2026','Việt Nam khởi nghiệp đổi mới sáng tạo vốn đầu tư','Việt Nam nông nghiệp chế biến thực phẩm xuất khẩu đầu tư','Việt Nam y tế giáo dục dịch vụ vốn đầu tư nước ngoài','Việt Nam ngân hàng tài chính thị trường chứng khoán nhà đầu tư nước ngoài','TP Hồ Chí Minh thu hút FDI đầu tư khu công nghiệp 2026','cơ hội đầu tư Việt Nam Đà Nẵng Hải Phòng Bình Dương Đồng Nai']},
+     'zh-cn':{hl:'zh-CN',gl:'CN',ceid:'CN:zh-Hans',qs:['越南 经济 GDP 增长 消费 通胀 2026','越南 外商直接投资 FDI 新项目 2026','越南 投资环境 改革 外国投资者 市场准入','越南 工业园区 工厂 制造业 投资项目 2026','越南 进出口 贸易协定 供应链 2026','越南 物流 港口 海港 机场 基础设施 2026','越南 高速公路 铁路 机场 交通基础设施 项目','越南 可再生能源 电网 风电 太阳能 投资','越南 数字经济 科技 半导体 数据中心 投资','越南 旅游 国际游客 酒店 投资 2026','越南 零售 消费市场 电子商务 增长 2026','越南 工业地产 办公楼 房地产 市场 投资','越南 税务政策 投资法 企业法规 2026','越南 公私合作 PPP 基础设施 项目 2026','越南 初创企业 创新 风险投资','越南 农业 食品加工 出口 投资','越南 医疗 教育 服务业 外商投资','越南 银行 金融 资本市场 外国投资者','胡志明市 FDI 投资 工业园区 2026','越南 岘港 海防 平阳 同奈 投资机会']},
+     'zh-tw':{hl:'zh-TW',gl:'TW',ceid:'TW:zh-Hant',qs:['越南 經濟 GDP 成長 消費 通膨 2026','越南 外商直接投資 FDI 新專案 2026','越南 投資環境 改革 外國投資者 市場准入','越南 工業區 工廠 製造業 投資專案 2026','越南 進出口 貿易協定 供應鏈 2026','越南 物流 港口 海港 機場 基礎建設 2026','越南 高速公路 鐵路 機場 交通基礎建設 專案','越南 再生能源 電網 風電 太陽能 投資','越南 數位經濟 科技 半導體 資料中心 投資','越南 觀光 國際旅客 飯店 投資 2026','越南 零售 消費市場 電子商務 成長 2026','越南 工業不動產 辦公大樓 房地產 市場 投資','越南 稅務政策 投資法 企業法規 2026','越南 公私協力 PPP 基礎建設 專案 2026','越南 新創企業 創新 創投','越南 農業 食品加工 出口 投資','越南 醫療 教育 服務業 外商投資','越南 銀行 金融 資本市場 外國投資者','胡志明市 FDI 投資 工業區 2026','越南 峴港 海防 平陽 同奈 投資機會']}
+   }[locale];
+   if(!cfg)return;
+   const fetchBatch=async q=>{
+     try{
+       const rss='https://news.google.com/rss/search?'+new URLSearchParams({q:q+' when:90d',hl:cfg.hl,gl:cfg.gl,ceid:cfg.ceid}).toString();
+       const endpoint='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss);
+       const res=await fetch(endpoint,{cache:'no-store'});if(!res.ok)return [];
+       const data=await res.json();if(data.status!=='ok'||!Array.isArray(data.items))return [];
+       return data.items.map(x=>{const d=x.pubDate?new Date(x.pubDate):null;return {date:d&&!isNaN(d)?d.toISOString():x.pubDate||'',title:(x.title||'').replace(/\s+-\s+[^-]+$/,''),summary:(x.description||'').replace(/<[^>]*>/g,' ').replace(/&nbsp;/g,' ').replace(/\s+/g,' ').trim().slice(0,420),source:x.author||'Google News',url:x.link||''};}).filter(x=>x.title&&/^https?:\/\//i.test(x.url));
+     }catch(e){return [];}
+   };
+   try{
+     const batches=[];
+     for(let i=0;i<cfg.qs.length;i+=4){batches.push(...await Promise.all(cfg.qs.slice(i,i+4).map(fetchBatch)));}
+     const seen=new Set(),merged=[];
+     [...batches,...(NEWS.items||[])].forEach(x=>{
+       const key=(x.url||'').split('?')[0].replace(/\/$/,'').toLowerCase()||String(x.title||'').toLowerCase().replace(/[^\p{L}\p{N}]+/gu,' ').trim();
+       if(key&&!seen.has(key)){seen.add(key);merged.push(x);}
+     });
+     const stamp=x=>{const d=new Date(x.date||'');return isNaN(d)?0:d.getTime();};
+     merged.sort((a,b)=>stamp(b)-stamp(a));
+     if(merged.length){NEWS.items=merged.slice(0,100);applyTexts();renderHome();if(allModal.classList.contains('is-open'))renderAllList();}
+   }catch(e){/* Keep the published feed when live sources are unavailable. */}
+ }
+
+ loadFresh().then(refreshLiveNews);
 })();
 </script>
 
