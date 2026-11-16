@@ -2690,6 +2690,25 @@ body { padding-top: 106px !important; }
 @media(max-width:520px){.why-reference{padding-top:32px!important;padding-bottom:34px!important}.why-reference-heading{margin-bottom:24px!important}.why-reference .why-grid{gap:26px 12px!important}.why-reference .why-item h3{font-size:15px!important}.why-reference .why-item p{font-size:12px!important;line-height:1.5!important}.why-reference .why-icon{flex-basis:68px!important;width:68px!important;height:68px!important}.why-reference .why-icon svg{width:36px!important;height:36px!important}}
 
 </style>
+<style id="yf-unified-section-eyebrows-v100">
+/* Use WHAT WE DO as the single typography and color reference for section labels. */
+.section-label,
+#services .yf-services-label,
+.yf-services-label,
+.yf-home-insights-eyebrow,
+.company-profile-inquiry-eyebrow,
+.yf-services-inquiry-eyebrow,
+.yf-contact-eyebrow,
+.yf-connect-label {
+  color:#b08a3e !important;
+  font-family:inherit !important;
+  font-size:12px !important;
+  font-weight:800 !important;
+  letter-spacing:2px !important;
+  line-height:1.35 !important;
+  text-transform:uppercase !important;
+}
+</style>
 </head>
 <body><div class="yf-sticky-shell"><div class="yf-topbar yf-topbar-b"><div class="yf-topbar-group"><a class="yf-topbar-item yf-topbar-contact" href="#contact"><span class="yf-phone" aria-hidden="true">☎</span>聯絡我們</a><nav class="yf-topbar-languages" aria-label="語言"><a class="yf-lang-btn" href="zh-cn.html" lang="zh-CN" aria-label="简体中文">简</a><a class="yf-lang-btn yf-lang-current" href="zh-tw.html" lang="zh-TW" aria-label="繁體中文">繁</a><a class="yf-lang-btn" href="index.html" lang="en" aria-label="English">EN</a><a class="yf-lang-btn" href="vi.html" lang="vi" aria-label="Tiếng Việt">VI</a></nav></div></div>
 <!-- =========================
@@ -3940,6 +3959,15 @@ body { padding-top: 106px !important; }
     directory.setAttribute('aria-hidden','true');
     document.body.style.overflow='';
   }
+
+  // The Home hero CTA must open the dedicated Services view, just like the Services menu.
+  document.querySelectorAll('.hero a.yf-open-services[data-services-open]').forEach(function(link){
+    link.addEventListener('click',function(e){
+      e.preventDefault();
+      const servicesNavLink=Array.from(navLinks).find(a=>a.getAttribute('href')==='#services');
+      openServices(servicesNavLink || null);
+    });
+  });
 
   navLinks.forEach(function(link){
     link.addEventListener('click',function(e){
