@@ -3428,6 +3428,10 @@ body { padding-top: 106px !important; }
  <label>Email công việc *<input type="email" name="email" autocomplete="email" required></label><label>Điện thoại / WhatsApp / WeChat<input name="phone" autocomplete="tel"></label>
  <label class="wide">Dịch vụ quan tâm *<select name="service" required><option value="" selected disabled>Chọn dịch vụ</option><option value="Tư vấn thị trường & thành lập doanh nghiệp">Tư vấn thị trường & thành lập doanh nghiệp</option><option value="Thành lập văn phòng đại diện">Thành lập văn phòng đại diện</option><option value="Giấy phép & tuân thủ">Giấy phép & tuân thủ</option><option value="Tìm nguồn hàng & kết nối kinh doanh">Tìm nguồn hàng & kết nối kinh doanh</option><option value="Tư vấn đầu tư & M&A">Tư vấn đầu tư & M&A</option><option value="Khác / Chưa xác định">Khác / Chưa xác định</option></select></label>
  <label class="wide">Nhu cầu của quý doanh nghiệp *<textarea name="message" required></textarea></label><button class="yf-contact-submit" type="submit">Gửi yêu cầu →</button><p class="yf-contact-note">Thông tin của quý khách chỉ được sử dụng để phản hồi yêu cầu.</p><div class="yf-contact-form-status" aria-live="polite"></div></form></div></div></section>
+<section id="yf-news-page" aria-labelledby="yf-news-page-title">
+ <div class="yf-news-page-hero"><div class="yf-news-page-hero-inner"><div class="yf-news-page-gold"></div><h1 id="yf-news-page-title">Tin tức</h1><p>Cập nhật về môi trường kinh doanh, đầu tư và các cơ hội hợp tác xuyên biên giới tại Việt Nam.</p></div></div>
+ <div class="yf-news-page-content"><div class="yf-news-page-content-inner"><div class="yf-news-page-list-heading"><div><h2 id="yf-news-page-list-title"></h2><p id="yf-news-page-list-intro"></p></div><span id="yf-news-page-count" class="yf-news-page-count">Hiển thị tất cả tin tức hiện có</span></div><div id="yf-news-page-grid" class="yf-news-page-grid" aria-live="polite"></div></div></div>
+</section>
  <script id="yf-contact-form-script-v62">(function(){document.querySelectorAll('[data-yf-contact-form]').forEach(function(form){form.addEventListener('submit',async function(e){e.preventDefault();var status=form.querySelector('.yf-contact-form-status');var button=form.querySelector('button[type="submit"]');button.disabled=true;status.textContent='…';try{var response=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(!response.ok)throw new Error('submit');status.textContent=response.ok?'Thank you. Your inquiry has been sent.':'Unable to send right now. Please email business@yingfaglobal.com.';if(response.ok)form.reset();}catch(err){status.textContent='Please email business@yingfaglobal.com to contact our team.';}finally{button.disabled=false;}});});})();</script>
 <footer>
   <div class="container">
@@ -4023,6 +4027,27 @@ body { padding-top: 106px !important; }
    document.getElementById('yf-comment-text').placeholder=locale==='vi'?'Nội dung bình luận':(locale==='zh-tw'?'您的留言':(locale==='zh-cn'?'您的评论':'Your Comment'));
    document.getElementById('yf-comment-submit').textContent=locale==='vi'?'Gửi bình luận':(locale==='zh-tw'?'提交留言':(locale==='zh-cn'?'提交评论':'Submit Comment'));
  }
+ function renderNewsPage(){
+   const pageGrid=document.getElementById('yf-news-page-grid');if(!pageGrid)return;
+   const pageTitle=document.getElementById('yf-news-page-list-title');
+   const pageIntro=document.getElementById('yf-news-page-list-intro');
+   const count=document.getElementById('yf-news-page-count');
+   if(pageTitle)pageTitle.textContent=NEWS.title||'Tất cả tin tức';
+   if(pageIntro)pageIntro.textContent=NEWS.intro||'';
+   if(count)count.textContent=(NEWS.items||[]).length+' · Hiển thị tất cả tin tức hiện có';
+   pageGrid.innerHTML='';
+   (NEWS.items||[]).slice(0,100).forEach(function(item){
+     const card=document.createElement('article');card.className='yf-news-page-card';
+     card.innerHTML='<div class="yf-news-page-card-date"></div><h3></h3><p></p><div class="yf-news-page-card-source"></div><a target="_blank" rel="noopener noreferrer"></a>';
+     card.querySelector('.yf-news-page-card-date').textContent=item.date||'';
+     card.querySelector('h3').textContent=item.title||'';
+     card.querySelector('p').textContent=item.summary||'';
+     card.querySelector('.yf-news-page-card-source').textContent=item.source||'';
+     const link=card.querySelector('a');link.textContent='Đọc tin đầy đủ →';link.href=item.url||'#';
+     if(!item.url){link.removeAttribute('target');link.removeAttribute('rel');}
+     pageGrid.appendChild(card);
+   });
+ }
  function cardHTML(item){
    const a=document.createElement('article');a.className='yf-home-news-card';
    a.innerHTML='<div class="news-date"></div><h3></h3><p></p><div class="news-source"></div>';
@@ -4073,12 +4098,12 @@ body { padding-top: 106px !important; }
  detailModal.querySelectorAll('[data-news-detail-close]').forEach(el=>el.addEventListener('click',closeDetail));
  document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(allModal.classList.contains('is-open'))closeAll();if(detailModal.classList.contains('is-open'))closeDetail();}});
  document.getElementById('yf-news-comment-form').addEventListener('submit',e=>{e.preventDefault();document.getElementById('yf-comment-status').textContent=locale==='vi'?'Cảm ơn bạn đã gửi bình luận.':(locale==='zh-tw'?'感謝您的留言。':(locale==='zh-cn'?'感谢您的评论。':'Thank you for your comment.'));});
- applyTexts();renderHome();start();window.addEventListener('resize',updatePosition);
+ applyTexts();renderHome();renderNewsPage();start();window.addEventListener('resize',updatePosition);
  async function loadFresh(){
    try{
      const r=await fetch('news-feed.json?ts='+Date.now(),{cache:'no-store'});
      if(!r.ok)return;const fresh=await r.json();
-     if(fresh&&fresh[locale]&&Array.isArray(fresh[locale].items)&&fresh[locale].items.length){NEWS=fresh[locale];NEWS.items=NEWS.items.slice(0,100);applyTexts();renderHome();}
+     if(fresh&&fresh[locale]&&Array.isArray(fresh[locale].items)&&fresh[locale].items.length){NEWS=fresh[locale];NEWS.items=NEWS.items.slice(0,100);applyTexts();renderHome();renderNewsPage();}
    }catch(e){}
  }
  /* Live refresh on every visit. Search multiple focused RSS feeds and merge real articles. */
@@ -4113,7 +4138,7 @@ body { padding-top: 106px !important; }
    }catch(e){/* Keep the published feed when live sources are unavailable. */}
  }
 
- loadFresh().then(refreshLiveNews);
+ loadFresh();
 })();
 </script>
 
@@ -4552,6 +4577,65 @@ body:not(.yf-about-page-mode):not(.yf-insights-page-mode) #insights .yf-home-ins
 })();
 </script>
 
+
+<style id="yf-news-page-banner-v95">
+/* Dedicated News view: a single static hero, matching About and Contact. */
+#yf-news-page{display:none;background:#f7f8fa;padding:0;min-height:calc(100vh - 150px);color:#17233c}
+.yf-news-page-hero{min-height:245px;display:flex;align-items:center;background:linear-gradient(90deg,rgba(7,27,73,.96),rgba(10,43,105,.72)),url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=2000&q=85') center 48%/cover no-repeat;color:#fff;padding:55px max(7%,calc((100% - 1180px)/2));box-sizing:border-box}
+.yf-news-page-hero-inner{max-width:1180px;width:100%;margin:0 auto}
+.yf-news-page-hero h1{font-size:clamp(32px,4vw,48px);line-height:1.15;margin:0 0 15px;font-weight:750;letter-spacing:-.02em}
+.yf-news-page-hero p{max-width:800px;margin:0;color:#edf2ff;font-size:17px;line-height:1.75}
+.yf-news-page-gold{width:66px;height:4px;background:#c9a45b;margin:0 0 22px;border-radius:2px}
+body.yf-news-page-mode > section:not(#yf-news-page){display:none!important}
+body.yf-news-page-mode #yf-news-page{display:block!important;min-height:calc(100vh - 150px)}
+body.yf-news-page-mode .nav a.active{color:var(--navy)}
+@media(max-width:760px){.yf-news-page-hero{min-height:210px;padding:38px 24px}.yf-news-page-hero p{font-size:15px}}
+
+/* Full multilingual news listing on the dedicated News page only. */
+.yf-news-page-content{background:#f7f8fa;padding:54px 0 76px;color:#17233c}
+.yf-news-page-content-inner{width:92%;max-width:1180px;margin:0 auto}
+.yf-news-page-list-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin:0 0 24px}
+.yf-news-page-list-heading h2{color:#0b2a5b;font-size:38px;line-height:1.2;text-align:left;margin:0 0 12px;font-weight:800}
+.yf-news-page-list-heading p{color:#667085;font-size:14px;line-height:1.65;max-width:780px;margin:0}
+.yf-news-page-count{font-size:11px;color:#667085;white-space:nowrap;padding-bottom:4px}
+.yf-news-page-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.yf-news-page-card{display:flex;flex-direction:column;min-height:205px;padding:22px;background:#fff;border:1px solid #e4e8ee;border-radius:14px;box-shadow:0 6px 20px rgba(9,30,66,.045);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.yf-news-page-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(9,30,66,.09);border-color:#c9d3df}
+.yf-news-page-card-date{font-size:10px;color:#8a6a2f;font-weight:800;margin-bottom:10px}
+.yf-news-page-card h3{font-size:17px;line-height:1.38;color:#0b2a5b;margin:0 0 10px}
+.yf-news-page-card p{font-size:12px;line-height:1.65;color:#667085;margin:0 0 16px;flex:1}
+.yf-news-page-card-source{font-size:10px;color:#475467;font-weight:700;margin-bottom:12px}
+.yf-news-page-card a{font-size:11px;color:#0b5c91;font-weight:800;text-decoration:none;align-self:flex-start}
+.yf-news-page-card a:hover{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.yf-news-page-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.yf-news-page-list-heading{align-items:flex-start;flex-direction:column}.yf-news-page-count{white-space:normal}}
+@media(max-width:600px){.yf-news-page-content{padding:38px 0 54px}.yf-news-page-list-heading h2{font-size:30px}.yf-news-page-grid{grid-template-columns:1fr}.yf-news-page-card{min-height:0;padding:19px}.yf-news-page-card h3{font-size:16px}}
+
+</style>
+
+<script id="yf-news-page-mode-script-v95">
+(function(){
+  var body=document.body;
+  var navLinks=Array.from(document.querySelectorAll('.nav a'));
+  function setActive(){navLinks.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#news');});}
+  function openNews(e){
+    if(e)e.preventDefault();
+    body.classList.remove('yf-about-page-mode','yf-insights-page-mode','yf-contact-page-mode','yf-services-is-open');
+    var profile=document.querySelector('.company-profile-expanded');
+    if(profile){profile.classList.remove('is-visible');profile.setAttribute('aria-hidden','true');}
+    var directory=document.getElementById('services-directory');
+    if(directory){directory.classList.remove('is-open');directory.setAttribute('aria-hidden','true');}
+    body.classList.add('yf-news-page-mode');
+    history.replaceState(null,'','#news');
+    setActive();
+    window.scrollTo({top:0,behavior:'auto'});
+  }
+  function closeNews(){body.classList.remove('yf-news-page-mode');}
+  document.querySelectorAll('a[href="#news"]').forEach(function(a){a.addEventListener('click',openNews,true);});
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){if(a.getAttribute('href')!=='#news')a.addEventListener('click',closeNews,true);});
+  window.addEventListener('hashchange',function(){if(location.hash==='#news')openNews();else closeNews();});
+  if(location.hash==='#news')openNews();
+})();
+</script>
 </body>
 </html>
 
